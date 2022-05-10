@@ -8,8 +8,13 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.19.1"
+  },
   "dependencies": {
     "@types/styled-components": "^5.1.25",
+    "axios": "^0.27.2",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
