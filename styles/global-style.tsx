@@ -24,5 +24,11 @@ export const GlobalStyle = createGlobalStyle`
         font-size: ${props => props.theme.typography.fontSize.p.base};
          line-height: ${props => props.theme.typography.lineHeight.p.base};
     }
+    
+    // For safari
+    svg {
+        width: 100%;
+        height: 100%;
+    }
 
 `

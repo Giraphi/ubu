@@ -23,7 +23,7 @@ export const theme = {
     typography: {
         fontSize: {
             p: {
-                base: "16px",
+                base: "18px",
             }
         },
         lineHeight: {
