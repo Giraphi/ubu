@@ -11,20 +11,20 @@ const StyledText = styled.div`
 export default function Home() {
     const { useQuery } = client;
     const generalSettings = useQuery().generalSettings;
-    const gigs = useQuery().gigs()?.nodes;
+    // const gigs = useQuery().gigs()?.nodes;
 
     return (
         <>
             <h1>Hello</h1>
             {generalSettings && generalSettings.title}
-            {
-                gigs?.map((gig: any, index) =>
-                    <React.Fragment key={index}>
-                        <div>{gig?.headline}</div>
-                    </React.Fragment>
-                )
+            {/*{*/}
+            {/*    gigs?.map((gig: any, index) =>*/}
+            {/*        <React.Fragment key={index}>*/}
+            {/*            <div>{gig?.headline}</div>*/}
+            {/*        </React.Fragment>*/}
+            {/*    )*/}
 
-            }
+            {/*}*/}
             <StyledText>styled text</StyledText>
         </>
     )
