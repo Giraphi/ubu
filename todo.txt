@@ -1,0 +1,2 @@
+icons alignen
+index.html meta einträge, favicon, preview images

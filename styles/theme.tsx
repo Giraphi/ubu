@@ -17,7 +17,7 @@ export const theme = {
             lg: "48px"
         },
         lg: {
-            base: "72px",
+            base: "80px",
         },
     },
     typography: {

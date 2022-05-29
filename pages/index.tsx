@@ -68,7 +68,7 @@ const StyledColumnRight = styled.div`
     }
 `
 
-const StyledMembersParagraph = styled.div`
+const StyledMembers = styled.div`
     grid-row: 4;
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
 
@@ -77,13 +77,17 @@ const StyledMembersParagraph = styled.div`
     }
 `
 
+const StyledMembersParagraph = styled.p`
+    margin-bottom: ${props => props.theme.space.gutter * 4}px;
+`
+
 const Home: NextPage = () => {
     const membersParagraph = <>
-        <p>
+        <StyledMembersParagraph>
             Daniel Pizarro - Drums and Illustration<br/>
             Simon Bartenschlager - Guitar<br/>
             Raphael Höps - Synthesizer<br/>
-        </p>
+        </StyledMembersParagraph>
         <SocialIcons/>
     </>
 
@@ -109,11 +113,11 @@ const Home: NextPage = () => {
                     <LeviathanNoBg/>
                 </StyledColumnRight>
 
-                <StyledMembersParagraph>
+                <StyledMembers>
                     <HideOnDesktop>
                         {membersParagraph}
                     </HideOnDesktop>
-                </StyledMembersParagraph>
+                </StyledMembers>
             </Grid>
         </StyledRoot>
 
