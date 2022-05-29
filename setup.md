@@ -56,3 +56,12 @@ Do a test commit & push.
 Setupa Vercal account and connect it to github repo as described here: <a href="https://nextjs.org/learn/basics/deploying-nextjs-app/deploy">here</a>.
 
 After that, the app should be online at e.g. `https://ubu-eta.vercel.app/`
+
+<h1>Fonts</h1>
+Links:
+https://nextjs.org/docs/basic-features/font-optimization
+https://dev.to/dharmi/adding-fonts-in-nextjs-local-fonts-along-with-styled-components-2cdd
+
+- Place font-files into `public/fonts`
+- Reference them by path with a `@font-face` in styled-component's global style
+- Make next.js preload them by placing a `<link  rel="preload"` into the document's head. (See `_document.tsx`)

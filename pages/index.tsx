@@ -1,5 +1,6 @@
 import type {NextPage} from 'next'
 import styled from "styled-components";
+import Hexe from "../images/hexe_2.svg";
 
 const StyledText = styled.div`
     color: lime;
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
         <>
             <h1>Hellooo</h1>
             <StyledText>styled text</StyledText>
+            <Hexe/>
         </>
     )
 }
