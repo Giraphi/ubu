@@ -6,6 +6,8 @@ import styled from "styled-components";
 
 const StyledRoot = styled.div`
     display: inline-flex;
+    margin-right: -8px;
+    margin-left: -10px;
 `;
 
 const StyledItem = styled.a`
@@ -43,7 +45,7 @@ export default function SocialIcons(props: SocialIconsProps) {
             </StyledItem>
 
             <StyledItem>
-                <Facebook/>
+                <Facebook href={"https://www.facebook.com/Ubu.Imperator.Band/"}/>
             </StyledItem>
 
             <StyledItem href={"mailto:ubuimperator.band@gmail.com"}>
