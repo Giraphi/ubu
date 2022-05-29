@@ -21,6 +21,8 @@ export const GlobalStyle = createGlobalStyle`
     p {
         margin-top: 0;
         margin-bottom: ${props => props.theme.space.sm.base};
+        font-size: ${props => props.theme.typography.fontSize.p.base};
+         line-height: ${props => props.theme.typography.lineHeight.p.base};
     }
 
 `

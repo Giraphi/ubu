@@ -9,14 +9,27 @@ export const theme = {
     },
     space: {
         gutter: 8,
-        md: {
-            base: "48px",
-        },
         sm: {
             base: "24px",
         },
-        xs: {
-            base: "8px",
+        md: {
+            base: "32px",
+            lg: "48px"
+        },
+        lg: {
+            base: "72px",
+        },
+    },
+    typography: {
+        fontSize: {
+            p: {
+                base: "16px",
+            }
+        },
+        lineHeight: {
+            p: {
+                base: "130%",
+            }
         }
     },
 
@@ -30,10 +43,8 @@ export const theme = {
             xlg: "1276px",
         },
         spaceHorizontal: {
-            base: "22px",
-            md: "42px",
-            lg: "42px",
-            xlg: "82px",
+            base: "32px",
+            lg: "48px",
         },
     },
     breakpoints: {
