@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Hexe from "../images/hexe_2.svg";
 
 const StyledRoot = styled.div`
-    background-color: ${props => props.theme.color.background};
+    //background-color: ${props => props.theme.color.background};
 `
 
 const StyledText = styled.div`
