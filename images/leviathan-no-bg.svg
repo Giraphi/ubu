@@ -1,6 +1,6 @@
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="215.43"
-     height="303.31" viewBox="0 0 215.43 303.31" enable-background="new 0 0 215.43 303.31">
-    <g fill="lime">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"
+     height="100%" viewBox="0 0 215.43 303.31" enable-background="new 0 0 215.43 303.31">
+    <g fill="white">
         <g>
             <path d="M18.299 269.336c.541.0.703-.709.074-.709C17.833 268.627 17.67 269.336 18.299 269.336v0z"/>
         </g>
@@ -3377,7 +3377,7 @@
             </g>
         </g>
     </g>
-    <g fill="lime">
+    <g fill="white">
         <g>
             <g>
                 <path d="M57.817-2.706c.278.0 1.01-.422.389-.422C57.927-3.128 57.196-2.706 57.817-2.706v0z"/>
