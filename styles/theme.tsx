@@ -44,7 +44,9 @@ export const theme = {
         },
         spaceHorizontal: {
             base: "32px",
+            md: "32px",
             lg: "48px",
+            xlg: "48px"
         },
     },
     breakpoints: {

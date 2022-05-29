@@ -95,8 +95,8 @@ const Home: NextPage = () => {
                 </StyledTopLine>
                 <StyledColumnLeft>
                     <p>
-                        Something's rising from the depths.<br/>
-                        King Ubu's servants are gathering. <br/>
+                        Something&lsquo;s rising from the depths.<br/>
+                        King Ubu&lsquo;s servants are gathering. <br/>
                         Join us! And may love guide us all.
                     </p>
 
