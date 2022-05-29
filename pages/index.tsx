@@ -8,7 +8,7 @@ const StyledText = styled.div`
 const Home: NextPage = () => {
     return (
         <>
-            <h1>Hello</h1>
+            <h1>Hellooo</h1>
             <StyledText>styled text</StyledText>
         </>
     )
