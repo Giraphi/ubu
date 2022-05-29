@@ -40,7 +40,7 @@ export interface SocialIconsProps {
 export default function SocialIcons(props: SocialIconsProps) {
     return (
         <StyledRoot>
-            <StyledItem href={"https://www.instagram.com/ubu.imperator/"}>
+            <StyledItem href={"https://www.instagram.com/ubu.imperator"}>
                 <Instagram/>
             </StyledItem>
 
