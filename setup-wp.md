@@ -28,29 +28,7 @@ https://developers.wpengine.com/blog/set-up-wordpress-as-a-headless-cms
 }
 ```
 
-Then test in the browser with something like this:
-
-```
-fetch('https://ubuimperator.000webhostapp.com/graphql', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json',
-  },
-  body: JSON.stringify({query: "{ posts { nodes { id } }}"})
-})
-  .then(r => r.json())
-  .then(data => console.log('data returned:', data));
-  ```
-
-- Some free wp providers don't support this at all.
-- So far this only works if the browser is on https://ubuimperator.000webhostapp.com/ when sending the request.
-- That also seems to be the reason why queries from localhost (`yarn run dev`) won't work. However they work if we do them server side with `getStaticProps`.
-- I guess in the faust.js tutorial they are using a wordpress system that also runs on localhost and therefore don't run into this problem.
-
 <h2>Custom Post Type UI</h2>
-
-<b>NOTE: In the faust.js tutorial they suggest another plugin to create custom data types. This might actually be easier</b>
 
 - Search for plugin `Custom Post Type UI`
 - In the wp admin bar click on 'CPT UI'
@@ -99,28 +77,3 @@ In the graphiQl interface try something like this:
 
 https://faustjs.org/
 https://github.com/wpengine/faustjs#wordpress-plugin
-
-<h2>Setup faust.js</h2>
-Setup faust.js as described <a href="https://faustjs.org/docs/tutorial/setup-faustjs#introduction">here<a/>.
-
-- Install FaustWP Plugin
-- Setup local next.js project
-
-```
-yarn add @faustjs/core @faustjs/next
-yarn add -D @gqty/cli dotenv-flow
-```
-
-<b>Some things to pay attention to</b>
-
-- Enable graphql introspection to generate schemes: WP Admin -> GraphQL -> Enable Public Introspection. See https://faustjs.org/docs/next/guides/fetching-data#troubleshooting
-- In the faust.js tutorial and template project, there are imports like this:
-
-```import { client } from 'client';```
-
-even though there's no `client` folder in this directory. It's working because of this line in `tsconfig.json`:
-```
-"baseUrl": "./src",
-```
-
-- Queries seem to work (so far) only from "same domain", i.e. not from localhost! But they work if we do them server-side with a next.js `getStaticProps`.
