@@ -1,6 +1,6 @@
-import Document from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import {ServerStyleSheet} from 'styled-components'
 import {DocumentContext} from "next/dist/shared/lib/utils";
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default // @ts-ignore
 class MyDocument extends Document {
@@ -23,5 +23,25 @@ class MyDocument extends Document {
         } finally {
             sheet.seal()
         }
+    }
+
+    render() {
+        return (
+            <Html lang="en">
+                <Head>
+                    <link
+                        rel="preload"
+                        href="/fonts/source-code-pro-regular.woff"
+                        as="font"
+                        type="font/woff"
+                        crossOrigin=""
+                    />
+                </Head>
+                <body>
+                <Main/>
+                <NextScript/>
+                </body>
+            </Html>
+        );
     }
 }

@@ -27,6 +27,8 @@ Now copy from the <a href="https://github.com/vercel/next.js/tree/canary/example
 - `next.config.js`
 - `_document.tsx`
 
+Note: When using `yarn run dev`, when inspecting the received document there's a `display: none;` on the `<div id=__next>` and/or `<body>`. The seems to be set by next.js in development mode to prevent flicker of unstyled content (FOUC): See <a href="https://github.com/vercel/next.js/discussions/16104">here</a>
+
 <h1>Git</h1>
 Create git repo on github, then push to it:
 
