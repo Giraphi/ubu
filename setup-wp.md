@@ -50,7 +50,10 @@ fetch('https://ubuimperator.000webhostapp.com/graphql', {
 
 <h2>Custom Post Type UI</h2>
 
-<b>NOTE: In the faust.js tutorial they suggest another plugin to create custom data types. This might actually be easier</b>
+<b>NOTE: In the faust.js tutorial they suggest another plugin to create custom data types. This might actually be easier:</b>
+
+https://github.com/wpengine/atlas-content-modeler
+
 
 - Search for plugin `Custom Post Type UI`
 - In the wp admin bar click on 'CPT UI'
