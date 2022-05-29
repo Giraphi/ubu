@@ -1,35 +1,18 @@
 import {createGlobalStyle, ThemeProvider} from 'styled-components'
 import {AppProps} from "next/app";
-import '../styles/globals.css'
+import {GlobalStyle} from "../styles/global-style";
+import {Theme, theme} from "../styles/theme";
 
-
-const GlobalStyle = createGlobalStyle`
-    @font-face {
-        font-family: "SourceCodePro";
-        src: url("/fonts/source-code-pro-regular.woff") format("woff");
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background-color: deeppink;
-        font-family: "SourceCodePro";
-    }
-
-`
-
-const theme = {
-    colors: {
-        primary: '#0070f3',
-    },
+declare module "styled-components" {
+    // eslint-disable-next-line @typescript-eslint/no-empty-interface
+    interface DefaultTheme extends Theme {}
 }
 
 export default function App({Component, pageProps}: AppProps) {
     return (
         <>
-            <GlobalStyle/>
             <ThemeProvider theme={theme}>
+                <GlobalStyle/>
                 <Component {...pageProps} />
             </ThemeProvider>
         </>
