@@ -1,13 +1,3 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   reactStrictMode: true,
-//   compiler: {
-//     styledComponents: true,
-//   },
-// }
-//
-// module.exports = nextConfig
-
 const webpackConfig = {
   webpack(config) {
     config.module.rules.push({
