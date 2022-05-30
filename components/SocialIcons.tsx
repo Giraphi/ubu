@@ -7,8 +7,8 @@ import styled from "styled-components";
 const StyledRoot = styled.div`
     display: inline-flex;
     margin-right: -${props => props.theme.space.gutter * 3}px;
-    
-    > * {        
+
+    > * {
         margin-right: ${props => props.theme.space.gutter * 3}px;
     }
 `;
@@ -16,10 +16,14 @@ const StyledRoot = styled.div`
 const StyledItem = styled.a`
     color: ${props => props.theme.color.white};
     margin-bottom: ${props => props.theme.space.gutter}px;
-    height: ${props => props.theme.space.gutter * 8}px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: ${props => props.theme.space.gutter * 9}px;
+
+    @media (min-width: ${props => props.theme.breakpoints.lg}px) {
+        height: ${props => props.theme.space.gutter * 8}px;
+    }
 
     > svg {
         height: 100%;
@@ -36,6 +40,7 @@ const StyledItem = styled.a`
         &:hover {
             color: ${props => props.theme.color.secondary};
         }
+
         > svg {
             position: relative;
             left: -1px;
@@ -46,6 +51,7 @@ const StyledItem = styled.a`
         &:hover {
             color: ${props => props.theme.color.tertiary};
         }
+
         > svg {
             position: relative;
             top: -1px;
