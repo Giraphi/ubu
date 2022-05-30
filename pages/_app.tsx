@@ -26,7 +26,7 @@ export default function App({Component, pageProps}: AppProps) {
                 <meta property="og:image" itemProp="image" content="/preview.png"/>
                 <meta property="og:image:type" content="image/jpg"/>
                 <meta property="og:title" content="Ubu Imperator"/>
-                <meta property="og:description" content="Ubu Imperator"/>
+                <meta property="og:description" content="Your king awaits you"/>
                 <meta property="og:type" content="website"/>
                 <link rel="img_src" href="/preview.png"/>
                 <link rel="apple-touch-icon" href="/preview.png"/>
