@@ -23,7 +23,7 @@ export default function App({Component, pageProps}: AppProps) {
                 <meta name="keywords"
                       content="Ubu Imperator Band Munich Experimental"/>
 
-                <meta property="og:image" itemProp="image" content="%PUBLIC_URL%/eye.png"/>
+                <meta property="og:image" itemProp="image" content="/preview.png"/>
                 <meta property="og:image:type" content="image/jpg"/>
                 <meta property="og:title" content="Ubu Imperator"/>
                 <meta property="og:description" content="Ubu Imperator"/>
