@@ -5,7 +5,8 @@ import {Theme, theme} from "../styles/theme";
 import Head from 'next/head';
 
 declare module "styled-components" {
-    interface DefaultTheme extends Theme {}
+    interface DefaultTheme extends Theme {
+    }
 }
 
 export default function App({Component, pageProps}: AppProps) {
@@ -13,12 +14,10 @@ export default function App({Component, pageProps}: AppProps) {
         <>
             <Head>
                 <meta charSet="utf-8"/>
-                <link rel="icon" href="/favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <meta name="theme-color" content="#000000"/>
-
-                <meta name="description" content="Ave Ubu. From this point on, there's no turning back, your king awaits you."/>
+                <meta name="description"
+                      content="Ave Ubu. From this point on, there's no turning back, your king awaits you."/>
                 <meta name="author" content="Ubu Imperator"/>
                 <meta name="keywords"
                       content="Ubu Imperator Band Munich Experimental"/>
@@ -30,6 +29,16 @@ export default function App({Component, pageProps}: AppProps) {
                 <meta property="og:type" content="website"/>
                 <link rel="img_src" href="/preview.png"/>
                 <link rel="apple-touch-icon" href="/preview.png"/>
+
+
+                <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
+                <link rel="icon" href="/favicon/favicon.ico?v=2"/>
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
+                <link rel="manifest" href="/favicon/site.webmanifest"/>
+                <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
+                <meta name="msapplication-TileColor" content="#da532c"/>
+                <meta name="theme-color" content="#ffffff"/>
 
                 <title>Ubu Imperator</title>
             </Head>
