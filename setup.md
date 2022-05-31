@@ -65,3 +65,6 @@ https://dev.to/dharmi/adding-fonts-in-nextjs-local-fonts-along-with-styled-compo
 - Place font-files into `public/fonts`
 - Reference them by path with a `@font-face` in styled-component's global style
 - Make next.js preload them by placing a `<link  rel="preload"` into the document's head. (See `_document.tsx`)
+
+<h1>Svg</h1>
+With SVGR. `yarn add @svgr/webpack` and adjust `next.config.js`

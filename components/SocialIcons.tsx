@@ -1,7 +1,7 @@
 import React from "react";
-import Instagram from "../images/instagram-fixed.svg";
-import Facebook from "../images/facebook-fixed.svg";
-import Mail from "../images/mail-fixed.svg";
+import Instagram from "../images/instagram.svg";
+import Facebook from "../images/facebook.svg";
+import Mail from "../images/mail.svg";
 import styled from "styled-components";
 
 const StyledRoot = styled.div`
