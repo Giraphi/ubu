@@ -9,27 +9,17 @@ export const theme = {
     },
     space: {
         gutter: 8,
-        sm: {
-            base: "24px",
-        },
-        md: {
-            base: "32px",
-            lg: "48px"
-        },
-        lg: {
-            base: "80px",
-        },
+        sm: "24px",
+        md: "32px",
+        lg: "54px",
+
     },
     typography: {
         fontSize: {
-            p: {
-                base: "18px",
-            }
+            p: "18px",
         },
         lineHeight: {
-            p: {
-                base: "130%",
-            }
+            p: "130%",
         }
     },
 

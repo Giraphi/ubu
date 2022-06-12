@@ -1,10 +1,6 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-// We are avoiding the suffixes -start and -end for grid lines here, because that will create implicit areas as described here:
-// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines#implicit_grid_areas_from_named_lines
-// (If we want to use those suffixes, we should make sure those implicit names don't collide with other grid line names)
-
 export const GridLines = {
     screenLeft: "screen-left",
     bleedLeft: "bleed-left",

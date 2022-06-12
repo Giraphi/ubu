@@ -11,7 +11,8 @@ import HideOnDesktop from "../components/HideOnDesktop";
 const StyledRoot = styled.div`
     min-height: 100vh;
     background: ${props => props.theme.color.black};
-    padding-bottom: ${props => props.theme.space.lg.base};
+    padding-bottom: ${props => props.theme.space.lg};
+    padding-top: ${props => props.theme.space.lg};
 `
 
 const StyledTopLine = styled.div`
@@ -20,18 +21,16 @@ const StyledTopLine = styled.div`
     display: flex;
     justify-content: center;
     grid-row: 1;
-    margin-bottom: ${props => props.theme.space.md.base};
-    margin-top: ${props => props.theme.space.md.base};
-    margin-left: ${props => props.theme.space.gutter}px;
-    margin-right: ${props => props.theme.space.gutter}px;
+    margin-bottom: ${props => props.theme.space.sm};
+    margin-right: ${props => props.theme.space.gutter * 2}px;
 
     @media (min-width: ${props => props.theme.breakpoints.md}px) {
         grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
     }
 
     @media (min-width: ${props => props.theme.breakpoints.lg}px) {
-        margin-bottom: ${props => props.theme.space.md.lg};
-        margin-top: ${props => props.theme.space.md.lg};
+        margin-bottom: ${props => props.theme.space.md};
+        margin-top: ${props => props.theme.space.md};
         grid-column: ${GridLines.col4Start} / ${GridLines.col9End};
     }
 `
@@ -50,7 +49,7 @@ const StyledColumnLeft = styled.div`
 
     @media (min-width: ${props => props.theme.breakpoints.lg}px) {
         align-items: flex-end;
-        padding-bottom: ${props => props.theme.space.md.base};
+        padding-bottom: ${props => props.theme.space.md};
         grid-column: ${GridLines.col3Start} / ${GridLines.col6End};
         text-align: right;
     }
@@ -99,9 +98,8 @@ const Home: NextPage = () => {
                 </StyledTopLine>
                 <StyledColumnLeft>
                     <p>
-                        Something’s rising from the depths.<br/>
-                        King Ubu’s servants are gathering. <br/>
-                        Join us! And may love guide us all.
+                        Something is rising from the depths.<br/>
+                        King Ubu awaits you.
                     </p>
 
                     <HideOnMobile>
