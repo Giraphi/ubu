@@ -1,2 +1,2 @@
-icons alignen
-index.html meta einträge, favicon, preview images
+- theme als const und nicht als sc theme?
+- hexe fliegt rein

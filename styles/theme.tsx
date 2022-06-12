@@ -43,7 +43,7 @@ export const theme = {
             xlg: "1276px",
         },
         spaceHorizontal: {
-            base: "32px",
+            base: "24px",
             md: "32px",
             lg: "48px",
             xlg: "48px"
