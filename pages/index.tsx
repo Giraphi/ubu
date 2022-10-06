@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import styled from "styled-components";
 
 import Intro from "../components/sections/Intro";
+import Photos from "../components/sections/Photos";
 
 const StyledRoot = styled.div`
     min-height: 100vh;
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
     return (
         <StyledRoot>
             <Intro />
+            <Photos />
         </StyledRoot>
     );
 };

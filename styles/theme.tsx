@@ -1,18 +1,17 @@
 export const theme = {
     color: {
-        primary: '#ff00ff',
-        secondary: '#00ffff',
-        tertiary: '#00ff00',
+        primary: "#ff00ff",
+        secondary: "#00ffff",
+        tertiary: "#00ff00",
         background: "#112",
-        white: '#eee',
-        black: "#111"
+        white: "#eee",
+        black: "#111",
     },
     space: {
         gutter: 8,
         sm: "24px",
         md: "32px",
         lg: "54px",
-
     },
     typography: {
         fontSize: {
@@ -20,9 +19,8 @@ export const theme = {
         },
         lineHeight: {
             p: "130%",
-        }
+        },
     },
-
     grid: {
         gap: {
             base: "8px",
@@ -36,7 +34,7 @@ export const theme = {
             base: "24px",
             md: "32px",
             lg: "48px",
-            xlg: "48px"
+            xlg: "48px",
         },
     },
     breakpoints: {
@@ -45,6 +43,11 @@ export const theme = {
         lg: 1024,
         xlg: 1440,
     },
-}
+    ratio: {
+        wide: 1.62,
+        xWide: 2.4,
+        high: 0.8,
+    },
+};
 
 export type Theme = typeof theme;
