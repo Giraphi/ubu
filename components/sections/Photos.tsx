@@ -5,6 +5,7 @@ import alle from "../../images/photos/alle.jpg";
 import simon from "../../images/photos/simon.jpg";
 import raphi from "../../images/photos/raphi.jpg";
 import daniel from "../../images/photos/daniel.jpg";
+import { rectangleKeyframes, starKeyframes } from "../../styles/clip-paths";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -29,18 +30,24 @@ export const StyledAllImage = styled.div`
     grid-row: 1;
     grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
     aspect-ratio: ${(props) => props.theme.ratio.wide};
+    animation: ${rectangleKeyframes} 9s infinite 0.7s;
+    animation-timing-function: linear;
 `;
 
 export const StyledSimonImage = styled.div`
     grid-row: 2;
     grid-column: ${GridLines.col3Start} / ${GridLines.col6End};
     aspect-ratio: ${(props) => props.theme.ratio.high};
+    animation: ${rectangleKeyframes} 8.2s infinite 0.3s;
+    animation-timing-function: linear;
 `;
 
 export const StyledRaphiImage = styled.div`
     grid-row: 2;
     grid-column: ${GridLines.col7Start} / ${GridLines.col10End};
     aspect-ratio: ${(props) => props.theme.ratio.high};
+    animation: ${rectangleKeyframes} 8.5s infinite 1.1s;
+    animation-timing-function: linear;
 `;
 
 export const StyledDanielImage = styled.div`
@@ -48,6 +55,8 @@ export const StyledDanielImage = styled.div`
     grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
     aspect-ratio: ${(props) => props.theme.ratio.wide * 1.5};
     transform: scaleX(-1);
+    animation: ${rectangleKeyframes} 8s infinite;
+    animation-timing-function: linear;
 `;
 
 export interface PhotosProps {}
