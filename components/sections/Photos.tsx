@@ -28,35 +28,59 @@ export const StyledImg = styled.img`
 
 export const StyledAllImage = styled.div`
     grid-row: 1;
-    grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
-    aspect-ratio: ${(props) => props.theme.ratio.wide};
+    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     animation: ${rectangleKeyframes} 9s infinite 0.7s;
     animation-timing-function: linear;
+    aspect-ratio: ${(props) => props.theme.ratio.square};
+
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+        aspect-ratio: ${(props) => props.theme.ratio.wide};
+        grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
+    }
 `;
 
 export const StyledSimonImage = styled.div`
     grid-row: 2;
-    grid-column: ${GridLines.col3Start} / ${GridLines.col6End};
-    aspect-ratio: ${(props) => props.theme.ratio.high};
+    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     animation: ${rectangleKeyframes} 8.2s infinite 0.3s;
     animation-timing-function: linear;
+    aspect-ratio: ${(props) => props.theme.ratio.square};
+
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+        aspect-ratio: ${(props) => props.theme.ratio.high};
+        grid-column: ${GridLines.col3Start} / ${GridLines.col6End};
+    }
 `;
 
 export const StyledRaphiImage = styled.div`
-    grid-row: 2;
-    grid-column: ${GridLines.col7Start} / ${GridLines.col10End};
-    aspect-ratio: ${(props) => props.theme.ratio.high};
+    grid-row: 3;
+    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
+
     animation: ${rectangleKeyframes} 8.5s infinite 1.1s;
     animation-timing-function: linear;
+    aspect-ratio: ${(props) => props.theme.ratio.square};
+
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+        aspect-ratio: ${(props) => props.theme.ratio.high};
+        grid-row: 2;
+        grid-column: ${GridLines.col7Start} / ${GridLines.col10End};
+    }
 `;
 
 export const StyledDanielImage = styled.div`
-    grid-row: 3;
-    grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
-    aspect-ratio: ${(props) => props.theme.ratio.wide * 1.5};
+    grid-row: 4;
+    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
+
     transform: scaleX(-1);
     animation: ${rectangleKeyframes} 8s infinite;
     animation-timing-function: linear;
+    aspect-ratio: ${(props) => props.theme.ratio.square};
+
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+        aspect-ratio: ${(props) => props.theme.ratio.wide * 1.5};
+        grid-row: 3;
+        grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
+    }
 `;
 
 export interface PhotosProps {}

@@ -32,8 +32,5 @@ export const rectangleKeyframes = keyframes`
     }
     100% {
         clip-path: polygon(2% 2%, 98% 0, 97% 100%, 2% 98%);
-
     }
-
-
 `;
