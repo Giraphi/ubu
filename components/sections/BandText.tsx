@@ -4,6 +4,10 @@ import Grid, { GridLines } from "../Grid";
 import styled from "styled-components";
 import Hexe from "../../images/figuren/hexe.svg";
 import Hexe2 from "../../images/figuren/hexe_2.svg";
+import Narr from "../../images/figuren/narr.svg";
+import Kerze from "../../images/figuren/kerze.svg";
+import Zauberer from "../../images/figuren/zauberer.svg";
+import Shaker from "../../images/figuren/shaker.svg";
 import Figur from "../Figur";
 
 const StyledArea = styled.div`
@@ -42,9 +46,9 @@ export default function BandText(props: TextProps) {
                         <Figur>
                             <Hexe2 />
                         </Figur>
-                        {/*<StyledRotateFigure>*/}
-                        {/*    <Hexe />*/}
-                        {/*</StyledRotateFigure>*/}
+                        <StyledRotateFigure>
+                            <Hexe />
+                        </StyledRotateFigure>
                     </Row>
                     <p>
                         Der Name der Band bezieht sich auf das Theaterstück "König Ubu" (1896) des französischen Schriftstellers Alfred
@@ -52,6 +56,17 @@ export default function BandText(props: TextProps) {
                         dadaistische Künstler der damaligen Zeit in Erstaunen versetzte. Ubu Imperator ist auch der Titel eine der
                         bekanntesten Werke von Max Ernst.
                     </p>
+                    <Row>
+                        <Figur>
+                            <Narr />
+                        </Figur>
+                        <Figur>
+                            <Kerze />
+                        </Figur>
+                        <Figur>
+                            <Shaker />
+                        </Figur>
+                    </Row>
                 </StyledArea>
             </Grid>
         </Section>

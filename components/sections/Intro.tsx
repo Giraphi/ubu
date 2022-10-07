@@ -22,13 +22,13 @@ const StyledTopLine = styled.div`
     }
 
     @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
-        margin-bottom: ${(props) => props.theme.space.md};
+        margin-bottom: ${(props) => props.theme.space.lg};
         margin-top: ${(props) => props.theme.space.md};
         grid-column: ${GridLines.col4Start} / ${GridLines.col9End};
     }
 `;
 
-const StyledColumnLeft = styled.div`
+const StyledColumnText = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     color: ${(props) => props.theme.color.white};
     display: flex;
@@ -37,25 +37,24 @@ const StyledColumnLeft = styled.div`
     grid-row: 2;
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        text-align: center;
+        //text-align: center;
     }
 
     @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
-        align-items: flex-end;
-        padding-bottom: ${(props) => props.theme.space.md};
-        grid-column: ${GridLines.col3Start} / ${GridLines.col6End};
-        text-align: right;
+        padding-bottom: ${(props) => props.theme.space.lg};
+        grid-column: ${GridLines.col8Start} / ${GridLines.col11End};
+        justify-content: center;
     }
 `;
 
-const StyledColumnRight = styled.div`
+const StyledColumnImage = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     ${colorAnimation};
     grid-row: 3;
 
     @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
         grid-row: 2;
-        grid-column: ${GridLines.col7Start} / ${GridLines.col10End};
+        grid-column: ${GridLines.col2Start} / ${GridLines.col7End};
         text-align: right;
     }
 `;
@@ -74,42 +73,36 @@ const StyledMembersParagraph = styled.p`
 `;
 
 export default function Intro() {
-    const membersParagraph = (
-        <>
-            <StyledMembersParagraph>
-                Daniel Pizarro - Drums and Illustration
-                <br />
-                Simon Bartenschlager - Guitar
-                <br />
-                Raphael Höps - Synthesizer
-                <br />
-            </StyledMembersParagraph>
-            <SocialIcons />
-        </>
-    );
-
     return (
         <Grid>
             <StyledTopLine>
                 <Logo />
             </StyledTopLine>
-            <StyledColumnLeft>
+            <StyledColumnText>
                 <p>
                     Something is rising from the depths.
                     <br />
                     King Ubu awaits you.
                 </p>
 
-                <HideOnMobile>{membersParagraph}</HideOnMobile>
-            </StyledColumnLeft>
+                <StyledMembersParagraph>
+                    Daniel Pizarro - Drums and Illustration
+                    <br />
+                    Simon Bartenschlager - Guitar
+                    <br />
+                    Raphael Höps - Synthesizer
+                    <br />
+                </StyledMembersParagraph>
+                <SocialIcons />
+            </StyledColumnText>
 
-            <StyledColumnRight>
+            <StyledColumnImage>
                 <LeviathanNoBg />
-            </StyledColumnRight>
+            </StyledColumnImage>
 
-            <StyledMembers>
-                <HideOnDesktop>{membersParagraph}</HideOnDesktop>
-            </StyledMembers>
+            {/*<StyledMembers>*/}
+            {/*    <HideOnDesktop>{membersParagraph}</HideOnDesktop>*/}
+            {/*</StyledMembers>*/}
         </Grid>
     );
 }
