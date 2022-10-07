@@ -84,7 +84,7 @@ export const StyledDanielImage = styled.div`
 `;
 
 const StyledText = styled.div`
-    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
+    grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
 `;
 
 export interface PhotosProps {}
@@ -92,6 +92,15 @@ export interface PhotosProps {}
 export default function Photos(props: PhotosProps) {
     return (
         <>
+            <Grid>
+                <StyledText>
+                    <h2>Ubu @ImportExport</h2>
+                    <p>
+                        Ubu bei den <a href={"https://alternativefakten089.de/"}>Alternativen Fakten</a> im September 2022 im Münchner{" "}
+                        <a href={"https://import-export.cc/"}>Import Export</a>. Fotos von Vanessa Mönius.
+                    </p>
+                </StyledText>
+            </Grid>
             <StyledGrid>
                 <StyledAllImage>
                     <StyledImg src={alle.src} />

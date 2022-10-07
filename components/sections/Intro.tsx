@@ -1,12 +1,11 @@
 import React from "react";
 import Grid, { GridLines } from "../Grid";
 import Logo from "../../images/logo.svg";
-import HideOnMobile from "../HideOnMobile";
 import LeviathanNoBg from "../../images/leviathan-no-bg.svg";
-import HideOnDesktop from "../HideOnDesktop";
 import SocialIcons from "../SocialIcons";
 import styled from "styled-components";
-import { colorAnimation, colorKeyframes } from "../../styles/keyframes";
+import { colorAnimation } from "../../styles/keyframes";
+import Shaker from "../../images/figuren/shaker.svg";
 
 const StyledTopLine = styled.div`
     color: ${(props) => props.theme.color.white};
@@ -28,6 +27,18 @@ const StyledTopLine = styled.div`
     }
 `;
 
+const StyledShaker = styled.div`
+    width: ${(props) => props.theme.space.figure};
+    height: ${(props) => props.theme.space.figure};
+    > svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        transform: scale(2.1) translateY(-4px) translateX(-8px);
+    }
+`;
+
 const StyledColumnText = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     color: ${(props) => props.theme.color.white};
@@ -36,12 +47,8 @@ const StyledColumnText = styled.div`
     justify-content: center;
     grid-row: 2;
 
-    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        //text-align: center;
-    }
-
     @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
-        padding-bottom: ${(props) => props.theme.space.lg};
+        padding-bottom: 30%;
         grid-column: ${GridLines.col8Start} / ${GridLines.col11End};
         justify-content: center;
     }
@@ -51,20 +58,22 @@ const StyledColumnImage = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     ${colorAnimation};
     grid-row: 3;
+    position: relative;
+
+    ::before {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-image: linear-gradient(to top, ${(props) => props.theme.color.black} 10%, transparent 30%);
+        content: " ";
+    }
 
     @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
         grid-row: 2;
         grid-column: ${GridLines.col2Start} / ${GridLines.col7End};
         text-align: right;
-    }
-`;
-
-const StyledMembers = styled.div`
-    grid-row: 4;
-    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
-
-    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        text-align: center;
     }
 `;
 
@@ -79,6 +88,9 @@ export default function Intro() {
                 <Logo />
             </StyledTopLine>
             <StyledColumnText>
+                <StyledShaker>
+                    <Shaker />
+                </StyledShaker>
                 <p>
                     Something is rising from the depths.
                     <br />

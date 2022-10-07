@@ -28,6 +28,10 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    a, a:hover, a:focus {
+        color: ${(props) => props.theme.color.white}
+    }
+
     // For safari
     svg {
         width: 100%;
