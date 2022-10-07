@@ -6,19 +6,23 @@ export const theme = {
         background: "#112",
         white: "#eee",
         black: "#111",
+        gray: "#555",
     },
     space: {
         gutter: 8,
         sm: "24px",
         md: "32px",
         lg: "54px",
+        figure: "80px",
     },
     typography: {
         fontSize: {
             p: "18px",
+            h2: "32px",
         },
         lineHeight: {
             p: "130%",
+            h2: "130%",
         },
     },
     grid: {
@@ -28,7 +32,7 @@ export const theme = {
             lg: "20px",
         },
         contentMaxWidth: {
-            xlg: "1276px",
+            xlg: "1120px",
         },
         spaceHorizontal: {
             base: "24px",

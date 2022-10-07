@@ -35,7 +35,7 @@ export const StyledAllImage = styled.div`
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         aspect-ratio: ${(props) => props.theme.ratio.wide};
-        grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
+        grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     }
 `;
 
@@ -48,7 +48,7 @@ export const StyledSimonImage = styled.div`
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         aspect-ratio: ${(props) => props.theme.ratio.high};
-        grid-column: ${GridLines.col3Start} / ${GridLines.col6End};
+        grid-column: ${GridLines.contentLeft} / ${GridLines.col6End};
     }
 `;
 
@@ -63,7 +63,7 @@ export const StyledRaphiImage = styled.div`
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         aspect-ratio: ${(props) => props.theme.ratio.high};
         grid-row: 2;
-        grid-column: ${GridLines.col7Start} / ${GridLines.col10End};
+        grid-column: ${GridLines.col7Start} / ${GridLines.contentRight};
     }
 `;
 
@@ -79,30 +79,36 @@ export const StyledDanielImage = styled.div`
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         aspect-ratio: ${(props) => props.theme.ratio.wide * 1.5};
         grid-row: 3;
-        grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
+        grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     }
+`;
+
+const StyledText = styled.div`
+    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
 `;
 
 export interface PhotosProps {}
 
 export default function Photos(props: PhotosProps) {
     return (
-        <StyledGrid>
-            <StyledAllImage>
-                <StyledImg src={alle.src} />
-            </StyledAllImage>
+        <>
+            <StyledGrid>
+                <StyledAllImage>
+                    <StyledImg src={alle.src} />
+                </StyledAllImage>
 
-            <StyledRaphiImage>
-                <StyledImg src={raphi.src} />
-            </StyledRaphiImage>
+                <StyledRaphiImage>
+                    <StyledImg src={raphi.src} />
+                </StyledRaphiImage>
 
-            <StyledSimonImage>
-                <StyledImg src={simon.src} />
-            </StyledSimonImage>
+                <StyledSimonImage>
+                    <StyledImg src={simon.src} />
+                </StyledSimonImage>
 
-            <StyledDanielImage>
-                <StyledImg src={daniel.src} />
-            </StyledDanielImage>
-        </StyledGrid>
+                <StyledDanielImage>
+                    <StyledImg src={daniel.src} />
+                </StyledDanielImage>
+            </StyledGrid>
+        </>
     );
 }

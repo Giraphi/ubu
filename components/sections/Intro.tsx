@@ -6,7 +6,7 @@ import LeviathanNoBg from "../../images/leviathan-no-bg.svg";
 import HideOnDesktop from "../HideOnDesktop";
 import SocialIcons from "../SocialIcons";
 import styled from "styled-components";
-import { colorKeyframes } from "../../styles/keyframes";
+import { colorAnimation, colorKeyframes } from "../../styles/keyframes";
 
 const StyledTopLine = styled.div`
     color: ${(props) => props.theme.color.white};
@@ -50,7 +50,7 @@ const StyledColumnLeft = styled.div`
 
 const StyledColumnRight = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
-    animation: ${colorKeyframes} 4s linear infinite;
+    ${colorAnimation};
     grid-row: 3;
 
     @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {

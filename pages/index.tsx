@@ -17,7 +17,7 @@ const Home: NextPage = () => {
     return (
         <StyledRoot>
             <Intro />
-            <Demo />
+            {/*<Demo />*/}
             <BandText />
             <Photos />
         </StyledRoot>

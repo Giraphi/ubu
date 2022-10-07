@@ -1,5 +1,5 @@
-import {keyframes} from "styled-components";
-import {theme} from "./theme";
+import { keyframes, css } from "styled-components";
+import { theme } from "./theme";
 
 export const colorKeyframes = keyframes`
     0% {
@@ -17,4 +17,8 @@ export const colorKeyframes = keyframes`
     100% {
         color: ${theme.color.primary};
     }
-`
+`;
+
+export const colorAnimation = css`
+    animation: ${colorKeyframes} 4s linear infinite;
+`;
