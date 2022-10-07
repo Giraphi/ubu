@@ -6,6 +6,7 @@ import simon from "../../images/photos/simon.jpg";
 import raphi from "../../images/photos/raphi.jpg";
 import daniel from "../../images/photos/daniel.jpg";
 import { rectangleKeyframes, starKeyframes } from "../../styles/clip-paths";
+import CompactArea from "../CompactArea";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -83,23 +84,19 @@ export const StyledDanielImage = styled.div`
     }
 `;
 
-const StyledText = styled.div`
-    grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
-`;
-
 export interface PhotosProps {}
 
 export default function Photos(props: PhotosProps) {
     return (
         <>
             <Grid>
-                <StyledText>
+                <CompactArea>
                     <h2>Ubu @ImportExport</h2>
                     <p>
                         Ubu bei den <a href={"https://alternativefakten089.de/"}>Alternativen Fakten</a> im September 2022{" "}
                         <a href={"https://import-export.cc/"}>Import Export</a> München. Fotos von Vanessa Mönius.
                     </p>
-                </StyledText>
+                </CompactArea>
             </Grid>
             <StyledGrid>
                 <StyledAllImage>

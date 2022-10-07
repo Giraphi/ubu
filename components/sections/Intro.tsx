@@ -6,6 +6,8 @@ import SocialIcons from "../SocialIcons";
 import styled from "styled-components";
 import { colorAnimation } from "../../styles/keyframes";
 import Shaker from "../../images/figuren/shaker.svg";
+import HideOnMobile from "../HideOnMobile";
+import HideOnDesktop from "../HideOnDesktop";
 
 const StyledTopLine = styled.div`
     color: ${(props) => props.theme.color.white};
@@ -44,9 +46,12 @@ const StyledColumnText = styled.div`
     color: ${(props) => props.theme.color.white};
     display: flex;
     flex-direction: column;
-    grid-row: 2;
+    grid-row: 3;
+    margin-bottom: ${(props) => props.theme.space.lg};
 
     @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
+        grid-row: 2;
+        margin-bottom: 0;
         padding-top: 33%;
         grid-column: ${GridLines.col8Start} / ${GridLines.col11End};
     }
@@ -55,7 +60,7 @@ const StyledColumnText = styled.div`
 const StyledColumnImage = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     ${colorAnimation};
-    grid-row: 3;
+    grid-row: 2;
     position: relative;
 
     ::before {
@@ -86,14 +91,21 @@ export default function Intro() {
                 <Logo />
             </StyledTopLine>
             <StyledColumnText>
-                <StyledShaker>
-                    <Shaker />
-                </StyledShaker>
+                <HideOnMobile>
+                    <StyledShaker>
+                        <Shaker />
+                    </StyledShaker>
+                </HideOnMobile>
                 <p>
                     Something is rising from the depths.
                     <br />
                     King Ubu awaits you.
                 </p>
+                <HideOnDesktop>
+                    <StyledShaker>
+                        <Shaker />
+                    </StyledShaker>
+                </HideOnDesktop>
 
                 <StyledMembersParagraph>
                     Daniel Pizarro - Drums and Illustration

@@ -13,6 +13,7 @@ export const theme = {
         sm: "24px",
         md: "32px",
         lg: "54px",
+        xlg: "108px",
         figure: "80px",
     },
     typography: {

@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "../Section";
+import SectionSpace from "../Section";
 import styled from "styled-components";
 import Grid, { GridLines } from "../Grid";
 
@@ -11,12 +11,12 @@ export interface DemoProps {}
 
 export default function Demo(props: DemoProps) {
     return (
-        <Section>
+        <SectionSpace>
             <Grid>
                 <StyledArea>
                     <h2>Ubu Demo</h2>
                 </StyledArea>
             </Grid>
-        </Section>
+        </SectionSpace>
     );
 }
