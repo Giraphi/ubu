@@ -1,6 +1,7 @@
 import React from "react";
 import Grid, { GridLines } from "./Grid";
 import styled from "styled-components";
+import Link from "next/link";
 
 const StyledArea = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight}; ;
@@ -20,7 +21,12 @@ export default function Footer() {
             <StyledArea>
                 <StyledRow>
                     <span>
-                        <a href={""}>Impressum</a> <a href={""}>Datenschutz</a>
+                        <Link href={"/impressum"} target={"_blank"}>
+                            Impressum
+                        </Link>{" "}
+                        <Link href={"/datenschutz"} target={"_blank"}>
+                            Datenschutz
+                        </Link>
                     </span>
                 </StyledRow>
             </StyledArea>

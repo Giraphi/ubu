@@ -8,6 +8,7 @@ import { colorAnimation } from "../../styles/keyframes";
 import Shaker from "../../images/figuren/shaker.svg";
 import HideOnMobile from "../HideOnMobile";
 import HideOnDesktop from "../HideOnDesktop";
+import SectionSpace from "../SectionSpace";
 
 const StyledTopLine = styled.div`
     color: ${(props) => props.theme.color.white};
@@ -47,7 +48,6 @@ const StyledColumnText = styled.div`
     display: flex;
     flex-direction: column;
     grid-row: 3;
-    margin-bottom: ${(props) => props.theme.space.lg};
 
     @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
         grid-row: 2;
@@ -116,6 +116,9 @@ export default function Intro() {
                     <br />
                 </StyledMembersParagraph>
                 <SocialIcons />
+                <HideOnDesktop>
+                    <SectionSpace />
+                </HideOnDesktop>
             </StyledColumnText>
 
             <StyledColumnImage>

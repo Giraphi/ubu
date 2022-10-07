@@ -58,7 +58,7 @@ export default function BandText(props: TextProps) {
                     <Figur>
                         <Kerze />
                     </Figur>
-                    <Figur>
+                    <Figur scale={2}>
                         <Shaker />
                     </Figur>
                 </Row>
