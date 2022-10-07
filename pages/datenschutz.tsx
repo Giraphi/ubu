@@ -18,11 +18,11 @@ const Datenschutz: NextPage = () => {
             <h3 id="dsg-general-intro"></h3>
             <p>
                 Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten
-                (nachfolgend kurz „Daten“) im Rahmen der Erbringung unserer Leistungen sowie innerhalb unseres Onlineangebotes und der mit
-                ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf
-                (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B.
-                „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).{" "}
-                <br />
+                (nachfolgend kurz &ldquo;Daten&rdquo;) im Rahmen der Erbringung unserer Leistungen sowie innerhalb unseres Onlineangebotes
+                und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media
+                Profile auf (nachfolgend gemeinsam bezeichnet als &ldquo;Onlineangebot&ldquo;). Im Hinblick auf die verwendeten
+                Begrifflichkeiten, wie z.B. &ldquo;Verarbeitung&rdquo; oder &ldquo;Verantwortlicher&rdquo; verweisen wir auf die
+                Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO). <br />
                 <br />
             </p>
             <h3 id="dsg-general-controller">Verantwortlicher</h3>
@@ -34,7 +34,7 @@ const Datenschutz: NextPage = () => {
                     <br />
                     <br />
                     (To make it more difficult for bots to read the e-mail address, we used [...] instead of real symbols Simply replace
-                    [at-symbol] with "@" and [dot-symbol] with ".")
+                    [at-symbol] with &quot;@&quot; and [dot-symbol] with &quot;.&quot;)
                 </span>
             </p>
             <h3 id="dsg-general-datatype">Arten der verarbeiteten Daten</h3>
@@ -51,7 +51,7 @@ const Datenschutz: NextPage = () => {
             <h3 id="dsg-general-datasubjects">Kategorien betroffener Personen</h3>
             <p>
                 Besucher und Nutzer des Onlineangebotes (Nachfolgend bezeichnen wir die betroffenen Personen zusammenfassend auch als
-                „Nutzer“).
+                &ldquo;Nutzer&rdquo;).
                 <br />
             </p>
             <h3 id="dsg-general-purpose">Zweck der Verarbeitung</h3>
@@ -68,38 +68,40 @@ const Datenschutz: NextPage = () => {
             </p>
             <h3 id="dsg-general-terms">Verwendete Begrifflichkeiten </h3>
             <p>
-                „Personenbezogene Daten“ sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person
-                (im Folgenden „betroffene Person“) beziehen; als identifizierbar wird eine natürliche Person angesehen, die direkt oder
-                indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer
-                Online-Kennung (z.B. Cookie) oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der
-                physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser
-                natürlichen Person sind.
+                &ldquo;Personenbezogene Daten&rdquo; sind alle Informationen, die sich auf eine identifizierte oder identifizierbare
+                natürliche Person (im Folgenden &ldquo;betroffene Person&rdquo;) beziehen; als identifizierbar wird eine natürliche Person
+                angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer,
+                zu Standortdaten, zu einer Online-Kennung (z.B. Cookie) oder zu einem oder mehreren besonderen Merkmalen identifiziert
+                werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder
+                sozialen Identität dieser natürlichen Person sind.
                 <br />
                 <br />
-                „Verarbeitung“ ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche Vorgangsreihe im
-                Zusammenhang mit personenbezogenen Daten. Der Begriff reicht weit und umfasst praktisch jeden Umgang mit Daten.
+                &ldquo;Verarbeitung&rdquo; ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche
+                Vorgangsreihe im Zusammenhang mit personenbezogenen Daten. Der Begriff reicht weit und umfasst praktisch jeden Umgang mit
+                Daten.
                 <br />
                 <br />
-                „Pseudonymisierung“ die Verarbeitung personenbezogener Daten in einer Weise, dass die personenbezogenen Daten ohne
-                Hinzuziehung zusätzlicher Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet werden können, sofern
-                diese zusätzlichen Informationen gesondert aufbewahrt werden und technischen und organisatorischen Maßnahmen unterliegen,
-                die gewährleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren natürlichen Person
-                zugewiesen werden.
+                &ldquo;Pseudonymisierung&rdquo; die Verarbeitung personenbezogener Daten in einer Weise, dass die personenbezogenen Daten
+                ohne Hinzuziehung zusätzlicher Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet werden können,
+                sofern diese zusätzlichen Informationen gesondert aufbewahrt werden und technischen und organisatorischen Maßnahmen
+                unterliegen, die gewährleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren
+                natürlichen Person zugewiesen werden.
                 <br />
                 <br />
-                „Profiling“ jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht, dass diese
+                &ldquo;Profiling&rdquo; jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht, dass diese
                 personenbezogenen Daten verwendet werden, um bestimmte persönliche Aspekte, die sich auf eine natürliche Person beziehen, zu
                 bewerten, insbesondere um Aspekte bezüglich Arbeitsleistung, wirtschaftliche Lage, Gesundheit, persönliche Vorlieben,
                 Interessen, Zuverlässigkeit, Verhalten, Aufenthaltsort oder Ortswechsel dieser natürlichen Person zu analysieren oder
                 vorherzusagen.
                 <br />
                 <br />
-                Als „Verantwortlicher“ wird die natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die allein oder
-                gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet, bezeichnet.
+                Als &ldquo;Verantwortlicher&rdquo; wird die natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die
+                allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet,
+                bezeichnet.
                 <br />
                 <br />
-                „Auftragsverarbeiter“ eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die personenbezogene
-                Daten im Auftrag des Verantwortlichen verarbeitet.
+                &ldquo;Auftragsverarbeiter&rdquo; eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die
+                personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.
                 <br />
             </p>
             <h3 id="dsg-general-legalbasis">Maßgebliche Rechtsgrundlagen</h3>
@@ -164,8 +166,8 @@ const Datenschutz: NextPage = () => {
                 oder auf Grundlage unserer berechtigten Interessen geschieht. Vorbehaltlich gesetzlicher oder vertraglicher Erlaubnisse,
                 verarbeiten oder lassen wir die Daten in einem Drittland nur beim Vorliegen der gesetzlichen Voraussetzungen. D.h. die
                 Verarbeitung erfolgt z.B. auf Grundlage besonderer Garantien, wie der offiziell anerkannten Feststellung eines der EU
-                entsprechenden Datenschutzniveaus (z.B. für die USA durch das „Privacy Shield“) oder Beachtung offiziell anerkannter
-                spezieller vertraglicher Verpflichtungen.
+                entsprechenden Datenschutzniveaus (z.B. für die USA durch das &ldquo;Privacy Shield&rdquo;) oder Beachtung offiziell
+                anerkannter spezieller vertraglicher Verpflichtungen.
             </p>
             <h3 id="dsg-general-rightssubject">Rechte der betroffenen Personen</h3>
             <p>
@@ -199,17 +201,18 @@ const Datenschutz: NextPage = () => {
             </p>
             <h3 id="dsg-general-cookies">Cookies und Widerspruchsrecht bei Direktwerbung</h3>
             <p>
-                Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern der Nutzer gespeichert werden. Innerhalb der Cookies können
-                unterschiedliche Angaben gespeichert werden. Ein Cookie dient primär dazu, die Angaben zu einem Nutzer (bzw. dem Gerät auf
-                dem das Cookie gespeichert ist) während oder auch nach seinem Besuch innerhalb eines Onlineangebotes zu speichern. Als
-                temporäre Cookies, bzw. „Session-Cookies“ oder „transiente Cookies“, werden Cookies bezeichnet, die gelöscht werden, nachdem
-                ein Nutzer ein Onlineangebot verlässt und seinen Browser schließt. In einem solchen Cookie kann z.B. der Inhalt eines
-                Warenkorbs in einem Onlineshop oder ein Login-Status gespeichert werden. Als „permanent“ oder „persistent“ werden Cookies
-                bezeichnet, die auch nach dem Schließen des Browsers gespeichert bleiben. So kann z.B. der Login-Status gespeichert werden,
-                wenn die Nutzer diese nach mehreren Tagen aufsuchen. Ebenso können in einem solchen Cookie die Interessen der Nutzer
-                gespeichert werden, die für Reichweitenmessung oder Marketingzwecke verwendet werden. Als „Third-Party-Cookie“ werden
-                Cookies bezeichnet, die von anderen Anbietern als dem Verantwortlichen, der das Onlineangebot betreibt, angeboten werden
-                (andernfalls, wenn es nur dessen Cookies sind spricht man von „First-Party Cookies“).
+                Als &ldquo;Cookies&rdquo; werden kleine Dateien bezeichnet, die auf Rechnern der Nutzer gespeichert werden. Innerhalb der
+                Cookies können unterschiedliche Angaben gespeichert werden. Ein Cookie dient primär dazu, die Angaben zu einem Nutzer (bzw.
+                dem Gerät auf dem das Cookie gespeichert ist) während oder auch nach seinem Besuch innerhalb eines Onlineangebotes zu
+                speichern. Als temporäre Cookies, bzw. &ldquo;Session-Cookies&rdquo; oder &ldquo;transiente Cookies&rdquo;, werden Cookies
+                bezeichnet, die gelöscht werden, nachdem ein Nutzer ein Onlineangebot verlässt und seinen Browser schließt. In einem solchen
+                Cookie kann z.B. der Inhalt eines Warenkorbs in einem Onlineshop oder ein Login-Status gespeichert werden. Als
+                &ldquo;permanent&rdquo; oder &ldquo;persistent&rdquo; werden Cookies bezeichnet, die auch nach dem Schließen des Browsers
+                gespeichert bleiben. So kann z.B. der Login-Status gespeichert werden, wenn die Nutzer diese nach mehreren Tagen aufsuchen.
+                Ebenso können in einem solchen Cookie die Interessen der Nutzer gespeichert werden, die für Reichweitenmessung oder
+                Marketingzwecke verwendet werden. Als &ldquo;Third-Party-Cookie&rdquo; werden Cookies bezeichnet, die von anderen Anbietern
+                als dem Verantwortlichen, der das Onlineangebot betreibt, angeboten werden (andernfalls, wenn es nur dessen Cookies sind
+                spricht man von &ldquo;First-Party Cookies&rdquo;).
                 <br />
                 <br />
                 Wir können temporäre und permanente Cookies einsetzen und klären hierüber im Rahmen unserer Datenschutzerklärung auf.
@@ -250,7 +253,8 @@ const Datenschutz: NextPage = () => {
             <p></p>
             <p>
                 <span className="ts-muster-content">
-                    Unsere Podcasts werden auf der Plattform „Bandcamp“ gespeichert und werden von dieser Plattform aus wiedergegeben.
+                    Unsere Podcasts werden auf der Plattform &ldquo;Bandcamp&rdquo; gespeichert und werden von dieser Plattform aus
+                    wiedergegeben.
                     <br />
                     <br />
                     Zu diesem Zweck binden wir sog. Bandcamp-Widgets in unsere Website ein. Dabei handelt es sich um Abspielsoftware, mit
@@ -427,7 +431,7 @@ const Datenschutz: NextPage = () => {
                     Wir setzen innerhalb unseres Onlineangebotes auf Grundlage unserer berechtigten Interessen (d.h. Interesse an der
                     Analyse, Optimierung und wirtschaftlichem Betrieb unseres Onlineangebotes im Sinne des Art. 6 Abs. 1 lit. f. DSGVO)
                     Inhalts- oder Serviceangebote von Drittanbietern ein, um deren Inhalte und Services, wie z.B. Videos oder Schriftarten
-                    einzubinden (nachfolgend einheitlich bezeichnet als “Inhalte”). <br />
+                    einzubinden (nachfolgend einheitlich bezeichnet als &rdquo;Inhalte”). <br />
                     <br />
                     Dies setzt immer voraus, dass die Drittanbieter dieser Inhalte, die IP-Adresse der Nutzer wahrnehmen, da sie ohne die
                     IP-Adresse die Inhalte nicht an deren Browser senden könnten. Die IP-Adresse ist damit für die Darstellung dieser
@@ -446,8 +450,8 @@ const Datenschutz: NextPage = () => {
             <p></p>
             <p>
                 <span className="ts-muster-content">
-                    Wir binden die Videos der Plattform “YouTube” des Anbieters Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA
-                    94043, USA, ein. Datenschutzerklärung:{" "}
+                    Wir binden die Videos der Plattform &rdquo;YouTube” des Anbieters Google LLC, 1600 Amphitheatre Parkway, Mountain View,
+                    CA 94043, USA, ein. Datenschutzerklärung:{" "}
                     <a target="_blank" href="https://www.google.com/policies/privacy/" rel="noreferrer">
                         https://www.google.com/policies/privacy/
                     </a>

@@ -14,10 +14,14 @@ const Impressum: NextPage = () => {
             <Grid>
                 <CompactArea>
                     <SectionSpace />
-
                     <h1>Owner</h1>
                     <div>Raphael Höps</div>
-                    <div>E-mail: hoeps.raphael [at] gmail.com</div>
+                    <br />
+                    E-mail: raphael[dot-symbol]hoeps[at-symbol]gmx[dot-symbol]net
+                    <br />
+                    <br />
+                    (To make it more difficult for bots to read the e-mail address, we used [...] instead of real symbols Simply replace
+                    [at-symbol] with &quot;@&quot; and [dot-symbol] with &quot;.&quot;)
                     <SectionSpace />
                 </CompactArea>
             </Grid>
