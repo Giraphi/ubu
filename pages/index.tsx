@@ -4,8 +4,6 @@ import styled from "styled-components";
 import Intro from "../components/sections/Intro";
 import Photos from "../components/sections/Photos";
 import BandText from "../components/sections/BandText";
-import Demo from "../components/sections/Demo";
-import Figur from "../components/Figur";
 import Footer from "../components/Footer";
 
 const StyledRoot = styled.div`
