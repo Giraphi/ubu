@@ -6,7 +6,6 @@ import Hexe from "../../images/figuren/hexe.svg";
 import Hexe2 from "../../images/figuren/hexe_2.svg";
 import Narr from "../../images/figuren/narr.svg";
 import Kerze from "../../images/figuren/kerze.svg";
-import Zauberer from "../../images/figuren/zauberer.svg";
 import Shaker from "../../images/figuren/shaker.svg";
 import Figur from "../Figur";
 

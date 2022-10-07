@@ -96,8 +96,8 @@ export default function Photos(props: PhotosProps) {
                 <StyledText>
                     <h2>Ubu @ImportExport</h2>
                     <p>
-                        Ubu bei den <a href={"https://alternativefakten089.de/"}>Alternativen Fakten</a> im September 2022 im Münchner{" "}
-                        <a href={"https://import-export.cc/"}>Import Export</a>. Fotos von Vanessa Mönius.
+                        Ubu bei den <a href={"https://alternativefakten089.de/"}>Alternativen Fakten</a> im September 2022{" "}
+                        <a href={"https://import-export.cc/"}>Import Export</a> München. Fotos von Vanessa Mönius.
                     </p>
                 </StyledText>
             </Grid>

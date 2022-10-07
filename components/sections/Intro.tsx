@@ -44,13 +44,11 @@ const StyledColumnText = styled.div`
     color: ${(props) => props.theme.color.white};
     display: flex;
     flex-direction: column;
-    justify-content: center;
     grid-row: 2;
 
     @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
-        padding-bottom: 30%;
+        padding-top: 33%;
         grid-column: ${GridLines.col8Start} / ${GridLines.col11End};
-        justify-content: center;
     }
 `;
 

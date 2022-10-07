@@ -28,8 +28,11 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    a, a:hover, a:focus {
+    a, a:focus {
         color: ${(props) => props.theme.color.white}
+    }
+    a:hover {
+        text-decoration: line-through;
     }
 
     // For safari
