@@ -5,8 +5,9 @@ import alle from "../../images/photos/alle.jpg";
 import simon from "../../images/photos/simon.jpg";
 import raphi from "../../images/photos/raphi.jpg";
 import daniel from "../../images/photos/daniel.jpg";
-import { rectangleKeyframes, starKeyframes } from "../../styles/clip-paths";
+import { rectangleKeyframes, starKeyframes } from "../../styles/clip-path-keyframes";
 import CompactArea from "../CompactArea";
+import SectionSpace from "../SectionSpace";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -115,6 +116,7 @@ export default function Photos(props: PhotosProps) {
                     <StyledImg src={daniel.src} />
                 </StyledDanielImage>
             </StyledGrid>
+            <SectionSpace />
         </>
     );
 }

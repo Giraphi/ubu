@@ -5,6 +5,7 @@ import Intro from "../components/sections/Intro";
 import Photos from "../components/sections/Photos";
 import BandText from "../components/sections/BandText";
 import Footer from "../components/Footer";
+import PhotosRuebe from "../components/sections/PhotosRuebe";
 
 const StyledRoot = styled.div`
     min-height: 100vh;
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
             {/*<Demo />*/}
             <BandText />
             <Photos />
+            <PhotosRuebe />
             <Footer />
         </StyledRoot>
     );

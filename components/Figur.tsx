@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from "react";
 import styled, { css } from "styled-components";
-import { colorAnimation } from "../styles/keyframes";
+import { colorAnimation } from "../styles/color-animation";
 
 const StyledRoot = styled.div<{ scale: number; delay: number; disableSpace?: boolean }>`
     width: ${(props) => props.theme.space.figure};
