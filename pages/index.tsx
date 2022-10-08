@@ -12,6 +12,7 @@ const StyledRoot = styled.div`
     background: ${(props) => props.theme.color.black};
     padding-bottom: ${(props) => props.theme.space.lg};
     padding-top: ${(props) => props.theme.space.md};
+    overflow-x: hidden;
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         padding-top: ${(props) => props.theme.space.lg};

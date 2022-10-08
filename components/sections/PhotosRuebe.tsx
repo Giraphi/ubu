@@ -5,21 +5,12 @@ import styled from "styled-components";
 import simon from "../../images/fotos-ruebezahl/ruebe-simon.jpg";
 import daniel from "../../images/fotos-ruebezahl/ruebe-daniel.jpg";
 import raphi from "../../images/fotos-ruebezahl/ruebe-raphi.jpg";
-import { flickerKeyframes } from "../../styles/flicker-keyframes";
 import { noiseKeyframes } from "../../styles/noise-keyframes";
 import GlitchyImage from "../GlitchyImage";
 import SectionSpace from "../SectionSpace";
 
 const StyledGrid = styled(Grid)`
-    row-gap: ${(props) => props.theme.grid.gap.base};
-
-    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        row-gap: ${(props) => props.theme.grid.gap.md};
-    }
-
-    @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
-        row-gap: ${(props) => props.theme.grid.gap.lg};
-    }
+    row-gap: ${(props) => props.theme.grid.gap.lg};
 `;
 
 const StyledRaphiImage = styled.div`
