@@ -4,7 +4,7 @@ import Logo from "../../images/logo.svg";
 import LeviathanNoBg from "../../images/leviathan-no-bg.svg";
 import SocialIcons from "../SocialIcons";
 import styled from "styled-components";
-import { colorAnimation } from "../../styles/keyframes";
+import { colorAnimation } from "../../styles/color-animation";
 import Shaker from "../../images/figuren/shaker.svg";
 import HideOnMobile from "../HideOnMobile";
 import HideOnDesktop from "../HideOnDesktop";
