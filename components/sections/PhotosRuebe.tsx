@@ -82,7 +82,7 @@ const StyledNoise = styled.div`
     background: url("http://assets.iceable.com/img/noise-transparent.png");
     animation: ${noiseKeyframes} 0.2s infinite;
     visibility: visible;
-    filter: contrast(200) brightness(200);
+    filter: contrast(2) brightness(2);
 `;
 
 export interface PhotosRuebeProps {}
