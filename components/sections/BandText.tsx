@@ -48,7 +48,7 @@ export default function BandText(props: TextProps) {
                 <p>
                     Der Name der Band bezieht sich auf das Theaterstück &bdquo;König Ubu&rdquo; (1896) des französischen Schriftstellers
                     Alfred Jarry. Ein Stück, das wegen seines grotesken, karnevalesken und absurden Charakters viele surrealistische und
-                    dadaistische Künstler der damaligen Zeit in Erstaunen versetzte. Ubu Imperator ist auch der Titel eine der bekanntesten
+                    dadaistische Künstler der damaligen Zeit in Erstaunen versetzte. Ubu Imperator ist auch der Titel eines der bekanntesten
                     Werke von Max Ernst.
                 </p>
                 <Row>
