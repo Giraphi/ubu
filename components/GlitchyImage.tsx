@@ -11,7 +11,7 @@ const StyledGlitch = styled.div`
     height: 100%;
 `;
 
-const StyledImg = styled.div<{ numChild: number; variant?: number }>`
+const StyledImg = styled.div<{ numChild: number; variant: number }>`
     position: absolute;
     top: calc(-1 * 5px);
     left: calc(-1 * 10px);
@@ -25,28 +25,31 @@ const StyledImg = styled.div<{ numChild: number; variant?: number }>`
         props.numChild === 2 &&
         css`
             transform: translate3d(10px, 0, 0);
-            animation: ${glitch1} 4s infinite linear alternate;
+            animation: ${glitch1} 5s infinite linear alternate;
+            animation-delay: -${props.variant * 2}s;
         `}
 
     ${(props) =>
         props.numChild === 3 &&
         css`
             transform: translate3d(-10px, 0, 0);
-            animation: ${glitch2} 4s infinite linear alternate;
+            animation: ${glitch2} 5s infinite linear alternate;
+            animation-delay: -${props.variant * 2}s;
         `}
 
     ${(props) =>
         props.numChild === 4 &&
         css`
             transform: translate3d(0, -5px, 0) scale3d(-1, -1, 1);
-            animation: ${glitch3} 4s infinite linear alternate;
+            animation: ${glitch3} 6s infinite linear alternate;
+            animation-delay: -${props.variant * 2}s;
         `}
 
     ${(props) =>
         props.numChild === 5 &&
         css`
-            animation: ${flash} 3s steps(1, end) infinite;
-            animation-delay: -${props.variant}s;
+            animation: ${flash} ${props.variant * 3}s steps(1, end) infinite;
+            animation-delay: -${props.variant * 2}s;
         `}
 `;
 
@@ -61,11 +64,10 @@ export default function GlitchyImage(props: GlitchyImageProps) {
 
     return (
         <StyledGlitch>
-            <StyledImg style={imageStyle} numChild={1} />
-
-            {props.variant === 1 && <StyledImg style={imageStyle} numChild={2} />}
-            {props.variant === 2 && <StyledImg style={imageStyle} numChild={3} />}
-            {props.variant === 3 && <StyledImg style={imageStyle} numChild={4} />}
+            <StyledImg style={imageStyle} numChild={1} variant={props.variant} />
+            {props.variant === 1 && <StyledImg style={imageStyle} numChild={2} variant={props.variant} />}
+            {props.variant === 2 && <StyledImg style={imageStyle} numChild={3} variant={props.variant} />}
+            {props.variant === 3 && <StyledImg style={imageStyle} numChild={4} variant={props.variant} />}
             <StyledImg style={imageStyle} numChild={5} variant={props.variant} />
         </StyledGlitch>
     );
