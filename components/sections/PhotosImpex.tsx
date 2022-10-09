@@ -91,7 +91,7 @@ export const StyledDanielImage = styled.div`
 
 export interface PhotosProps {}
 
-export default function Photos(props: PhotosProps) {
+export default function PhotosImpex(props: PhotosProps) {
     return (
         <>
             <Grid>

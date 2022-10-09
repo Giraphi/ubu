@@ -14,18 +14,7 @@ const StyledRoot = styled.div`
 const Datenschutz: NextPage = () => {
     return (
         <StyledRoot>
-            <h2>Datenschutzerklärung</h2>
-            <h3 id="dsg-general-intro"></h3>
-            <p>
-                Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten
-                (nachfolgend kurz &ldquo;Daten&rdquo;) im Rahmen der Erbringung unserer Leistungen sowie innerhalb unseres Onlineangebotes
-                und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media
-                Profile auf (nachfolgend gemeinsam bezeichnet als &ldquo;Onlineangebot&ldquo;). Im Hinblick auf die verwendeten
-                Begrifflichkeiten, wie z.B. &ldquo;Verarbeitung&rdquo; oder &ldquo;Verantwortlicher&rdquo; verweisen wir auf die
-                Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO). <br />
-                <br />
-            </p>
-            <h3 id="dsg-general-controller">Verantwortlicher</h3>
+            <h2 id="dsg-general-controller">Verantwortlicher</h2>
             <p>
                 <span className="tsmcontroller">
                     Raphael Höps
@@ -36,6 +25,17 @@ const Datenschutz: NextPage = () => {
                     (To make it more difficult for bots to read the e-mail address, we used [...] instead of real symbols Simply replace
                     [at-symbol] with &quot;@&quot; and [dot-symbol] with &quot;.&quot;)
                 </span>
+            </p>
+            <h2>Datenschutzerklärung</h2>
+            <h3 id="dsg-general-intro"></h3>
+            <p>
+                Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten
+                (nachfolgend kurz &ldquo;Daten&rdquo;) im Rahmen der Erbringung unserer Leistungen sowie innerhalb unseres Onlineangebotes
+                und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media
+                Profile auf (nachfolgend gemeinsam bezeichnet als &ldquo;Onlineangebot&ldquo;). Im Hinblick auf die verwendeten
+                Begrifflichkeiten, wie z.B. &ldquo;Verarbeitung&rdquo; oder &ldquo;Verantwortlicher&rdquo; verweisen wir auf die
+                Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO). <br />
+                <br />
             </p>
             <h3 id="dsg-general-datatype">Arten der verarbeiteten Daten</h3>
             <p>
@@ -253,8 +253,8 @@ const Datenschutz: NextPage = () => {
             <p></p>
             <p>
                 <span className="ts-muster-content">
-                    Unsere Podcasts werden auf der Plattform &ldquo;Bandcamp&rdquo; gespeichert und werden von dieser Plattform aus
-                    wiedergegeben.
+                    Unsere Musik, Podcasts und Medien werden z.T. auf der Plattform &ldquo;Bandcamp&rdquo; gespeichert und werden von dieser
+                    Plattform aus wiedergegeben.
                     <br />
                     <br />
                     Zu diesem Zweck binden wir sog. Bandcamp-Widgets in unsere Website ein. Dabei handelt es sich um Abspielsoftware, mit

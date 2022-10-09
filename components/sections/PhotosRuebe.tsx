@@ -85,7 +85,7 @@ export default function PhotosRuebe(props: PhotosRuebeProps) {
                     <h2>Ubu @Rübezahl</h2>
                     <p>
                         Ubu auf dem sehr besonderen und nachhaltigem{" "}
-                        <a href={"https://www.youtube.com/watch?v=ylfAdSLbCS0"}>Rübezahl Festival</a> im August 2022
+                        <a href={"https://www.youtube.com/watch?v=ylfAdSLbCS0"}>Rübezahl Festival</a> im August 2022.
                     </p>
                 </CompactArea>
             </Grid>

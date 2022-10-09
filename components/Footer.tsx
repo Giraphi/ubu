@@ -21,12 +21,12 @@ export default function Footer() {
             <StyledArea>
                 <StyledRow>
                     <span>
-                        <Link href={"/impressum"} target={"_blank"}>
+                        <a href={"/impressum"} target={"_blank"} rel="noreferrer">
                             Impressum
-                        </Link>{" "}
-                        <Link href={"/datenschutz"} target={"_blank"}>
+                        </a>{" "}
+                        <a href={"/datenschutz"} target={"_blank"} rel="noreferrer">
                             Datenschutz
-                        </Link>
+                        </a>
                     </span>
                 </StyledRow>
             </StyledArea>
