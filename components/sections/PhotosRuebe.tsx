@@ -19,7 +19,6 @@ const StyledRaphiImage = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     ${(props) => aspectRatioMixin(props.theme.ratio.square)}
     overflow: hidden;
-    position: relative;
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         grid-row: 1;
@@ -31,9 +30,8 @@ const StyledRaphiImage = styled.div`
 const StyledSimonImage = styled.div`
     grid-row: 2;
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
-    overflow: hidden;
-    position: relative;
     ${(props) => aspectRatioMixin(props.theme.ratio.square)}
+    overflow: hidden;
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         ${(props) => aspectRatioMixin(props.theme.ratio.high)}
@@ -43,11 +41,10 @@ const StyledSimonImage = styled.div`
 `;
 
 const StyledDanielImage = styled.div`
-    overflow: hidden;
-    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
-    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
-    position: relative;
     grid-row: 3;
+    overflow: hidden;
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
+    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         grid-row: 2;

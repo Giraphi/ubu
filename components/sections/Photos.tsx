@@ -32,9 +32,10 @@ export const StyledImg = styled.img`
 export const StyledAllImage = styled.div`
     grid-row: 1;
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
+
     animation: ${rectangleKeyframes} 9s infinite 0.7s;
     animation-timing-function: linear;
-    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         ${(props) => aspectRatioMixin(props.theme.ratio.wide)}
@@ -45,9 +46,10 @@ export const StyledAllImage = styled.div`
 export const StyledSimonImage = styled.div`
     grid-row: 2;
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
+
     animation: ${rectangleKeyframes} 8.2s infinite 0.3s;
     animation-timing-function: linear;
-    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         ${(props) => aspectRatioMixin(props.theme.ratio.high)}
@@ -58,10 +60,10 @@ export const StyledSimonImage = styled.div`
 export const StyledRaphiImage = styled.div`
     grid-row: 3;
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
 
     animation: ${rectangleKeyframes} 8.5s infinite 1.1s;
     animation-timing-function: linear;
-    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         ${(props) => aspectRatioMixin(props.theme.ratio.high)}
@@ -73,11 +75,11 @@ export const StyledRaphiImage = styled.div`
 export const StyledDanielImage = styled.div`
     grid-row: 4;
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
 
     transform: scaleX(-1);
     animation: ${rectangleKeyframes} 8s infinite;
     animation-timing-function: linear;
-    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         ${(props) => aspectRatioMixin(props.theme.ratio.xWide)}
