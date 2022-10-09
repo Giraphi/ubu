@@ -4,35 +4,41 @@ export const glitch1 = keyframes`
 0% {
     clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
 }
-10% {
+2% {
     clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
 }
-20% {
+4% {
     clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
 }
-30% {
+6% {
     clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
 }
-40% {
+8% {
     clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
 }
-50% {
+10% {
     clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
 }
-60% {
+12% {
     clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
 }
-70% {
+14% {
     clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
 }
-80% {
+16% {
     clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
 }
-90% {
+18% {
     clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
 }
-100% {
+20% {
     clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+}
+21% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+}
+100% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
 }
 `;
 

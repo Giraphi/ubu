@@ -93,17 +93,17 @@ export default function PhotosRuebe(props: PhotosRuebeProps) {
             </Grid>
             <StyledGrid>
                 <StyledRaphiImage>
-                    <GlitchyImage src={raphi.src} variant={0} />
-                    {/*<StyledNoise />*/}
+                    <GlitchyImage src={raphi.src} variant={1} />
+                    <StyledNoise />
                 </StyledRaphiImage>
 
                 <StyledSimonImage>
                     <GlitchyImage src={simon.src} variant={2} imagePosition={"58% 14%"} />
-                    {/*<StyledNoise />*/}
+                    <StyledNoise />
                 </StyledSimonImage>
 
                 <StyledDanielImage>
-                    {/*<GlitchyImage src={daniel.src} variant={3} imagePosition={"19% 38%"} />*/}
+                    <GlitchyImage src={daniel.src} variant={3} imagePosition={"19% 38%"} />
                     <StyledNoise />
                 </StyledDanielImage>
             </StyledGrid>
