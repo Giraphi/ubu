@@ -25,7 +25,7 @@ const StyledImg = styled.div<{ numChild: number; variant: number }>`
         props.numChild === 2 &&
         css`
             transform: translate3d(10px, 0, 0);
-            animation: ${glitch1} 5s infinite linear alternate;
+            animation: ${glitch1} 3s infinite linear alternate;
             animation-delay: -${props.variant * 2}s;
         `}
 
@@ -41,7 +41,7 @@ const StyledImg = styled.div<{ numChild: number; variant: number }>`
         props.numChild === 4 &&
         css`
             transform: translate3d(0, -5px, 0) scale3d(-1, -1, 1);
-            animation: ${glitch3} 6s infinite linear alternate;
+            animation: ${glitch3} 4s infinite linear alternate;
             animation-delay: -${props.variant * 2}s;
         `}
 
