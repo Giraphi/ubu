@@ -8,6 +8,7 @@ import raphi from "../../images/fotos-ruebezahl/ruebe-raphi.jpg";
 import { noiseKeyframes } from "../../styles/noise-keyframes";
 import GlitchyImage from "../GlitchyImage";
 import SectionSpace from "../SectionSpace";
+import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.lg};
@@ -16,13 +17,13 @@ const StyledGrid = styled(Grid)`
 const StyledRaphiImage = styled.div`
     grid-row: 1;
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
-    aspect-ratio: ${(props) => props.theme.ratio.square};
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
     overflow: hidden;
     position: relative;
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         grid-row: 1;
-        aspect-ratio: ${(props) => props.theme.ratio.high};
+        ${(props) => aspectRatioMixin(props.theme.ratio.high)}
         grid-column: ${GridLines.contentLeft} / ${GridLines.col6End};
     }
 `;
@@ -32,10 +33,10 @@ const StyledSimonImage = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     overflow: hidden;
     position: relative;
-    aspect-ratio: ${(props) => props.theme.ratio.square};
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        aspect-ratio: ${(props) => props.theme.ratio.high};
+        ${(props) => aspectRatioMixin(props.theme.ratio.high)}
         grid-row: 1;
         grid-column: ${GridLines.col7Start} / ${GridLines.contentRight};
     }
@@ -44,13 +45,13 @@ const StyledSimonImage = styled.div`
 const StyledDanielImage = styled.div`
     overflow: hidden;
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
-    aspect-ratio: ${(props) => props.theme.ratio.square};
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
     position: relative;
     grid-row: 3;
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         grid-row: 2;
-        aspect-ratio: ${(props) => props.theme.ratio.xWide};
+        ${(props) => aspectRatioMixin(props.theme.ratio.xWide)}
     }
 `;
 
@@ -93,18 +94,24 @@ export default function PhotosRuebe(props: PhotosRuebeProps) {
             </Grid>
             <StyledGrid>
                 <StyledRaphiImage>
-                    <GlitchyImage src={raphi.src} variant={1} />
-                    <StyledNoise />
+                    <AspectRatioContent>
+                        <GlitchyImage src={raphi.src} variant={1} />
+                        <StyledNoise />
+                    </AspectRatioContent>
                 </StyledRaphiImage>
 
                 <StyledSimonImage>
-                    <GlitchyImage src={simon.src} variant={2} imagePosition={"58% 14%"} />
-                    <StyledNoise />
+                    <AspectRatioContent>
+                        <GlitchyImage src={simon.src} variant={2} imagePosition={"58% 14%"} />
+                        <StyledNoise />
+                    </AspectRatioContent>
                 </StyledSimonImage>
 
                 <StyledDanielImage>
-                    <GlitchyImage src={daniel.src} variant={3} imagePosition={"19% 38%"} />
-                    <StyledNoise />
+                    <AspectRatioContent>
+                        <GlitchyImage src={daniel.src} variant={3} imagePosition={"19% 38%"} />
+                        <StyledNoise />
+                    </AspectRatioContent>
                 </StyledDanielImage>
             </StyledGrid>
             <SectionSpace />

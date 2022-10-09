@@ -5,9 +5,10 @@ import alle from "../../images/photos/alle.jpg";
 import simon from "../../images/photos/simon.jpg";
 import raphi from "../../images/photos/raphi.jpg";
 import daniel from "../../images/photos/daniel.jpg";
-import { rectangleKeyframes, starKeyframes } from "../../styles/clip-path-keyframes";
+import { rectangleKeyframes } from "../../styles/clip-path-keyframes";
 import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
+import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -33,10 +34,10 @@ export const StyledAllImage = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     animation: ${rectangleKeyframes} 9s infinite 0.7s;
     animation-timing-function: linear;
-    aspect-ratio: ${(props) => props.theme.ratio.square};
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        aspect-ratio: ${(props) => props.theme.ratio.wide};
+        ${(props) => aspectRatioMixin(props.theme.ratio.wide)}
         grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     }
 `;
@@ -46,10 +47,10 @@ export const StyledSimonImage = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     animation: ${rectangleKeyframes} 8.2s infinite 0.3s;
     animation-timing-function: linear;
-    aspect-ratio: ${(props) => props.theme.ratio.square};
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        aspect-ratio: ${(props) => props.theme.ratio.high};
+        ${(props) => aspectRatioMixin(props.theme.ratio.high)}
         grid-column: ${GridLines.contentLeft} / ${GridLines.col6End};
     }
 `;
@@ -60,10 +61,10 @@ export const StyledRaphiImage = styled.div`
 
     animation: ${rectangleKeyframes} 8.5s infinite 1.1s;
     animation-timing-function: linear;
-    aspect-ratio: ${(props) => props.theme.ratio.square};
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        aspect-ratio: ${(props) => props.theme.ratio.high};
+        ${(props) => aspectRatioMixin(props.theme.ratio.high)}
         grid-row: 2;
         grid-column: ${GridLines.col7Start} / ${GridLines.contentRight};
     }
@@ -76,10 +77,11 @@ export const StyledDanielImage = styled.div`
     transform: scaleX(-1);
     animation: ${rectangleKeyframes} 8s infinite;
     animation-timing-function: linear;
-    aspect-ratio: ${(props) => props.theme.ratio.square};
+    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        aspect-ratio: ${(props) => props.theme.ratio.wide * 1.5};
+        ${(props) => aspectRatioMixin(props.theme.ratio.xWide)}
+
         grid-row: 3;
         grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     }
@@ -101,19 +103,27 @@ export default function Photos(props: PhotosProps) {
             </Grid>
             <StyledGrid>
                 <StyledAllImage>
-                    <StyledImg src={alle.src} />
+                    <AspectRatioContent>
+                        <StyledImg src={alle.src} />
+                    </AspectRatioContent>
                 </StyledAllImage>
 
                 <StyledRaphiImage>
-                    <StyledImg src={raphi.src} />
+                    <AspectRatioContent>
+                        <StyledImg src={raphi.src} />
+                    </AspectRatioContent>
                 </StyledRaphiImage>
 
                 <StyledSimonImage>
-                    <StyledImg src={simon.src} />
+                    <AspectRatioContent>
+                        <StyledImg src={simon.src} />
+                    </AspectRatioContent>
                 </StyledSimonImage>
 
                 <StyledDanielImage>
-                    <StyledImg src={daniel.src} />
+                    <AspectRatioContent>
+                        <StyledImg src={daniel.src} />
+                    </AspectRatioContent>
                 </StyledDanielImage>
             </StyledGrid>
             <SectionSpace />
