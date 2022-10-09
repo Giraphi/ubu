@@ -74,6 +74,7 @@ const StyledNoise = styled.div`
     animation: ${noiseKeyframes} 0.2s infinite;
     visibility: visible;
     filter: contrast(2) brightness(2);
+    border: 1px solid gray;
 `;
 
 export interface PhotosRuebeProps {}
@@ -92,16 +93,17 @@ export default function PhotosRuebe(props: PhotosRuebeProps) {
             </Grid>
             <StyledGrid>
                 <StyledRaphiImage>
-                    <GlitchyImage src={raphi.src} variant={1} />
-                    <StyledNoise />
+                    <GlitchyImage src={raphi.src} variant={0} />
+                    {/*<StyledNoise />*/}
                 </StyledRaphiImage>
 
                 <StyledSimonImage>
                     <GlitchyImage src={simon.src} variant={2} imagePosition={"58% 14%"} />
-                    <StyledNoise />
+                    {/*<StyledNoise />*/}
                 </StyledSimonImage>
+
                 <StyledDanielImage>
-                    <GlitchyImage src={daniel.src} variant={3} imagePosition={"19% 38%"} />
+                    {/*<GlitchyImage src={daniel.src} variant={3} imagePosition={"19% 38%"} />*/}
                     <StyledNoise />
                 </StyledDanielImage>
             </StyledGrid>

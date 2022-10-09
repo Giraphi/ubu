@@ -62,10 +62,18 @@ export default function GlitchyImage(props: GlitchyImageProps) {
     return (
         <StyledGlitch>
             <StyledImg style={imageStyle} numChild={1} />
-            {props.variant === 1 && <StyledImg style={imageStyle} numChild={2} />}
-            {props.variant === 2 && <StyledImg style={imageStyle} numChild={3} />}
-            {props.variant === 3 && <StyledImg style={imageStyle} numChild={4} />}
-            <StyledImg style={imageStyle} numChild={5} variant={props.variant} />
+            {props.variant !== 0 && (
+                <>
+                    {props.variant === 1 && <StyledImg style={imageStyle} numChild={2} />}
+                    {props.variant === 2 && <StyledImg style={imageStyle} numChild={3} />}
+                    {props.variant === 3 && (
+                        <>
+                            <StyledImg style={imageStyle} numChild={4} />
+                            <StyledImg style={imageStyle} numChild={5} variant={props.variant} />
+                        </>
+                    )}
+                </>
+            )}
         </StyledGlitch>
     );
 }

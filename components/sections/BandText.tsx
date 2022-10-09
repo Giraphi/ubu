@@ -38,10 +38,10 @@ export default function BandText(props: TextProps) {
                     <Figur>
                         <Hexe />
                     </Figur>
-                    <Figur>
+                    <Figur delay={1}>
                         <Hexe2 />
                     </Figur>
-                    <StyledRotateFigure>
+                    <StyledRotateFigure delay={2}>
                         <Hexe />
                     </StyledRotateFigure>
                 </Row>
@@ -52,13 +52,13 @@ export default function BandText(props: TextProps) {
                     Werke von Max Ernst.
                 </p>
                 <Row>
-                    <Figur>
+                    <Figur delay={3}>
                         <Narr />
                     </Figur>
-                    <Figur>
+                    <Figur delay={1.5}>
                         <Kerze />
                     </Figur>
-                    <Figur scale={2}>
+                    <Figur scale={2} delay={4}>
                         <Shaker />
                     </Figur>
                 </Row>

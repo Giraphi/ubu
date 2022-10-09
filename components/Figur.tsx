@@ -25,16 +25,18 @@ const StyledRoot = styled.div<{ scale: number; delay: number; disableSpace?: boo
 
 export interface FigurProps {
     children: ReactNode;
+    delay?: number;
     disableSpace?: boolean;
     className?: string;
     scale?: number;
 }
 
 export default function Figur(props: FigurProps) {
-    const animationDelay = useState(Math.random() * 3)[0];
+    // const animationDelay = useState(Math.random() * 3)[0];
     const scale = props.scale || 1.5;
+
     return (
-        <StyledRoot scale={scale} className={props.className} disableSpace={props.disableSpace} delay={animationDelay}>
+        <StyledRoot scale={scale} className={props.className} disableSpace={props.disableSpace} delay={props.delay || 0}>
             {props.children}
         </StyledRoot>
     );
