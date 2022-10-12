@@ -93,7 +93,7 @@ const StyledMembersParagraph = styled.p`
 export default function Intro() {
     const scrollTarget = useRef<HTMLDivElement>(null);
 
-    function handleClick() {
+    function scrollDown(e: React.MouseEvent) {
         if (!scrollTarget.current) {
             return;
         }
@@ -101,9 +101,9 @@ export default function Intro() {
     }
 
     return (
-        <div onClick={handleClick}>
+        <div>
             <Grid>
-                <StyledTopLine>
+                <StyledTopLine onClick={scrollDown}>
                     <Logo />
                 </StyledTopLine>
                 <StyledColumnText>
@@ -137,7 +137,7 @@ export default function Intro() {
                     </HideOnDesktop>
                 </StyledColumnText>
 
-                <StyledColumnImage ref={scrollTarget}>
+                <StyledColumnImage ref={scrollTarget} onClick={scrollDown}>
                     <LeviathanNoBg />
                 </StyledColumnImage>
                 <StyledScrollTarget ref={scrollTarget} />
