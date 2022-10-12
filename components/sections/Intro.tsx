@@ -23,7 +23,7 @@ const StyledTopLine = styled.div`
         grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
     }
 
-    @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         margin-bottom: ${(props) => props.theme.space.lg};
         margin-top: ${(props) => props.theme.space.md};
         grid-column: ${GridLines.col4Start} / ${GridLines.col9End};
@@ -49,7 +49,7 @@ const StyledColumnText = styled.div`
     flex-direction: column;
     grid-row: 3;
 
-    @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         grid-row: 2;
         margin-bottom: 0;
         padding-top: 33%;
@@ -73,7 +73,7 @@ const StyledColumnImage = styled.div`
         content: " ";
     }
 
-    @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         grid-row: 2;
         grid-column: ${GridLines.col2Start} / ${GridLines.col7End};
         text-align: right;

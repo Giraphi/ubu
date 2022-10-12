@@ -6,6 +6,7 @@ import PhotosImpex from "../components/sections/PhotosImpex";
 import BandText from "../components/sections/BandText";
 import Footer from "../components/Footer";
 import PhotosRuebe from "../components/sections/PhotosRuebe";
+import Demo from "../components/sections/Demo";
 
 const StyledRoot = styled.div`
     min-height: 100vh;
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
     return (
         <StyledRoot>
             <Intro />
-            {/*<Demo />*/}
+            <Demo />
             <BandText />
             <PhotosImpex />
             <PhotosRuebe />
