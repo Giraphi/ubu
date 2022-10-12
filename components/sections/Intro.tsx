@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import Grid, { GridLines } from "../Grid";
-import Logo from "../../images/optimized/logo.svg";
-import Leviathan from "../../images/optimized/leviathan.svg";
+import Logo from "../../images/logo.svg";
+import LeviathanNoBg from "../../images/leviathan-no-bg.svg";
 import SocialIcons from "../SocialIcons";
 import styled from "styled-components";
 import { colorAnimation } from "../../styles/color-animation";
@@ -62,8 +62,6 @@ const StyledColumnImage = styled.div`
     ${colorAnimation};
     grid-row: 2;
     position: relative;
-    height: 0;
-    padding-bottom: 135%;
 
     ::before {
         position: absolute;
@@ -71,9 +69,8 @@ const StyledColumnImage = styled.div`
         width: 100%;
         height: 100%;
         display: flex;
-        background-image: linear-gradient(to top, ${(props) => props.theme.color.black} 8%, transparent 30%);
+        background-image: linear-gradient(to top, ${(props) => props.theme.color.black} 10%, transparent 30%);
         content: " ";
-        z-index: 10;
     }
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
@@ -81,18 +78,7 @@ const StyledColumnImage = styled.div`
         grid-column: ${GridLines.col2Start} / ${GridLines.col7End};
         text-align: right;
     }
-
-    > svg {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        object-fit: contain;
-    }
 `;
-
-const StyledImageRatio = styled.div``;
 
 const StyledScrollTarget = styled.div`
     grid-row: 3;
@@ -107,7 +93,7 @@ const StyledMembersParagraph = styled.p`
 export default function Intro() {
     const scrollTarget = useRef<HTMLDivElement>(null);
 
-    function scrollDown(e: React.MouseEvent) {
+    function handleClick() {
         if (!scrollTarget.current) {
             return;
         }
@@ -115,16 +101,11 @@ export default function Intro() {
     }
 
     return (
-        <div>
+        <div onClick={handleClick}>
             <Grid>
-                <StyledTopLine onClick={scrollDown}>
+                <StyledTopLine>
                     <Logo />
                 </StyledTopLine>
-
-                <StyledColumnImage ref={scrollTarget} onClick={scrollDown}>
-                    <Leviathan />
-                </StyledColumnImage>
-
                 <StyledColumnText>
                     <HideOnMobile>
                         <StyledShaker>
@@ -156,6 +137,9 @@ export default function Intro() {
                     </HideOnDesktop>
                 </StyledColumnText>
 
+                <StyledColumnImage ref={scrollTarget}>
+                    <LeviathanNoBg />
+                </StyledColumnImage>
                 <StyledScrollTarget ref={scrollTarget} />
             </Grid>
         </div>
