@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Grid, { GridLines } from "../Grid";
 import Logo from "../../images/logo.svg";
 import LeviathanNoBg from "../../images/leviathan-no-bg.svg";
@@ -80,54 +80,68 @@ const StyledColumnImage = styled.div`
     }
 `;
 
+const StyledScrollTarget = styled.div`
+    grid-row: 3;
+    position: relative;
+    top: -30px;
+`;
+
 const StyledMembersParagraph = styled.p`
     margin-bottom: ${(props) => props.theme.space.gutter * 4}px;
 `;
 
 export default function Intro() {
+    const scrollTarget = useRef<HTMLDivElement>(null);
+
+    function handleClick() {
+        if (!scrollTarget.current) {
+            return;
+        }
+        scrollTarget.current.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+
     return (
-        <Grid>
-            <StyledTopLine>
-                <Logo />
-            </StyledTopLine>
-            <StyledColumnText>
-                <HideOnMobile>
-                    <StyledShaker>
-                        <Shaker />
-                    </StyledShaker>
-                </HideOnMobile>
-                <p>
-                    Something is rising from the depths.
-                    <br />
-                    King Ubu awaits you.
-                </p>
-                <HideOnDesktop>
-                    <StyledShaker>
-                        <Shaker />
-                    </StyledShaker>
-                </HideOnDesktop>
+        <div onClick={handleClick}>
+            <Grid>
+                <StyledTopLine>
+                    <Logo />
+                </StyledTopLine>
+                <StyledColumnText>
+                    <HideOnMobile>
+                        <StyledShaker>
+                            <Shaker />
+                        </StyledShaker>
+                    </HideOnMobile>
+                    <p>
+                        Something is rising from the depths.
+                        <br />
+                        King Ubu awaits you.
+                    </p>
+                    <HideOnDesktop>
+                        <StyledShaker>
+                            <Shaker />
+                        </StyledShaker>
+                    </HideOnDesktop>
 
-                <StyledMembersParagraph>
-                    Daniel Pizarro - Drums and Illustration
-                    <br />
-                    Simon Bartenschlager - Guitar
-                    <br />
-                    Raphael Höps - Synthesizer
-                    <br />
-                </StyledMembersParagraph>
-                <SocialIcons />
-                <HideOnDesktop>
-                    <SectionSpace />
-                </HideOnDesktop>
-            </StyledColumnText>
+                    <StyledMembersParagraph>
+                        Daniel Pizarro - Drums and Illustration
+                        <br />
+                        Simon Bartenschlager - Guitar
+                        <br />
+                        Raphael Höps - Synthesizer
+                        <br />
+                    </StyledMembersParagraph>
+                    <SocialIcons />
+                    <HideOnDesktop>
+                        <SectionSpace />
+                    </HideOnDesktop>
+                </StyledColumnText>
 
-            <StyledColumnImage>
-                <LeviathanNoBg />
-            </StyledColumnImage>
-
-            {/*<StyledMembers>*/}
-            {/*    <HideOnDesktop>{membersParagraph}</HideOnDesktop>*/}
-            {/*</StyledMembers>*/}
-        </Grid>
+                <StyledColumnImage ref={scrollTarget}>
+                    <LeviathanNoBg />
+                </StyledColumnImage>
+                <StyledScrollTarget ref={scrollTarget} />
+            </Grid>
+        </div>
     );
 }

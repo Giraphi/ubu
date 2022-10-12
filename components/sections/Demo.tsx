@@ -30,19 +30,6 @@ const StyledIframe = styled.iframe`
     }
 `;
 
-const StyledRow = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        align-items: flex-end;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-`;
-
 const StyledP = styled.div`
     margin-bottom: ${(props) => props.theme.space.sm};
 
