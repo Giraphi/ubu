@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Grid from "../Grid";
+import Grid, { GridLines } from "../Grid";
 import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
 
 const StyledIframeContainer = styled.div`
-    padding-top: 171%;
-    position: relative;
-    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        position: static;
-        padding-top: 0;
-    }
+    display: flex;
+    justify-content: center;
+    // grid-row: 2;
+    // grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
+    //
+    // @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+    //     grid-column: ${GridLines.col3Start} / ${GridLines.col5End};
+    //     position: static;
+    //     padding-top: 0;
+    // }
 `;
 
 const StyledIframe = styled.iframe`
     border: 0;
     box-shadow: 0 0 15px 1px ${(props) => props.theme.color.secondary};
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
+    width: 300px;
+    height: 538px;
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         box-shadow: 0 0 26px 6px ${(props) => props.theme.color.secondary};
         width: 400px;
         height: 638px;
-        position: static;
     }
 `;
 
@@ -43,8 +43,12 @@ const StyledRow = styled.div`
     }
 `;
 
-const StyledTeam = styled.div`
-    width: 250px;
+const StyledP = styled.div`
+    margin-bottom: ${(props) => props.theme.space.sm};
+
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+        margin-bottom: ${(props) => props.theme.space.lg};
+    }
 `;
 
 export interface DemoProps {}
@@ -56,15 +60,12 @@ export default function Demo(props: DemoProps) {
         setIsFirstRender(false);
     }, []);
 
-    // https://bandcamp.com/EmbeddedPlayer/album=3643840065/size=large/bgcol=333333/linkcol=ffffff/artwork=small/transparent=true/
-    // https://bandcamp.com/EmbeddedPlayer/album=3643840065/size=large/bgcol=333333/linkcol=ffffff/transparent=true/"
-
     return (
         <>
             <Grid>
                 <CompactArea>
                     <h2>Ubu Demo</h2>
-
+                    <StyledP>Ubu präsentiert die ersten frisch fertig gestellten Demo Aufnahmen. Gemastered von Ulli. Vielen Dank!</StyledP>
                     <StyledIframeContainer>
                         {!isFirstRender && (
                             <StyledIframe
@@ -76,7 +77,6 @@ export default function Demo(props: DemoProps) {
                             </StyledIframe>
                         )}
                     </StyledIframeContainer>
-                    {/*</StyledRow>*/}
                 </CompactArea>
             </Grid>
             <SectionSpace />
