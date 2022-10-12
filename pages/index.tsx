@@ -7,22 +7,19 @@ import BandText from "../components/sections/BandText";
 import Footer from "../components/Footer";
 import PhotosRuebe from "../components/sections/PhotosRuebe";
 import Demo from "../components/sections/Demo";
+import PageMenu from "../components/PageMenu/PageMenu";
 
 const StyledRoot = styled.div`
-    min-height: 100vh;
     background: ${(props) => props.theme.color.black};
-    padding-bottom: ${(props) => props.theme.space.lg};
-    padding-top: ${(props) => props.theme.space.md};
+    padding-bottom: ${(props) => props.theme.space.sm};
+    padding-top: ${(props) => props.theme.space.lg};
     overflow-x: hidden;
-
-    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        padding-top: ${(props) => props.theme.space.lg};
-    }
 `;
 
 const Home: NextPage = () => {
     return (
         <StyledRoot>
+            <PageMenu />
             <Intro />
             <Demo />
             <BandText />

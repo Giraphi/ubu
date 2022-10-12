@@ -30,17 +30,17 @@ const StyledIframe = styled.iframe`
     }
 `;
 
-const StyledP = styled.div`
-    margin-bottom: ${(props) => props.theme.space.sm};
+const StyledP = styled.p`
+    && {
+        margin-bottom: ${(props) => props.theme.space.sm};
 
-    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        margin-bottom: ${(props) => props.theme.space.lg};
+        @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+            margin-bottom: ${(props) => props.theme.space.lg};
+        }
     }
 `;
 
-export interface DemoProps {}
-
-export default function Demo(props: DemoProps) {
+export default function Demo() {
     const [isFirstRender, setIsFirstRender] = useState(true);
 
     useEffect(() => {
@@ -52,7 +52,9 @@ export default function Demo(props: DemoProps) {
             <Grid>
                 <CompactArea>
                     <h2>Ubu Demo</h2>
-                    <StyledP>Ubu präsentiert die ersten frisch fertig gestellten Demo Aufnahmen. Gemastered von Ulli. Vielen Dank!</StyledP>
+                    <StyledP>
+                        Ubu präsentiert die ersten frisch fertig gestellten Demo-Aufnahmen. Mit Mastering von Ulrich Treutwein. Vielen Dank!
+                    </StyledP>
                     <StyledIframeContainer>
                         {!isFirstRender && (
                             <StyledIframe
