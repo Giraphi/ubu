@@ -42,7 +42,7 @@ const StyledButton = styled.div<{ isMenuOpen: boolean }>`
     flex-direction: column;
     justify-content: center;
     background-color: ${(props) => props.theme.color.black};
-    box-shadow: 0 0 15px 2px ${(props) => props.theme.color.tertiary};
+    box-shadow: 0 0 15px 2px ${(props) => props.theme.color.primary};
 
     ${StyledBar}:first-child {
         margin-bottom: ${BarSpaceSmPx}px;
@@ -94,7 +94,7 @@ const menuVariants = {
         },
     },
     hidden: {
-        clipPath: "ellipse(1vw 1vh at 0% 0%)",
+        clipPath: "ellipse(0vw 0vh at 0% 0%)",
         transition: {
             duration: 0.3,
         },
