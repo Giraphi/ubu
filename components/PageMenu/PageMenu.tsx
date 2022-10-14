@@ -1,25 +1,45 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styled, { css } from "styled-components";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import PageMenuContent from "./PageMenuContent";
 import { styleConstants } from "../../styles/style-constants";
+import Logo from "../../images/logo.svg";
 
-const ButtonSizePx = 60;
+const ButtonSizePx = 54;
 const BarHeightPx = 0.08 * ButtonSizePx;
 const BarSpacePx = 0.07 * ButtonSizePx;
 
-const ButtonSizeSmPx = 45;
+const ButtonSizeSmPx = 50;
 const BarHeightSmPx = 0.08 * ButtonSizeSmPx;
 const BarSpaceSmPx = 0.07 * ButtonSizeSmPx;
 
 const StyledRoot = styled.div<{
     isMenuOpen: boolean;
+    isMenuVisible: boolean;
 }>`
     position: fixed;
     top: 0;
     left: 0;
     z-index: ${styleConstants.zIndex.menuButton};
     cursor: pointer;
+    width: 100%;
+    border-bottom: 1px solid ${(props) => props.theme.color.white};
+    background-color: ${(props) => props.theme.color.black};
+    display: flex;
+    justify-content: space-between;
+
+    height: ${ButtonSizeSmPx}px;
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+        height: ${ButtonSizePx}px;
+    }
+
+    transition: top 0.2s ease-out;
+
+    ${(props) =>
+        !props.isMenuVisible &&
+        css`
+            top: -${ButtonSizePx}px;
+        `}
 `;
 
 const StyledBar = styled.div`
@@ -37,12 +57,12 @@ const StyledBar = styled.div`
 
 const StyledButton = styled.div<{ isMenuOpen: boolean }>`
     width: ${ButtonSizeSmPx}px;
-    height: ${ButtonSizeSmPx}px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: ${(props) => props.theme.color.black};
-    box-shadow: 0 0 15px 2px ${(props) => props.theme.color.primary};
+    border-right: 1px solid ${(props) => props.theme.color.white};
 
     ${StyledBar}:first-child {
         margin-bottom: ${BarSpaceSmPx}px;
@@ -50,7 +70,6 @@ const StyledButton = styled.div<{ isMenuOpen: boolean }>`
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         width: ${ButtonSizePx}px;
-        height: ${ButtonSizePx}px;
         ${StyledBar}:first-child {
             margin-bottom: ${BarSpacePx}px;
         }
@@ -101,23 +120,62 @@ const menuVariants = {
     },
 };
 
+const StyledLogo = styled.div`
+    display: flex;
+    align-items: center;
+    margin-right: ${(props) => props.theme.grid.spaceHorizontal.base};
+    width: 170px;
+    color: ${(props) => props.theme.color.primary};
+`;
+
 export interface MenuProps {}
 
 export default function PageMenu(props: MenuProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
+    const { scrollY } = useScroll();
+    const prevScrollY = useRef(scrollY.get());
+
+    scrollY.onChange((value) => {
+        if (Math.abs(value - prevScrollY.current) < 7) {
+            return;
+        }
+        value > prevScrollY.current ? onScrollDown(value) : onScrollUp(value);
+    });
+
+    function onScrollDown(value: number) {
+        prevScrollY.current = value;
+        setIsMenuVisible(false);
+        setIsMenuOpen(false);
+    }
+
+    function onScrollUp(value: number) {
+        if (value <= 7) {
+            setIsMenuOpen(false);
+            setIsMenuVisible(false);
+            prevScrollY.current = value;
+            return;
+        }
+
+        setIsMenuOpen(false);
+        setIsMenuVisible(true);
+        prevScrollY.current = value;
+    }
 
     function handleClick() {
-        console.log("click");
         setIsMenuOpen((x) => !x);
     }
 
     return (
         <>
-            <StyledRoot isMenuOpen={isMenuOpen} onClick={handleClick}>
-                <StyledButton isMenuOpen={isMenuOpen}>
+            <StyledRoot isMenuOpen={isMenuOpen} isMenuVisible={isMenuVisible}>
+                <StyledButton isMenuOpen={isMenuOpen} onClick={handleClick}>
                     <StyledBar />
                     <StyledBar />
                 </StyledButton>
+                <StyledLogo>
+                    <Logo />
+                </StyledLogo>
             </StyledRoot>
 
             <AnimatePresence>
