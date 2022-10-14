@@ -103,6 +103,10 @@ const StyledPageMenuContentWrapper = styled(motion.div)`
     top: 0;
     left: 0;
     z-index: ${styleConstants.zIndex.menuContent};
+    padding-top: ${ButtonSizeSmPx}px;
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+        padding-top: ${ButtonSizePx}px;
+    }
 `;
 
 const menuVariants = {
@@ -137,7 +141,7 @@ export default function PageMenu(props: MenuProps) {
     const prevScrollY = useRef(scrollY.get());
 
     scrollY.onChange((value) => {
-        if (Math.abs(value - prevScrollY.current) < 7) {
+        if (Math.abs(value - prevScrollY.current) < 15) {
             return;
         }
         value > prevScrollY.current ? onScrollDown(value) : onScrollUp(value);

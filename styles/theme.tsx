@@ -3,10 +3,9 @@ export const theme = {
         primary: "#ff00ff",
         secondary: "#00ffff",
         tertiary: "#00ff00",
-        background: "#112",
         white: "#eee",
         black: "#111",
-        gray: "#555",
+        gray: "#1f1f1f",
     },
     space: {
         gutter: 8,

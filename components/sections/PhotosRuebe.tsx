@@ -72,7 +72,6 @@ const StyledNoise = styled.div`
     animation: ${noiseKeyframes} 0.2s infinite;
     visibility: visible;
     filter: contrast(2) brightness(2);
-    border: 1px solid gray;
 `;
 
 export interface PhotosRuebeProps {}

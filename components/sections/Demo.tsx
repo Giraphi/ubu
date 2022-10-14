@@ -3,18 +3,11 @@ import styled from "styled-components";
 import Grid, { GridLines } from "../Grid";
 import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
+import { scrollIds } from "../PageMenu/PageMenuContent";
 
 const StyledIframeContainer = styled.div`
     display: flex;
     justify-content: center;
-    // grid-row: 2;
-    // grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
-    //
-    // @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-    //     grid-column: ${GridLines.col3Start} / ${GridLines.col5End};
-    //     position: static;
-    //     padding-top: 0;
-    // }
 `;
 
 const StyledIframe = styled.iframe`
@@ -49,6 +42,7 @@ export default function Demo() {
 
     return (
         <>
+            <div id={scrollIds.UbuDemo} />
             <Grid>
                 <CompactArea>
                     <h2>Ubu Demo</h2>
