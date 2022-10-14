@@ -125,6 +125,11 @@ export default function Intro() {
                 <StyledTopLine onClick={scrollDown}>
                     <Logo />
                 </StyledTopLine>
+
+                <StyledColumnImage ref={scrollTarget} onClick={scrollDown}>
+                    <Leviathan />
+                </StyledColumnImage>
+
                 <StyledColumnText>
                     <HideOnMobile>
                         <StyledShaker>
@@ -156,9 +161,6 @@ export default function Intro() {
                     </HideOnDesktop>
                 </StyledColumnText>
 
-                <StyledColumnImage ref={scrollTarget} onClick={scrollDown}>
-                    {!isFirstRender && <Leviathan />}
-                </StyledColumnImage>
                 <StyledScrollTarget ref={scrollTarget} />
             </Grid>
         </div>
