@@ -111,7 +111,7 @@ export default function PhotosImpex(props: PhotosProps) {
                 <StyledAllImage>
                     <AspectRatioContent>
                         <picture>
-                            <source srcSet={"./fotos-impex/alle.webp"} />
+                            {/*<source srcSet={"./fotos-impex/alle.webp"} />*/}
                             <StyledImg src={"./fotos-impex/alle.jpg"} />
                         </picture>
                     </AspectRatioContent>
@@ -120,7 +120,7 @@ export default function PhotosImpex(props: PhotosProps) {
                 <StyledRaphiImage>
                     <AspectRatioContent>
                         <picture>
-                            <source srcSet={"./fotos-impex/raphi.webp"} />
+                            {/*<source srcSet={"./fotos-impex/raphi.webp"} />*/}
                             <StyledImg src={"./fotos-impex/raphi.jpg"} />
                         </picture>
                     </AspectRatioContent>
@@ -129,7 +129,7 @@ export default function PhotosImpex(props: PhotosProps) {
                 <StyledSimonImage>
                     <AspectRatioContent>
                         <picture>
-                            <source srcSet={"./fotos-impex/simon.webp"} />
+                            {/*<source srcSet={"./fotos-impex/simon.webp"} />*/}
                             <StyledImg src={"./fotos-impex/simon.jpg"} />
                         </picture>
                     </AspectRatioContent>
@@ -138,7 +138,7 @@ export default function PhotosImpex(props: PhotosProps) {
                 <StyledDanielImage>
                     <AspectRatioContent>
                         <picture>
-                            <source srcSet={"./fotos-impex/daniel.webp"} />
+                            {/*<source srcSet={"./fotos-impex/daniel.webp"} />*/}
                             <StyledImg src={"./fotos-impex/daniel.jpg"} />
                         </picture>
                     </AspectRatioContent>
