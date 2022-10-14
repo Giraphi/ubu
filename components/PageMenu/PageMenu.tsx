@@ -132,9 +132,7 @@ const StyledLogo = styled.div`
     color: ${(props) => props.theme.color.primary};
 `;
 
-export interface MenuProps {}
-
-export default function PageMenu(props: MenuProps) {
+export default function PageMenu() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMenuVisible, setIsMenuVisible] = useState(false);
     const { scrollY } = useScroll();

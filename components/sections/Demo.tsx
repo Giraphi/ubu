@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Grid, { GridLines } from "../Grid";
+import Grid from "../Grid";
 import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
-import { scrollIds } from "../PageMenu/PageMenuContent";
 import ScrollTarget from "../ScrollTarget";
 
 const StyledIframeContainer = styled.div`
