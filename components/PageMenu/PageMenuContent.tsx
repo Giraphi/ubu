@@ -2,10 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { styleConstants } from "../../styles/style-constants";
 
-export const scrollIds = {
-    UbuDemo: "ubu-demo",
-};
-
 const StyledRoot = styled.div`
     height: 100vh;
     width: 50vw;

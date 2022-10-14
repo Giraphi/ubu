@@ -5,13 +5,13 @@ import PageMenuContent from "./PageMenuContent";
 import { styleConstants } from "../../styles/style-constants";
 import Logo from "../../images/logo.svg";
 
-const ButtonSizePx = 54;
-const BarHeightPx = 0.08 * ButtonSizePx;
-const BarSpacePx = 0.07 * ButtonSizePx;
+export const TopBarSizePx = 54;
+const BarHeightPx = 0.08 * TopBarSizePx;
+const BarSpacePx = 0.07 * TopBarSizePx;
 
-const ButtonSizeSmPx = 50;
-const BarHeightSmPx = 0.08 * ButtonSizeSmPx;
-const BarSpaceSmPx = 0.07 * ButtonSizeSmPx;
+export const TopBarSizeSmPx = 50;
+const BarHeightSmPx = 0.08 * TopBarSizeSmPx;
+const BarSpaceSmPx = 0.07 * TopBarSizeSmPx;
 
 const StyledRoot = styled.div<{
     isMenuOpen: boolean;
@@ -28,9 +28,9 @@ const StyledRoot = styled.div<{
     display: flex;
     justify-content: space-between;
 
-    height: ${ButtonSizeSmPx}px;
+    height: ${TopBarSizeSmPx}px;
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        height: ${ButtonSizePx}px;
+        height: ${TopBarSizePx}px;
     }
 
     transition: top 0.2s ease-out;
@@ -38,7 +38,7 @@ const StyledRoot = styled.div<{
     ${(props) =>
         !props.isMenuVisible &&
         css`
-            top: -${ButtonSizePx}px;
+            top: -${TopBarSizePx}px;
         `}
 `;
 
@@ -56,7 +56,7 @@ const StyledBar = styled.div`
 `;
 
 const StyledButton = styled.div<{ isMenuOpen: boolean }>`
-    width: ${ButtonSizeSmPx}px;
+    width: ${TopBarSizeSmPx}px;
 
     display: flex;
     flex-direction: column;
@@ -69,7 +69,7 @@ const StyledButton = styled.div<{ isMenuOpen: boolean }>`
     }
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        width: ${ButtonSizePx}px;
+        width: ${TopBarSizePx}px;
         ${StyledBar}:first-child {
             margin-bottom: ${BarSpacePx}px;
         }
@@ -103,9 +103,9 @@ const StyledPageMenuContentWrapper = styled(motion.div)`
     top: 0;
     left: 0;
     z-index: ${styleConstants.zIndex.menuContent};
-    padding-top: ${ButtonSizeSmPx}px;
+    padding-top: ${TopBarSizeSmPx}px;
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        padding-top: ${ButtonSizePx}px;
+        padding-top: ${TopBarSizePx}px;
     }
 `;
 

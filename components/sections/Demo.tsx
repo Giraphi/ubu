@@ -4,6 +4,7 @@ import Grid, { GridLines } from "../Grid";
 import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
 import { scrollIds } from "../PageMenu/PageMenuContent";
+import ScrollTarget from "../ScrollTarget";
 
 const StyledIframeContainer = styled.div`
     display: flex;
@@ -42,7 +43,7 @@ export default function Demo() {
 
     return (
         <>
-            <div id={scrollIds.UbuDemo} />
+            <ScrollTarget id={"UbuDemo"} />
             <Grid>
                 <CompactArea>
                     <h2>Ubu Demo</h2>
