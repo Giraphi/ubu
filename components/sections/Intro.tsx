@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Grid, { GridLines } from "../Grid";
-import Logo from "../../images/logo.svg";
-import LeviathanNoBg from "../../images/leviathan-no-bg.svg";
+import Logo from "../../images/optimized/logo.svg";
+import Leviathan from "../../images/optimized/leviathan.svg";
 import SocialIcons from "../SocialIcons";
 import styled from "styled-components";
 import { colorAnimation } from "../../styles/color-animation";
@@ -106,6 +106,11 @@ const StyledMembersParagraph = styled.p`
 
 export default function Intro() {
     const scrollTarget = useRef<HTMLDivElement>(null);
+    const [isFirstRender, setIsFirstRender] = useState(true);
+
+    useEffect(() => {
+        setIsFirstRender(false);
+    }, []);
 
     function scrollDown(e: React.MouseEvent) {
         if (!scrollTarget.current) {
@@ -152,7 +157,7 @@ export default function Intro() {
                 </StyledColumnText>
 
                 <StyledColumnImage ref={scrollTarget} onClick={scrollDown}>
-                    <LeviathanNoBg />
+                    {!isFirstRender && <Leviathan />}
                 </StyledColumnImage>
                 <StyledScrollTarget ref={scrollTarget} />
             </Grid>

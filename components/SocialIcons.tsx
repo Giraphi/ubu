@@ -1,8 +1,8 @@
 import React from "react";
-import Instagram from "../images/instagram.svg";
-import Facebook from "../images/facebook.svg";
-import Mail from "../images/mail.svg";
-import Bandcamp from "../images/bandcamp.svg";
+import Instagram from "../images/optimized/instagram.svg";
+import Facebook from "../images/optimized/facebook.svg";
+import Mail from "../images/optimized/mail.svg";
+import Bandcamp from "../images/optimized/bandcamp.svg";
 import styled from "styled-components";
 
 const StyledRoot = styled.div`
