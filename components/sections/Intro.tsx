@@ -62,6 +62,8 @@ const StyledColumnImage = styled.div`
     ${colorAnimation};
     grid-row: 2;
     position: relative;
+    height: 0;
+    padding-bottom: 135%;
 
     ::before {
         position: absolute;
@@ -69,8 +71,9 @@ const StyledColumnImage = styled.div`
         width: 100%;
         height: 100%;
         display: flex;
-        background-image: linear-gradient(to top, ${(props) => props.theme.color.black} 10%, transparent 30%);
+        background-image: linear-gradient(to top, ${(props) => props.theme.color.black} 8%, transparent 30%);
         content: " ";
+        z-index: 10;
     }
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
@@ -78,7 +81,18 @@ const StyledColumnImage = styled.div`
         grid-column: ${GridLines.col2Start} / ${GridLines.col7End};
         text-align: right;
     }
+
+    > svg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+    }
 `;
+
+const StyledImageRatio = styled.div``;
 
 const StyledScrollTarget = styled.div`
     grid-row: 3;
