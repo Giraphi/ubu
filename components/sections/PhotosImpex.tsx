@@ -99,7 +99,7 @@ export default function PhotosImpex(props: PhotosProps) {
                     <h2>Ubu @ImportExport</h2>
                     <p>
                         Ubu bei den <a href={"https://alternativefakten089.de/"}>Alternativen Fakten</a> im September 2022 im{" "}
-                        <a href={"https://import-export.cc/"}>Import Export</a> München. Fotos von Vanessa Mönius.
+                        <a href={"https://import-export.cc/"}>Import Export</a> München. Danke an Vanessa Mönius für die Fotos.
                     </p>
                 </CompactArea>
             </Grid>
