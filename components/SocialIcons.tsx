@@ -20,7 +20,7 @@ const StyledItem = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: ${(props) => props.theme.space.gutter * 8}px;
+    height: ${(props) => props.theme.space.gutter * 9}px;
     width: 43px;
 
     > svg {
