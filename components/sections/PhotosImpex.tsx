@@ -1,10 +1,14 @@
 import React from "react";
 import Grid, { GridLines } from "../Grid";
 import styled from "styled-components";
-import alle from "../../images/photos/alle.jpg";
-import simon from "../../images/photos/simon.jpg";
-import raphi from "../../images/photos/raphi.jpg";
-import daniel from "../../images/photos/daniel.jpg";
+// import alle from "../../public/fotos-impex/alle.jpg";
+// import alleWebp from "../../public/fotos-impex/alle.webp";
+// import simon from "../../public/fotos-impex/simon.jpg";
+// import simonWebp from "../../public/fotos-impex/simon.webp";
+// import raphi from "../../public/fotos-impex/raphi.jpg";
+// import raphiWebp from "../../public/fotos-impex/raphi.webp";
+// import daniel from "../../public/fotos-impex/daniel.jpg";
+// import danielWebp from "../../public/fotos-impex/daniel.webp";
 import { rectangleKeyframes } from "../../styles/clip-path-keyframes";
 import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
@@ -106,25 +110,37 @@ export default function PhotosImpex(props: PhotosProps) {
             <StyledGrid>
                 <StyledAllImage>
                     <AspectRatioContent>
-                        <StyledImg src={alle.src} />
+                        <picture>
+                            <source srcSet={"./fotos-impex/alle.webp"} />
+                            <StyledImg src={"./fotos-impex/alle.jpg"} />
+                        </picture>
                     </AspectRatioContent>
                 </StyledAllImage>
 
                 <StyledRaphiImage>
                     <AspectRatioContent>
-                        <StyledImg src={raphi.src} />
+                        <picture>
+                            <source srcSet={"./fotos-impex/raphi.webp"} />
+                            <StyledImg src={"./fotos-impex/raphi.jpg"} />
+                        </picture>
                     </AspectRatioContent>
                 </StyledRaphiImage>
 
                 <StyledSimonImage>
                     <AspectRatioContent>
-                        <StyledImg src={simon.src} />
+                        <picture>
+                            <source srcSet={"./fotos-impex/simon.webp"} />
+                            <StyledImg src={"./fotos-impex/simon.jpg"} />
+                        </picture>
                     </AspectRatioContent>
                 </StyledSimonImage>
 
                 <StyledDanielImage>
                     <AspectRatioContent>
-                        <StyledImg src={daniel.src} />
+                        <picture>
+                            <source srcSet={"./fotos-impex/daniel.webp"} />
+                            <StyledImg src={"./fotos-impex/daniel.jpg"} />
+                        </picture>
                     </AspectRatioContent>
                 </StyledDanielImage>
             </StyledGrid>
