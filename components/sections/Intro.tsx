@@ -106,11 +106,6 @@ const StyledMembersParagraph = styled.p`
 
 export default function Intro() {
     const scrollTarget = useRef<HTMLDivElement>(null);
-    const [isFirstRender, setIsFirstRender] = useState(true);
-
-    useEffect(() => {
-        setIsFirstRender(false);
-    }, []);
 
     function scrollDown(e: React.MouseEvent) {
         if (!scrollTarget.current) {
