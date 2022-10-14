@@ -23,7 +23,7 @@ const StyledRoot = styled.div`
 const Home: NextPage = () => {
     return (
         <StyledRoot>
-            <PageMenu />
+            {/*<PageMenu />*/}
             <Intro />
             <Demo />
             <BandText />
