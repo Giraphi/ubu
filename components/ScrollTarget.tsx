@@ -4,7 +4,7 @@ import { TopBarSizePx, TopBarSizeSmPx } from "./PageMenu/PageMenu";
 
 const StyledDiv = styled.div`
     position: relative;
-    bottom: ${TopBarSizeSmPx}px;
+    bottom: ${TopBarSizeSmPx + 16}px;
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         height: ${TopBarSizePx}px;
     }

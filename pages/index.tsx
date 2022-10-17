@@ -7,6 +7,7 @@ import BandText from "../components/sections/BandText";
 import Footer from "../components/Footer";
 import PhotosRuebe from "../components/sections/PhotosRuebe";
 import Demo from "../components/sections/Demo";
+import PageMenu from "../components/PageMenu/PageMenu";
 
 const StyledRoot = styled.div`
     background: ${(props) => props.theme.color.black};
@@ -22,7 +23,7 @@ const StyledRoot = styled.div`
 const Home: NextPage = () => {
     return (
         <StyledRoot>
-            {/*<PageMenu />*/}
+            <PageMenu />
             <Intro />
             <Demo />
             <BandText />

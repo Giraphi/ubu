@@ -4,12 +4,13 @@ import { AnimatePresence, motion, useScroll } from "framer-motion";
 import PageMenuContent from "./PageMenuContent";
 import { styleConstants } from "../../styles/style-constants";
 import Logo from "../../images/logo.svg";
+import { colorAnimationSlow } from "../../styles/color-animation";
 
 export const TopBarSizePx = 54;
 const BarHeightPx = 0.08 * TopBarSizePx;
 const BarSpacePx = 0.07 * TopBarSizePx;
 
-export const TopBarSizeSmPx = 50;
+export const TopBarSizeSmPx = 42;
 const BarHeightSmPx = 0.08 * TopBarSizeSmPx;
 const BarSpaceSmPx = 0.07 * TopBarSizeSmPx;
 
@@ -130,39 +131,25 @@ const StyledLogo = styled.div`
     margin-right: ${(props) => props.theme.grid.spaceHorizontal.base};
     width: 170px;
     color: ${(props) => props.theme.color.primary};
+    margin-bottom: 8px;
+    margin-top: 8px;
+    ${colorAnimationSlow};
+
+    > svg {
+        height: 100%;
+        width: unset;
+        margin-left: auto;
+    }
 `;
 
 export default function PageMenu() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMenuVisible, setIsMenuVisible] = useState(false);
-    // const { scrollY } = useScroll();
-    // const prevScrollY = useRef(scrollY.get());
+    const { scrollY } = useScroll();
 
-    // scrollY.onChange((value) => {
-    //     if (Math.abs(value - prevScrollY.current) < 15) {
-    //         return;
-    //     }
-    //     value > prevScrollY.current ? onScrollDown(value) : onScrollUp(value);
-    // });
-    //
-    // function onScrollDown(value: number) {
-    //     prevScrollY.current = value;
-    //     setIsMenuVisible(false);
-    //     setIsMenuOpen(false);
-    // }
-    //
-    // function onScrollUp(value: number) {
-    //     if (value <= 7) {
-    //         setIsMenuOpen(false);
-    //         setIsMenuVisible(false);
-    //         prevScrollY.current = value;
-    //         return;
-    //     }
-    //
-    //     setIsMenuOpen(false);
-    //     setIsMenuVisible(true);
-    //     prevScrollY.current = value;
-    // }
+    scrollY.onChange((value) => {
+        setIsMenuVisible(value > 100);
+    });
 
     function handleClick() {
         setIsMenuOpen((x) => !x);
@@ -183,7 +170,7 @@ export default function PageMenu() {
             <AnimatePresence>
                 {isMenuOpen && (
                     <StyledPageMenuContentWrapper variants={menuVariants} initial={"hidden"} animate={"visible"} exit={"hidden"}>
-                        <PageMenuContent />
+                        <PageMenuContent handleItemClick={() => setIsMenuOpen(false)} />
                     </StyledPageMenuContentWrapper>
                 )}
             </AnimatePresence>

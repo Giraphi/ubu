@@ -16,20 +16,23 @@ const StyledLink = styled.div`
     margin-bottom: ${(props) => props.theme.space.md};
 `;
 
-export interface PageMenuContentProps {}
+export interface PageMenuContentProps {
+    handleItemClick: () => void;
+}
 
 export default function PageMenuContent(props: PageMenuContentProps) {
-    function scroll(target: string) {
+    function onItemClick(target: string) {
         const element: HTMLDivElement | null = document.querySelector(target);
         if (!element) {
             return;
         }
         element.scrollIntoView({ behavior: "smooth" });
+        props.handleItemClick();
     }
 
     return (
         <StyledRoot>
-            <StyledLink onClick={() => scroll("#ubu-demo")}>Ubu Demo</StyledLink>
+            <StyledLink onClick={() => onItemClick("#ubu-demo")}>Ubu Demo</StyledLink>
         </StyledRoot>
     );
 }

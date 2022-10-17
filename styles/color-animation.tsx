@@ -22,3 +22,7 @@ export const colorKeyframes = keyframes`
 export const colorAnimation = css`
     animation: ${colorKeyframes} 4s linear infinite;
 `;
+
+export const colorAnimationSlow = css`
+    animation: ${colorKeyframes} 12s linear infinite;
+`;
