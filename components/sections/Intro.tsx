@@ -9,6 +9,7 @@ import Shaker from "../../images/figuren/shaker.svg";
 import HideOnMobile from "../HideOnMobile";
 import HideOnDesktop from "../HideOnDesktop";
 import SectionSpace from "../SectionSpace";
+import ScrollTarget, { scrollTargetMixin } from "../ScrollTarget";
 
 const StyledTopLine = styled.div`
     color: ${(props) => props.theme.color.white};
@@ -80,14 +81,18 @@ const StyledColumnImage = styled.div`
     }
 `;
 
-const StyledScrollTarget = styled.div`
-    grid-row: 3;
-    position: relative;
-    top: -30px;
-`;
+// const StyledScrollTarget = styled.div`
+//     grid-row: 3;
+//     position: relative;
+//     top: -30px;
+// `;
 
 const StyledMembersParagraph = styled.p`
     margin-bottom: ${(props) => props.theme.space.gutter * 4}px;
+`;
+
+const StyledScrollTarget = styled.div`
+    ${scrollTargetMixin};
 `;
 
 export default function Intro() {
@@ -107,11 +112,13 @@ export default function Intro() {
                     <Logo />
                 </StyledTopLine>
 
-                <StyledColumnImage ref={scrollTarget}>
+                <StyledColumnImage>
                     <LeviathanNoBg />
                 </StyledColumnImage>
 
                 <StyledColumnText>
+                    <StyledScrollTarget ref={scrollTarget} />
+
                     <HideOnMobile>
                         <StyledShaker>
                             <Shaker />
@@ -141,8 +148,6 @@ export default function Intro() {
                         <SectionSpace />
                     </HideOnDesktop>
                 </StyledColumnText>
-
-                <StyledScrollTarget ref={scrollTarget} />
             </Grid>
         </div>
     );

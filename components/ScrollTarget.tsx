@@ -1,13 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { TopBarSizePx, TopBarSizeSmPx } from "./PageMenu/PageMenu";
 
-const StyledDiv = styled.div`
+export const scrollTargetMixin = css`
     position: relative;
     bottom: ${TopBarSizeSmPx + 16}px;
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        height: ${TopBarSizePx}px;
+        height: ${TopBarSizePx + 16}px;
     }
+`;
+
+const StyledDiv = styled.div`
+    ${scrollTargetMixin};
 `;
 
 export const scrollIds = {
