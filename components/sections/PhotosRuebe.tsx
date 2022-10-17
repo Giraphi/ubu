@@ -9,6 +9,7 @@ import { noiseKeyframes } from "../../styles/noise-keyframes";
 import GlitchyImage from "../GlitchyImage";
 import SectionSpace from "../SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
+import ScrollTarget, { ScrollId } from "../ScrollTarget";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.lg};
@@ -79,6 +80,7 @@ export interface PhotosRuebeProps {}
 export default function PhotosRuebe(props: PhotosRuebeProps) {
     return (
         <>
+            <ScrollTarget id={ScrollId.ruebe} />
             <Grid>
                 <CompactArea>
                     <h2>Ubu @Rübezahl</h2>

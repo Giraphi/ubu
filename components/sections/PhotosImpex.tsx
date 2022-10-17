@@ -13,6 +13,7 @@ import { rectangleKeyframes } from "../../styles/clip-path-keyframes";
 import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
+import ScrollTarget, { ScrollId } from "../ScrollTarget";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -98,6 +99,7 @@ export interface PhotosProps {}
 export default function PhotosImpex(props: PhotosProps) {
     return (
         <>
+            <ScrollTarget id={ScrollId.impex} />
             <Grid>
                 <CompactArea>
                     <h2>Ubu @ImportExport</h2>

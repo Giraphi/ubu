@@ -7,7 +7,7 @@ export const scrollTargetMixin = css`
     position: relative;
     bottom: ${TopBarSizeSmPx + 16}px;
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        height: ${TopBarSizePx + 16}px;
+        bottom: ${TopBarSizePx + 16}px;
     }
 `;
 

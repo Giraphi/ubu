@@ -148,7 +148,12 @@ export default function PageMenu() {
     const { scrollY } = useScroll();
 
     scrollY.onChange((value) => {
-        setIsMenuVisible(value > 100);
+        const isScrolled = value > 100;
+        setIsMenuVisible(isScrolled);
+
+        if (!isScrolled) {
+            setIsMenuOpen(false);
+        }
     });
 
     function handleClick() {

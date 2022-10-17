@@ -10,6 +10,7 @@ import Shaker from "../../images/figuren/shaker.svg";
 import Figur from "../Figur";
 import CompactArea from "../CompactArea";
 import { useInView } from "framer-motion";
+import ScrollTarget, { ScrollId } from "../ScrollTarget";
 
 const StyledRotateFigure = styled(Figur)`
     transform: scaleX(-1);
@@ -48,51 +49,54 @@ export default function BandText(props: TextProps) {
     }, [isAllInView, isSomeInView]);
 
     return (
-        <Grid>
-            <CompactArea>
-                <h2>Über uns</h2>
-                <p>
-                    UBU IMPERATOR ist ein 2022 gegründetes Krautrocktrio aus München mit Genreeinflüssen aus Noise, Experimental und
-                    Progressive.
-                </p>
-                <Row>
-                    <Figur>
-                        <Hexe />
-                    </Figur>
-                    <Figur delay={1}>
-                        <Hexe2 />
-                    </Figur>
-                    <StyledRotateFigure delay={2}>
-                        <Hexe />
-                    </StyledRotateFigure>
-                </Row>
-                <p>
-                    Die Musik von UBU IMPERATOR ist meist instrumental und geprägt von stimmungsvoll-krautigen Flächen, immersiven Sequenzen
-                    und Arpeggios, sowie teils dystopischem Noise, der von harmonischen Synthesizer Akkorden abgelöst wird.
-                </p>
-                <Row>
-                    <Figur delay={3}>
-                        <Narr />
-                    </Figur>
-                    <Figur delay={1.5}>
-                        <Kerze />
-                    </Figur>
-                    <Figur scale={2} delay={4}>
-                        <Shaker />
-                    </Figur>
-                </Row>
-                <p>
-                    Der Name der Band bezieht sich auf das Theaterstück &bdquo;König Ubu&rdquo; (1896) des französischen Schriftstellers
-                    Alfred Jarry. Ein Stück, das wegen seines grotesken, karnevalesken und absurden Charakters viele surrealistische und
-                    dadaistische Künstler der damaligen Zeit in Erstaunen versetzte. Ubu Imperator ist auch der Titel eines der bekanntesten
-                    Werke von Max Ernst.
-                </p>
-                <StyledVideo ref={videoRef} muted={true} loop={true} playsInline={true}>
-                    <source src={"./video/eule.webm"} type={"video/webm"} />
-                    <source src={"./video/eule.mp4"} type={"video/mp4"} />
-                </StyledVideo>
-                <SectionSpace />
-            </CompactArea>
-        </Grid>
+        <>
+            <ScrollTarget id={ScrollId.ueberUns} />
+            <Grid>
+                <CompactArea>
+                    <h2>Über uns</h2>
+                    <p>
+                        UBU IMPERATOR ist ein 2022 gegründetes Krautrocktrio aus München mit Genreeinflüssen aus Noise, Experimental und
+                        Progressive.
+                    </p>
+                    <Row>
+                        <Figur>
+                            <Hexe />
+                        </Figur>
+                        <Figur delay={1}>
+                            <Hexe2 />
+                        </Figur>
+                        <StyledRotateFigure delay={2}>
+                            <Hexe />
+                        </StyledRotateFigure>
+                    </Row>
+                    <p>
+                        Die Musik von UBU IMPERATOR ist meist instrumental und geprägt von stimmungsvoll-krautigen Flächen, immersiven
+                        Sequenzen und Arpeggios, sowie teils dystopischem Noise, der von harmonischen Synthesizer Akkorden abgelöst wird.
+                    </p>
+                    <Row>
+                        <Figur delay={3}>
+                            <Narr />
+                        </Figur>
+                        <Figur delay={1.5}>
+                            <Kerze />
+                        </Figur>
+                        <Figur scale={2} delay={4}>
+                            <Shaker />
+                        </Figur>
+                    </Row>
+                    <p>
+                        Der Name der Band bezieht sich auf das Theaterstück &bdquo;König Ubu&rdquo; (1896) des französischen Schriftstellers
+                        Alfred Jarry. Ein Stück, das wegen seines grotesken, karnevalesken und absurden Charakters viele surrealistische und
+                        dadaistische Künstler der damaligen Zeit in Erstaunen versetzte. Ubu Imperator ist auch der Titel eines der
+                        bekanntesten Werke von Max Ernst.
+                    </p>
+                    <StyledVideo ref={videoRef} muted={true} loop={true} playsInline={true}>
+                        <source src={"./video/eule.webm"} type={"video/webm"} />
+                        <source src={"./video/eule.mp4"} type={"video/mp4"} />
+                    </StyledVideo>
+                    <SectionSpace />
+                </CompactArea>
+            </Grid>
+        </>
     );
 }

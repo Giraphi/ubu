@@ -5,16 +5,18 @@ import { ScrollId } from "../ScrollTarget";
 
 const StyledRoot = styled.div`
     height: 100vh;
-    width: 50vw;
+    //width: 50vw;
     background-color: ${(props) => props.theme.color.gray};
     box-shadow: 0 0 6px 1px ${(props) => props.theme.color.primary};
     display: flex;
     flex-direction: column;
-    padding: ${(props) => props.theme.grid.spaceHorizontal.base};
+    padding: ${(props) => props.theme.space.gutter * 5}px ${(props) => props.theme.space.gutter * 5}px
+        ${(props) => props.theme.space.gutter * 5}px ${(props) => props.theme.grid.spaceHorizontal.base};
 `;
 
 const StyledLink = styled.div`
     margin-bottom: ${(props) => props.theme.space.md};
+    cursor: pointer;
 `;
 
 export interface PageMenuContentProps {
@@ -33,7 +35,11 @@ export default function PageMenuContent(props: PageMenuContentProps) {
 
     return (
         <StyledRoot>
+            <StyledLink onClick={() => onItemClick(ScrollId.top)}>Start</StyledLink>
             <StyledLink onClick={() => onItemClick(ScrollId.ubuDemo)}>Ubu Demo</StyledLink>
+            <StyledLink onClick={() => onItemClick(ScrollId.ubuDemo)}>Über Uns</StyledLink>
+            <StyledLink onClick={() => onItemClick(ScrollId.ubuDemo)}>Fotos Impex</StyledLink>
+            <StyledLink onClick={() => onItemClick(ScrollId.ubuDemo)}>Fotos Rübezahl</StyledLink>
         </StyledRoot>
     );
 }
