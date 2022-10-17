@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import PageMenuContent from "./PageMenuContent";
@@ -14,7 +14,7 @@ export const TopBarSizeSmPx = 42;
 const BarHeightSmPx = 0.08 * TopBarSizeSmPx;
 const BarSpaceSmPx = 0.07 * TopBarSizeSmPx;
 
-const StyledRoot = styled.div<{
+const StyledTopBar = styled.div<{
     isMenuOpen: boolean;
     isMenuVisible: boolean;
 }>`
@@ -22,7 +22,6 @@ const StyledRoot = styled.div<{
     top: 0;
     left: 0;
     z-index: ${styleConstants.zIndex.menuButton};
-    cursor: pointer;
     width: 100%;
     border-bottom: 1px solid ${(props) => props.theme.color.white};
     background-color: ${(props) => props.theme.color.black};
@@ -58,6 +57,7 @@ const StyledBar = styled.div`
 
 const StyledButton = styled.div<{ isMenuOpen: boolean }>`
     width: ${TopBarSizeSmPx}px;
+    cursor: pointer;
 
     display: flex;
     flex-direction: column;
@@ -146,6 +146,7 @@ export default function PageMenu() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMenuVisible, setIsMenuVisible] = useState(false);
     const { scrollY } = useScroll();
+    const ref = useRef<HTMLDivElement>(null);
 
     scrollY.onChange((value) => {
         const isScrolled = value > 100;
@@ -160,9 +161,29 @@ export default function PageMenu() {
         setIsMenuOpen((x) => !x);
     }
 
+    useEffect(() => {
+        const handleClick = (event: MouseEvent) => {
+            if (!ref.current) {
+                return;
+            }
+
+            const isClickOutside = !ref.current.contains(event.target as Node);
+            if (!isClickOutside) {
+                return;
+            }
+            setIsMenuOpen(false);
+        };
+
+        document.addEventListener("click", handleClick);
+
+        return () => {
+            document.removeEventListener("click", handleClick);
+        };
+    }, []);
+
     return (
-        <>
-            <StyledRoot isMenuOpen={isMenuOpen} isMenuVisible={isMenuVisible}>
+        <div ref={ref}>
+            <StyledTopBar isMenuOpen={isMenuOpen} isMenuVisible={isMenuVisible}>
                 <StyledButton isMenuOpen={isMenuOpen} onClick={handleClick}>
                     <StyledBar />
                     <StyledBar />
@@ -170,7 +191,7 @@ export default function PageMenu() {
                 <StyledLogo>
                     <Logo />
                 </StyledLogo>
-            </StyledRoot>
+            </StyledTopBar>
 
             <AnimatePresence>
                 {isMenuOpen && (
@@ -179,6 +200,6 @@ export default function PageMenu() {
                     </StyledPageMenuContentWrapper>
                 )}
             </AnimatePresence>
-        </>
+        </div>
     );
 }
