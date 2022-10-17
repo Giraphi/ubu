@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import styled, { css } from "styled-components";
 import { TopBarSizePx, TopBarSizeSmPx } from "./PageMenu/PageMenu";
 import { GridLines } from "./Grid";
+import { useInView } from "framer-motion";
+import { MenuContext } from "../context/MenuContext";
 
 export const scrollTargetMixin = css`
     position: relative;
@@ -23,10 +25,24 @@ export enum ScrollId {
     ruebe = "ruebe",
 }
 
+// const ScrollIdArray = Object.values(ScrollId);
+
 export interface ScrollTargetProps {
-    id: string;
+    id: ScrollId;
 }
 
 export default function ScrollTarget(props: ScrollTargetProps) {
-    return <StyledDiv id={props.id} />;
+    const ref = useRef<HTMLDivElement>(null);
+    // const isInView = useInView(ref, {});
+    // const setActiveItem = useContext(MenuContext).setActiveItem;
+
+    // useEffect(() => {
+    //     if (!isInView) {
+    //         return;
+    //     }
+    //     console.log(`set ${props.id}`);
+    //     setActiveItem(props.id);
+    // }, [isInView, props.id, setActiveItem]);
+
+    return <StyledDiv id={props.id} ref={ref} />;
 }

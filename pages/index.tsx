@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import PhotosRuebe from "../components/sections/PhotosRuebe";
 import Demo from "../components/sections/Demo";
 import PageMenu from "../components/PageMenu/PageMenu";
+import MenuContextProvider from "../context/MenuContextProvider";
 
 const StyledRoot = styled.div`
     background: ${(props) => props.theme.color.black};
@@ -22,15 +23,17 @@ const StyledRoot = styled.div`
 
 const Home: NextPage = () => {
     return (
-        <StyledRoot>
-            <PageMenu />
-            <Intro />
-            <Demo />
-            <BandText />
-            <PhotosImpex />
-            <PhotosRuebe />
-            <Footer />
-        </StyledRoot>
+        <MenuContextProvider>
+            <StyledRoot>
+                <PageMenu />
+                <Intro />
+                <Demo />
+                <BandText />
+                <PhotosImpex />
+                <PhotosRuebe />
+                <Footer />
+            </StyledRoot>
+        </MenuContextProvider>
     );
 };
 
