@@ -5,6 +5,7 @@ import PageMenuContent from "./PageMenuContent";
 import { styleConstants } from "../../styles/style-constants";
 import Logo from "../../images/logo.svg";
 import { colorAnimationSlow } from "../../styles/color-animation";
+import { ScrollId } from "../ScrollTarget";
 
 export const TopBarSizePx = 54;
 const BarHeightPx = 0.08 * TopBarSizePx;
@@ -126,6 +127,7 @@ const menuVariants = {
 };
 
 const StyledLogo = styled.div`
+    cursor: pointer;
     display: flex;
     align-items: center;
     margin-right: ${(props) => props.theme.grid.spaceHorizontal.base};
@@ -181,6 +183,14 @@ export default function PageMenu() {
         };
     }, []);
 
+    function onLogoClick() {
+        const element: HTMLDivElement | null = document.querySelector(`#${ScrollId.top}`);
+        if (!element) {
+            return;
+        }
+        element.scrollIntoView({ behavior: "smooth" });
+    }
+
     return (
         <div ref={ref}>
             <StyledTopBar isMenuOpen={isMenuOpen} isMenuVisible={isMenuVisible}>
@@ -188,7 +198,7 @@ export default function PageMenu() {
                     <StyledBar />
                     <StyledBar />
                 </StyledButton>
-                <StyledLogo>
+                <StyledLogo onClick={onLogoClick}>
                     <Logo />
                 </StyledLogo>
             </StyledTopBar>
