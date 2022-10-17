@@ -9,7 +9,7 @@ import Shaker from "../../images/figuren/shaker.svg";
 import HideOnMobile from "../HideOnMobile";
 import HideOnDesktop from "../HideOnDesktop";
 import SectionSpace from "../SectionSpace";
-import ScrollTarget, { scrollTargetMixin } from "../ScrollTarget";
+import ScrollTarget, { ScrollId, scrollTargetMixin } from "../ScrollTarget";
 
 const StyledTopLine = styled.div`
     color: ${(props) => props.theme.color.white};
@@ -107,6 +107,7 @@ export default function Intro() {
 
     return (
         <div onClick={handleClick}>
+            <ScrollTarget id={ScrollId.top} />
             <Grid>
                 <StyledTopLine>
                     <Logo />

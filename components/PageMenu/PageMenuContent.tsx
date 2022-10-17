@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { styleConstants } from "../../styles/style-constants";
+import { ScrollId } from "../ScrollTarget";
 
 const StyledRoot = styled.div`
     height: 100vh;
@@ -21,8 +22,8 @@ export interface PageMenuContentProps {
 }
 
 export default function PageMenuContent(props: PageMenuContentProps) {
-    function onItemClick(target: string) {
-        const element: HTMLDivElement | null = document.querySelector(target);
+    function onItemClick(scrollId: ScrollId) {
+        const element: HTMLDivElement | null = document.querySelector(`#${scrollId}`);
         if (!element) {
             return;
         }
@@ -32,7 +33,7 @@ export default function PageMenuContent(props: PageMenuContentProps) {
 
     return (
         <StyledRoot>
-            <StyledLink onClick={() => onItemClick("#ubu-demo")}>Ubu Demo</StyledLink>
+            <StyledLink onClick={() => onItemClick(ScrollId.ubuDemo)}>Ubu Demo</StyledLink>
         </StyledRoot>
     );
 }

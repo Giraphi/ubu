@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Grid from "../Grid";
 import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
-import ScrollTarget from "../ScrollTarget";
+import ScrollTarget, { ScrollId } from "../ScrollTarget";
 
 const StyledIframeContainer = styled.div`
     display: flex;
@@ -43,7 +43,7 @@ export default function Demo() {
 
     return (
         <>
-            <ScrollTarget id={"UbuDemo"} />
+            <ScrollTarget id={ScrollId.ubuDemo} />
             <Grid>
                 <CompactArea>
                     <h2>Ubu Demo</h2>
