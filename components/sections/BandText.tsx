@@ -87,7 +87,7 @@ export default function BandText(props: TextProps) {
                     dadaistische Künstler der damaligen Zeit in Erstaunen versetzte. Ubu Imperator ist auch der Titel eines der bekanntesten
                     Werke von Max Ernst.
                 </p>
-                <StyledVideo ref={videoRef} muted={true} loop={true}>
+                <StyledVideo ref={videoRef} muted={true} loop={true} playsInline={true}>
                     <source src={"./video/eule.webm"} type={"video/webm"} />
                     <source src={"./video/eule.mp4"} type={"video/mp4"} />
                 </StyledVideo>

@@ -135,34 +135,34 @@ const StyledLogo = styled.div`
 export default function PageMenu() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMenuVisible, setIsMenuVisible] = useState(false);
-    const { scrollY } = useScroll();
-    const prevScrollY = useRef(scrollY.get());
+    // const { scrollY } = useScroll();
+    // const prevScrollY = useRef(scrollY.get());
 
-    scrollY.onChange((value) => {
-        if (Math.abs(value - prevScrollY.current) < 15) {
-            return;
-        }
-        value > prevScrollY.current ? onScrollDown(value) : onScrollUp(value);
-    });
-
-    function onScrollDown(value: number) {
-        prevScrollY.current = value;
-        setIsMenuVisible(false);
-        setIsMenuOpen(false);
-    }
-
-    function onScrollUp(value: number) {
-        if (value <= 7) {
-            setIsMenuOpen(false);
-            setIsMenuVisible(false);
-            prevScrollY.current = value;
-            return;
-        }
-
-        setIsMenuOpen(false);
-        setIsMenuVisible(true);
-        prevScrollY.current = value;
-    }
+    // scrollY.onChange((value) => {
+    //     if (Math.abs(value - prevScrollY.current) < 15) {
+    //         return;
+    //     }
+    //     value > prevScrollY.current ? onScrollDown(value) : onScrollUp(value);
+    // });
+    //
+    // function onScrollDown(value: number) {
+    //     prevScrollY.current = value;
+    //     setIsMenuVisible(false);
+    //     setIsMenuOpen(false);
+    // }
+    //
+    // function onScrollUp(value: number) {
+    //     if (value <= 7) {
+    //         setIsMenuOpen(false);
+    //         setIsMenuVisible(false);
+    //         prevScrollY.current = value;
+    //         return;
+    //     }
+    //
+    //     setIsMenuOpen(false);
+    //     setIsMenuVisible(true);
+    //     prevScrollY.current = value;
+    // }
 
     function handleClick() {
         setIsMenuOpen((x) => !x);
