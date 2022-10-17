@@ -8,6 +8,7 @@ import ScrollTarget from "../ScrollTarget";
 const StyledIframeContainer = styled.div`
     display: flex;
     justify-content: center;
+    padding-top: ${(props) => props.theme.space.gutter}px;
 `;
 
 const StyledIframe = styled.iframe`
