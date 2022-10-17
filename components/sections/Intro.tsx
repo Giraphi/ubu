@@ -115,11 +115,10 @@ export default function Intro() {
 
                 <StyledColumnImage>
                     <LeviathanNoBg />
+                    <StyledScrollTarget ref={scrollTarget} />
                 </StyledColumnImage>
 
                 <StyledColumnText>
-                    <StyledScrollTarget ref={scrollTarget} />
-
                     <HideOnMobile>
                         <StyledShaker>
                             <Shaker />
