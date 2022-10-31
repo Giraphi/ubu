@@ -3,15 +3,9 @@ import Grid, { GridLines } from "../Grid";
 import styled from "styled-components";
 import alle from "../../images/fotos-impex-original/alle.jpg";
 import simon from "../../images/fotos-impex-original/simon.jpg";
-import daniel from "../../images/fotos-impex-original/daniel.jpg";
+import daniel from "../../images/fotos-impex-original/daniel-crop.jpg";
 import raphi from "../../images/fotos-impex-original/raphi.jpg";
-// import alleWebp from "../../public/fotos-impex/alle.webp";
-// import simon from "../../public/fotos-impex/simon.jpg";
-// import simonWebp from "../../public/fotos-impex/simon.webp";
-// import raphi from "../../public/fotos-impex/raphi.jpg";
-// import raphiWebp from "../../public/fotos-impex/raphi.webp";
-// import daniel from "../../public/fotos-impex/daniel.jpg";
-// import danielWebp from "../../public/fotos-impex/daniel.webp";
+
 import { rectangleKeyframes } from "../../styles/clip-path-keyframes";
 import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
@@ -150,7 +144,7 @@ export default function PhotosImpex(props: PhotosProps) {
                         {/*    /!*<source srcSet={"./fotos-impex/daniel.webp"} />*!/*/}
                         {/*    <StyledImg src={"./fotos-impex/daniel.jpg"} />*/}
                         {/*</picture>*/}
-                        <Image src={daniel} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} objectPosition={"bottom"} />
+                        <Image src={daniel} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} objectPosition={"50% 50%"} />
                     </AspectRatioContent>
                 </StyledDanielImage>
             </StyledGrid>
