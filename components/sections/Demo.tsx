@@ -54,6 +54,7 @@ export default function Demo() {
                         {!isFirstRender && (
                             <StyledIframe
                                 // style="border: 0; width: 400px; height: 274px;"
+                                title={"bandcamp"}
                                 src="https://bandcamp.com/EmbeddedPlayer/album=3643840065/size=large/bgcol=333333/linkcol=ffffff/transparent=true/"
                                 seamless
                             >
