@@ -12,7 +12,7 @@ import MenuContextProvider from "../context/MenuContextProvider";
 
 const StyledRoot = styled.div`
     background: ${(props) => props.theme.color.black};
-    padding-bottom: ${(props) => props.theme.space.lg};
+    padding-bottom: ${(props) => props.theme.space.gutter * 2}px;
     padding-top: ${(props) => props.theme.space.md};
     overflow-x: hidden;
 
@@ -26,7 +26,6 @@ const Home: NextPage = () => {
         <MenuContextProvider>
             <StyledRoot>
                 <PageMenu />
-                {/*<div style={{ height: "50px", width: "100%", position: "fixed", top: 0, backgroundColor: "red", zIndex: "99" }}></div>*/}
                 <Intro />
                 <Demo />
                 <BandText />
