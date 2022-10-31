@@ -19,6 +19,7 @@ const StyledTopLine = styled.div`
     grid-row: 1;
     margin-bottom: ${(props) => props.theme.space.sm};
     margin-right: ${(props) => props.theme.space.gutter * 2}px;
+    cursor: pointer;
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
@@ -63,6 +64,7 @@ const StyledColumnImage = styled.div`
     ${colorAnimation};
     grid-row: 2;
     position: relative;
+    cursor: pointer;
 
     ::before {
         position: absolute;
@@ -80,12 +82,6 @@ const StyledColumnImage = styled.div`
         text-align: right;
     }
 `;
-
-// const StyledScrollTarget = styled.div`
-//     grid-row: 3;
-//     position: relative;
-//     top: -30px;
-// `;
 
 const StyledMembersParagraph = styled.p`
     margin-bottom: ${(props) => props.theme.space.gutter * 4}px;
@@ -106,14 +102,14 @@ export default function Intro() {
     }
 
     return (
-        <div onClick={handleClick}>
+        <>
             <ScrollTarget id={ScrollId.top} />
             <Grid>
-                <StyledTopLine>
+                <StyledTopLine onClick={handleClick}>
                     <Logo />
                 </StyledTopLine>
 
-                <StyledColumnImage>
+                <StyledColumnImage onClick={handleClick}>
                     <LeviathanNoBg />
                     <StyledScrollTarget ref={scrollTarget} />
                 </StyledColumnImage>
@@ -149,6 +145,6 @@ export default function Intro() {
                     </HideOnDesktop>
                 </StyledColumnText>
             </Grid>
-        </div>
+        </>
     );
 }
