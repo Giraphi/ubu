@@ -10,6 +10,7 @@ import GlitchyImage from "../GlitchyImage";
 import SectionSpace from "../SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
+import NoiseTransparent from "../../images/noise-transparent.png";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.lg};
@@ -69,7 +70,7 @@ const StyledNoise = styled.div`
     bottom: -50%;
     width: 200%;
     height: 200%;
-    background: url("http://assets.iceable.com/img/noise-transparent.png");
+    background: url(${NoiseTransparent.src});
     animation: ${noiseKeyframes} 0.2s infinite;
     visibility: visible;
     filter: contrast(2) brightness(2);
