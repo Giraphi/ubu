@@ -26,6 +26,7 @@ const Home: NextPage = () => {
         <MenuContextProvider>
             <StyledRoot>
                 <PageMenu />
+                {/*<div style={{ height: "50px", width: "100%", position: "fixed", top: 0, backgroundColor: "red", zIndex: "99" }}></div>*/}
                 <Intro />
                 <Demo />
                 <BandText />

@@ -28,8 +28,10 @@ const StyledTopBar = styled.div<{
     background-color: ${(props) => props.theme.color.black};
     display: flex;
     justify-content: space-between;
-
     height: ${TopBarSizeSmPx}px;
+    // Fixes a glitch on iOS Safari where a thin transparent area between iOS top bar and browser content was rendered.
+    transform: translateY(-1px);
+
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         height: ${TopBarSizePx}px;
     }
@@ -192,7 +194,7 @@ export default function PageMenu() {
     }
 
     return (
-        <div ref={ref}>
+        <>
             <StyledTopBar isMenuOpen={isMenuOpen} isMenuVisible={isMenuVisible}>
                 <StyledButton isMenuOpen={isMenuOpen} onClick={handleClick}>
                     <StyledBar />
@@ -210,6 +212,6 @@ export default function PageMenu() {
                     </StyledPageMenuContentWrapper>
                 )}
             </AnimatePresence>
-        </div>
+        </>
     );
 }
