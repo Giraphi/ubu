@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { flash, glitch1, glitch2, glitch3 } from "../styles/glitch-keyframes";
+import Image from "next/image";
+import { ImageProps } from "next/dist/client/image";
 
 const StyledGlitch = styled.div`
     position: relative;
@@ -11,15 +13,15 @@ const StyledGlitch = styled.div`
     height: 100%;
 `;
 
-const StyledImg = styled.div<{ numChild: number; variant: number }>`
+const StyledImg = styled(Image)<{ numChild: number; variant: number }>`
     position: absolute;
     top: calc(-1 * 5px);
     left: calc(-1 * 10px);
     width: calc(100% + 10px * 2);
     height: calc(100% + 5px * 2);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-size: cover;
+    //background-repeat: no-repeat;
+    //background-color: transparent;
+    //background-size: cover;
 
     ${(props) =>
         props.numChild === 2 &&
@@ -57,18 +59,26 @@ export interface GlitchyImageProps {
     src: string;
     variant: number;
     imagePosition?: string;
+    alt: string;
 }
 
 export default function GlitchyImage(props: GlitchyImageProps) {
-    const imageStyle = { backgroundImage: `url(${props.src})`, backgroundPosition: props.imagePosition };
+    const imageProps = {
+        src: props.src,
+        layout: "fill",
+        objectFit: "cover",
+        objectPosition: props.imagePosition,
+        alt: props.alt,
+        quality: 100,
+    } as ImageProps;
 
     return (
         <StyledGlitch>
-            <StyledImg style={imageStyle} numChild={1} variant={props.variant} />
-            {props.variant === 1 && <StyledImg style={imageStyle} numChild={2} variant={props.variant} />}
-            {props.variant === 2 && <StyledImg style={imageStyle} numChild={3} variant={props.variant} />}
-            {props.variant === 3 && <StyledImg style={imageStyle} numChild={4} variant={props.variant} />}
-            <StyledImg style={imageStyle} numChild={5} variant={props.variant} />
+            <StyledImg {...imageProps} numChild={1} variant={props.variant} />
+            {props.variant === 1 && <StyledImg {...imageProps} numChild={2} variant={props.variant} />}
+            {props.variant === 2 && <StyledImg {...imageProps} numChild={3} variant={props.variant} />}
+            {props.variant === 3 && <StyledImg {...imageProps} numChild={4} variant={props.variant} />}
+            <StyledImg {...imageProps} numChild={5} variant={props.variant} />
         </StyledGlitch>
     );
 }
