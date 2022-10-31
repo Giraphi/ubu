@@ -115,15 +115,15 @@ const StyledPageMenuContentWrapper = styled(motion.div)`
 
 const menuVariants = {
     visible: {
-        clipPath: "ellipse(70vw 144vh at 0% 0%)",
+        clipPath: "ellipse(80vw 200vh at 0% 0%)",
         transition: {
-            duration: 0.3,
+            duration: 0.5,
         },
     },
     hidden: {
         clipPath: "ellipse(0vw 0vh at 0% 0%)",
         transition: {
-            duration: 0.3,
+            duration: 0.5,
         },
     },
 };
