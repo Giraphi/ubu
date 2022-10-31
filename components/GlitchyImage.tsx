@@ -69,7 +69,7 @@ export default function GlitchyImage(props: GlitchyImageProps) {
         objectFit: "cover",
         objectPosition: props.imagePosition,
         alt: props.alt,
-        quality: 100,
+        quality: 80,
     } as ImageProps;
 
     return (
