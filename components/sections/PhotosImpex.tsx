@@ -1,7 +1,10 @@
 import React from "react";
 import Grid, { GridLines } from "../Grid";
 import styled from "styled-components";
-// import alle from "../../public/fotos-impex/alle.jpg";
+import alle from "../../images/fotos-impex-original/alle.jpg";
+import simon from "../../images/fotos-impex-original/simon.jpg";
+import daniel from "../../images/fotos-impex-original/daniel.jpg";
+import raphi from "../../images/fotos-impex-original/raphi.jpg";
 // import alleWebp from "../../public/fotos-impex/alle.webp";
 // import simon from "../../public/fotos-impex/simon.jpg";
 // import simonWebp from "../../public/fotos-impex/simon.webp";
@@ -14,6 +17,7 @@ import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
+import Image from "next/image";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -112,37 +116,41 @@ export default function PhotosImpex(props: PhotosProps) {
             <StyledGrid>
                 <StyledAllImage>
                     <AspectRatioContent>
-                        <picture>
-                            {/*<source srcSet={"./fotos-impex/alle.webp"} />*/}
-                            <StyledImg src={"./fotos-impex/alle.jpg"} />
-                        </picture>
+                        {/*<picture>*/}
+                        {/*<source srcSet={"./fotos-impex/alle.webp"} />*/}
+                        {/*<StyledImg src={"./fotos-impex/alle.jpg"} />*/}
+                        <Image src={alle} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} />
+                        {/*</picture>*/}
                     </AspectRatioContent>
                 </StyledAllImage>
 
                 <StyledRaphiImage>
                     <AspectRatioContent>
-                        <picture>
-                            {/*<source srcSet={"./fotos-impex/raphi.webp"} />*/}
-                            <StyledImg src={"./fotos-impex/raphi.jpg"} />
-                        </picture>
+                        {/*<picture>*/}
+                        {/*    /!*<source srcSet={"./fotos-impex/raphi.webp"} />*!/*/}
+                        {/*    <StyledImg src={"./fotos-impex/raphi.jpg"} />*/}
+                        {/*</picture>*/}
+                        <Image src={raphi} layout={"fill"} quality={90} objectFit={"cover"} alt={"raphi"} />
                     </AspectRatioContent>
                 </StyledRaphiImage>
 
                 <StyledSimonImage>
                     <AspectRatioContent>
-                        <picture>
-                            {/*<source srcSet={"./fotos-impex/simon.webp"} />*/}
-                            <StyledImg src={"./fotos-impex/simon.jpg"} />
-                        </picture>
+                        {/*<picture>*/}
+                        {/*    /!*<source srcSet={"./fotos-impex/simon.webp"} />*!/*/}
+                        {/*    <StyledImg src={"./fotos-impex/simon.jpg"} />*/}
+                        {/*</picture>*/}
+                        <Image src={simon} layout={"fill"} quality={90} objectFit={"cover"} alt={"simon"} />
                     </AspectRatioContent>
                 </StyledSimonImage>
 
                 <StyledDanielImage>
                     <AspectRatioContent>
-                        <picture>
-                            {/*<source srcSet={"./fotos-impex/daniel.webp"} />*/}
-                            <StyledImg src={"./fotos-impex/daniel.jpg"} />
-                        </picture>
+                        {/*<picture>*/}
+                        {/*    /!*<source srcSet={"./fotos-impex/daniel.webp"} />*!/*/}
+                        {/*    <StyledImg src={"./fotos-impex/daniel.jpg"} />*/}
+                        {/*</picture>*/}
+                        <Image src={daniel} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} objectPosition={"bottom"} />
                     </AspectRatioContent>
                 </StyledDanielImage>
             </StyledGrid>
