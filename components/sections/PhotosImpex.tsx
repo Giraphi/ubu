@@ -144,7 +144,7 @@ export default function PhotosImpex(props: PhotosProps) {
                         {/*    /!*<source srcSet={"./fotos-impex/daniel.webp"} />*!/*/}
                         {/*    <StyledImg src={"./fotos-impex/daniel.jpg"} />*/}
                         {/*</picture>*/}
-                        <Image src={daniel} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} objectPosition={"50% 50%"} />
+                        <Image src={daniel} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} objectPosition={"60%"} />
                     </AspectRatioContent>
                 </StyledDanielImage>
             </StyledGrid>
