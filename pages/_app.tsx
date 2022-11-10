@@ -3,6 +3,7 @@ import { AppProps } from "next/app";
 import { GlobalStyle } from "../styles/global-style";
 import { Theme, theme } from "../styles/theme";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 declare module "styled-components" {
     interface DefaultTheme extends Theme {}
@@ -42,6 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <ThemeProvider theme={theme}>
                 <GlobalStyle />
                 <Component {...pageProps} />
+                <Analytics />
             </ThemeProvider>
         </>
     );
