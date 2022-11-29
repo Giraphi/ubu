@@ -21,7 +21,7 @@ export default function Video(props: VideoProps) {
                     <h2>Video</h2>
                     <p>
                         Madness! Ubu Drummer und Illustrator Daniel hat die Nächte durchgezeichnet und ein irrwitziges Delirium von einem
-                        Musikvideo zu unserem song Kardinalkardinal erschaffen. Hope you like it!
+                        Musikvideo zu unserem Song Kardinalkardinal erschaffen. Hope you like it!
                     </p>
                     <StyledVideoArea>
                         <AspectRatioContent>
