@@ -52,6 +52,7 @@ export const theme = {
         wide: 1.62,
         xWide: 2.4,
         high: 0.8,
+        youtube: 1.78,
     },
 };
 

@@ -1,8 +1,9 @@
 import React from "react";
-import Instagram from "../images/optimized/instagram.svg";
-import Facebook from "../images/optimized/facebook.svg";
-import Mail from "../images/optimized/mail.svg";
-import Bandcamp from "../images/optimized/bandcamp.svg";
+import Instagram from "../images/social-icons/instagram.svg";
+import Facebook from "../images/social-icons/facebook.svg";
+import Mail from "../images/social-icons/mail.svg";
+import Bandcamp from "../images/social-icons/bandcamp.svg";
+import Youtube from "../images/social-icons/youtube.svg";
 import styled from "styled-components";
 
 const StyledRoot = styled.div`
@@ -34,14 +35,13 @@ const StyledItem = styled.a`
         }
     }
 
-    &.facebook {
+    &.youtube {
         &:hover {
-            color: ${(props) => props.theme.color.secondary};
+            color: ${(props) => props.theme.color.primary};
         }
 
         > svg {
-            position: relative;
-            left: -1px;
+            transform: scale(1.3, 1.3) translateY(4px);
         }
     }
 
@@ -58,7 +58,7 @@ const StyledItem = styled.a`
 
     &.bandcamp {
         &:hover {
-            color: ${(props) => props.theme.color.tertiary};
+            color: ${(props) => props.theme.color.secondary};
         }
 
         > svg {
@@ -78,16 +78,16 @@ export default function SocialIcons(props: SocialIconsProps) {
                 <Instagram />
             </StyledItem>
 
-            <StyledItem href={"mailto:ubuimperator.band@gmail.com"} target={"_blank"} className={"mail"}>
-                <Mail />
-            </StyledItem>
-
-            <StyledItem href={"https://www.facebook.com/Ubu.Imperator.Band/"} target={"_blank"} className={"facebook"}>
-                <Facebook />
-            </StyledItem>
-
             <StyledItem href={"https://ubuimperator.bandcamp.com/album/ubudemo"} target={"_blank"} className={"bandcamp"}>
                 <Bandcamp />
+            </StyledItem>
+
+            <StyledItem href={"https://www.youtube.com/@ubuimperator4321"} target={"_blank"} className={"youtube"}>
+                <Youtube />
+            </StyledItem>
+
+            <StyledItem href={"mailto:ubuimperator.band@gmail.com"} target={"_blank"} className={"mail"}>
+                <Mail />
             </StyledItem>
         </StyledRoot>
     );

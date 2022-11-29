@@ -3,7 +3,7 @@ import Grid, { GridLines } from "../Grid";
 import styled from "styled-components";
 import alle from "../../images/fotos-impex-original/alle.jpg";
 import simon from "../../images/fotos-impex-original/simon.jpg";
-import daniel from "../../images/fotos-impex-original/daniel-crop.jpg";
+import daniel from "../../images/fotos-fleisch/daniel.jpg";
 import raphi from "../../images/fotos-impex-original/raphi.jpg";
 
 import { rectangleKeyframes } from "../../styles/clip-path-keyframes";
@@ -110,41 +110,25 @@ export default function PhotosImpex(props: PhotosProps) {
             <StyledGrid>
                 <StyledAllImage>
                     <AspectRatioContent>
-                        {/*<picture>*/}
-                        {/*<source srcSet={"./fotos-impex/alle.webp"} />*/}
-                        {/*<StyledImg src={"./fotos-impex/alle.jpg"} />*/}
                         <Image src={alle} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} />
-                        {/*</picture>*/}
                     </AspectRatioContent>
                 </StyledAllImage>
 
                 <StyledRaphiImage>
                     <AspectRatioContent>
-                        {/*<picture>*/}
-                        {/*    /!*<source srcSet={"./fotos-impex/raphi.webp"} />*!/*/}
-                        {/*    <StyledImg src={"./fotos-impex/raphi.jpg"} />*/}
-                        {/*</picture>*/}
                         <Image src={raphi} layout={"fill"} quality={90} objectFit={"cover"} alt={"raphi"} />
                     </AspectRatioContent>
                 </StyledRaphiImage>
 
                 <StyledSimonImage>
                     <AspectRatioContent>
-                        {/*<picture>*/}
-                        {/*    /!*<source srcSet={"./fotos-impex/simon.webp"} />*!/*/}
-                        {/*    <StyledImg src={"./fotos-impex/simon.jpg"} />*/}
-                        {/*</picture>*/}
                         <Image src={simon} layout={"fill"} quality={90} objectFit={"cover"} alt={"simon"} />
                     </AspectRatioContent>
                 </StyledSimonImage>
 
                 <StyledDanielImage>
                     <AspectRatioContent>
-                        {/*<picture>*/}
-                        {/*    /!*<source srcSet={"./fotos-impex/daniel.webp"} />*!/*/}
-                        {/*    <StyledImg src={"./fotos-impex/daniel.jpg"} />*/}
-                        {/*</picture>*/}
-                        <Image src={daniel} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} objectPosition={"60%"} />
+                        <Image src={daniel} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} />
                     </AspectRatioContent>
                 </StyledDanielImage>
             </StyledGrid>

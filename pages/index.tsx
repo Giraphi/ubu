@@ -9,6 +9,7 @@ import PhotosRuebe from "../components/sections/PhotosRuebe";
 import Demo from "../components/sections/Demo";
 import PageMenu from "../components/PageMenu/PageMenu";
 import MenuContextProvider from "../context/MenuContextProvider";
+import Video from "../components/sections/Video";
 
 const StyledRoot = styled.div`
     background: ${(props) => props.theme.color.black};
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
                 <Intro />
                 <Demo />
                 <BandText />
+                <Video />
                 <PhotosImpex />
                 <PhotosRuebe />
                 <Footer />
