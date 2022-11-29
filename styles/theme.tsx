@@ -49,10 +49,10 @@ export const theme = {
     },
     ratio: {
         square: 1,
-        wide: 1.62,
+        wide: 1.78,
+        youtube: 1.78,
         xWide: 2.4,
         high: 0.8,
-        youtube: 1.78,
     },
 };
 
