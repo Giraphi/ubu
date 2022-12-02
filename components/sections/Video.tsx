@@ -5,6 +5,7 @@ import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
 import styled from "styled-components";
+import { FormattedMessage } from "react-intl";
 
 const StyledVideoArea = styled.div`
     ${(props) => aspectRatioMixin(props.theme.ratio.youtube)}
@@ -20,8 +21,7 @@ export default function Video(props: VideoProps) {
                 <CompactArea>
                     <h2>Video</h2>
                     <p>
-                        Madness! Ubu Drummer und Illustrator Daniel hat die Nächte durchgezeichnet und ein irrwitziges Delirium von einem
-                        Musikvideo zu unserem Song Kardinalkardinal erschaffen. Hope you like it!
+                        <FormattedMessage id={"home.video.text"} />
                     </p>
                     <StyledVideoArea>
                         <AspectRatioContent>

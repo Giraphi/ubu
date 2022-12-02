@@ -12,6 +12,7 @@ import SectionSpace from "../SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
 import Image from "next/image";
+import { FormattedMessage } from "react-intl";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -102,8 +103,17 @@ export default function PhotosImpex(props: PhotosProps) {
                 <CompactArea>
                     <h2>Ubu @ImportExport</h2>
                     <p>
-                        Ubu bei den <a href={"https://alternativefakten089.de/"}>Alternativen Fakten</a> im September 2022 im{" "}
-                        <a href={"https://import-export.cc/"}>Import Export</a> München. Danke an Vanessa Mönius für die Fotos.
+                        <FormattedMessage
+                            id={"home.impex.text"}
+                            values={{
+                                faktenLink: (
+                                    <a href={"https://alternativefakten089.de/"}>
+                                        <FormattedMessage id={"home.impex.text.faktenLink"} />
+                                    </a>
+                                ),
+                                impexLink: <a href={"https://import-export.cc/"}>Import Export</a>,
+                            }}
+                        />
                     </p>
                 </CompactArea>
             </Grid>

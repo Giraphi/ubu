@@ -11,6 +11,7 @@ import SectionSpace from "../SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
 import NoiseTransparent from "../../images/noise-transparent.png";
+import { FormattedMessage } from "react-intl";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.lg};
@@ -86,8 +87,12 @@ export default function PhotosRuebe(props: PhotosRuebeProps) {
                 <CompactArea>
                     <h2>Ubu @Rübezahl</h2>
                     <p>
-                        Ubu auf dem sehr besonderen und nachhaltigen{" "}
-                        <a href={"https://www.youtube.com/watch?v=ylfAdSLbCS0"}>Rübezahl Festival</a> im August 2022.
+                        <FormattedMessage
+                            id={"home.ruebe.text"}
+                            values={{ link: <a href={"https://www.youtube.com/watch?v=ylfAdSLbCS0"}>Rübezahl Festival</a> }}
+                        />
+                        {/*Ubu auf dem sehr besonderen und nachhaltigen{" "}*/}
+                        {/*<a href={"https://www.youtube.com/watch?v=ylfAdSLbCS0"}>Rübezahl Festival</a> im August 2022.*/}
                     </p>
                 </CompactArea>
             </Grid>

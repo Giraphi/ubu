@@ -11,7 +11,14 @@ import PageMenu from "../components/PageMenu/PageMenu";
 import MenuContextProvider from "../context/MenuContextProvider";
 import Video from "../components/sections/Video";
 import { useRouter } from "next/router";
-import { LanguageContext } from "../context/LanguageContext";
+import en from "../lang/en.json";
+import de from "../lang/de.json";
+import { IntlProvider } from "react-intl";
+
+const messages: Record<string, any> = {
+    de,
+    en,
+};
 
 const StyledRoot = styled.div`
     background: ${(props) => props.theme.color.black};
@@ -28,7 +35,7 @@ const Home: NextPage = () => {
     const locale = useRouter().locale as "de" | "en"; // because of next.config.js this can only be "de" or "en"
 
     return (
-        <LanguageContext.Provider value={{ locale: locale }}>
+        <IntlProvider locale={locale} messages={messages[locale]}>
             <MenuContextProvider>
                 <StyledRoot>
                     <PageMenu />
@@ -41,7 +48,7 @@ const Home: NextPage = () => {
                     <Footer />
                 </StyledRoot>
             </MenuContextProvider>
-        </LanguageContext.Provider>
+        </IntlProvider>
     );
 };
 
