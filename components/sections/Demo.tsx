@@ -51,7 +51,6 @@ export default function Demo() {
                 <CompactArea>
                     <h2>Ubu Demo</h2>
                     <StyledP>
-                        {/*<LocaleText texts={textContent.home.demo.text} />*/}
                         <FormattedMessage id={"home.demo.text"} />
                     </StyledP>
                     <StyledIframeContainer>
