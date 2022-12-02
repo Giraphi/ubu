@@ -10,6 +10,8 @@ import Demo from "../components/sections/Demo";
 import PageMenu from "../components/PageMenu/PageMenu";
 import MenuContextProvider from "../context/MenuContextProvider";
 import Video from "../components/sections/Video";
+import { useRouter } from "next/router";
+import { LanguageContext } from "../context/LanguageContext";
 
 const StyledRoot = styled.div`
     background: ${(props) => props.theme.color.black};
@@ -23,19 +25,23 @@ const StyledRoot = styled.div`
 `;
 
 const Home: NextPage = () => {
+    const locale = useRouter().locale as "de" | "en"; // because of next.config.js this can only be "de" or "en"
+
     return (
-        <MenuContextProvider>
-            <StyledRoot>
-                <PageMenu />
-                <Intro />
-                <Demo />
-                <BandText />
-                <Video />
-                <PhotosImpex />
-                <PhotosRuebe />
-                <Footer />
-            </StyledRoot>
-        </MenuContextProvider>
+        <LanguageContext.Provider value={{ locale: locale }}>
+            <MenuContextProvider>
+                <StyledRoot>
+                    <PageMenu />
+                    <Intro />
+                    <Demo />
+                    <BandText />
+                    <Video />
+                    <PhotosImpex />
+                    <PhotosRuebe />
+                    <Footer />
+                </StyledRoot>
+            </MenuContextProvider>
+        </LanguageContext.Provider>
     );
 };
 

@@ -4,6 +4,9 @@ import Grid from "../Grid";
 import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
+import { FormattedMessage } from "react-intl";
+import LocaleText from "../LocaleText";
+import { textContent } from "../../lang/textContent";
 
 const StyledIframeContainer = styled.div`
     display: flex;
@@ -48,7 +51,7 @@ export default function Demo() {
                 <CompactArea>
                     <h2>Ubu Demo</h2>
                     <StyledP>
-                        Ubu präsentiert die ersten frisch fertig gestellten Demo-Aufnahmen. Mit Mastering von Ulrich Treutwein. Vielen Dank!
+                        <LocaleText texts={textContent.home.demo.text} />
                     </StyledP>
                     <StyledIframeContainer>
                         {!isFirstRender && (
