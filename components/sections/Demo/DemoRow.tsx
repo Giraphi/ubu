@@ -9,6 +9,7 @@ const StyledRow = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    row-gap: ${(props) => props.theme.space.sm};
 
     @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
         flex-direction: row;
@@ -51,7 +52,6 @@ const StyledImageContainer = styled.div`
 `;
 
 const StyledImageItem = styled.div`
-    height: 400px;
     width: 100%;
     position: relative;
 
@@ -73,7 +73,7 @@ export default function DemoRow(props: DemoRowProps) {
         <StyledRow>
             <StyledImageContainer>
                 <StyledImageItem>
-                    <Image src={Kas1} alt={"Tape"} quality={50} layout={"fill"} objectFit={"contain"} />
+                    <Image src={Kas1} alt={"Tape"} quality={50} />
                 </StyledImageItem>
             </StyledImageContainer>
 
@@ -92,7 +92,7 @@ export default function DemoRow(props: DemoRowProps) {
 
             <StyledImageContainer>
                 <StyledImageItem>
-                    <Image src={Kas3} alt={"Tape"} quality={50} layout={"fill"} objectFit={"contain"} />
+                    <Image src={Kas3} alt={"Tape"} quality={50} />
                 </StyledImageItem>
             </StyledImageContainer>
         </StyledRow>
