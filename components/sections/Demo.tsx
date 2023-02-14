@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Grid from "../Grid";
+import Grid, { GridLines } from "../Grid";
 import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
 import { FormattedMessage } from "react-intl";
+import klangschutz from "../../images/klangschutz-banner.jpeg";
+import Image from "next/image";
+import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
 
 const StyledIframeContainer = styled.div`
     display: flex;
@@ -38,6 +41,27 @@ const StyledP = styled.p`
             margin-bottom: ${(props) => props.theme.space.lg};
         }
     }
+`;
+
+const StyledBanner = styled.div`
+    grid-row: 2;
+    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
+    ${(props) => aspectRatioMixin(props.theme.ratio.klangschutzBanner)};
+
+    // margin-bottom: ${(props) => props.theme.space.sm};
+    //
+    // @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+    //     margin-bottom: ${(props) => props.theme.space.lg};
+    // }
+`;
+
+const StyledLink = styled.a`
+    display: block;
+    width: 100%;
+    height: 100%;
+    //display: block;
+    //aspect-ratio: 1.49;
+    //position: relative;
 `;
 
 export default function Demo() {
@@ -77,6 +101,14 @@ export default function Demo() {
                         />
                     </StyledP>
                 </CompactArea>
+
+                <StyledBanner>
+                    <AspectRatioContent>
+                        <StyledLink href={"https://www.klangschutz.com/"}>
+                            <Image src={klangschutz} quality={90} alt={"klangschutz"} layout="fill" objectFit={"cover"} />
+                        </StyledLink>
+                    </AspectRatioContent>
+                </StyledBanner>
             </Grid>
             <SectionSpace />
         </>

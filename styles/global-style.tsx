@@ -33,16 +33,6 @@ export const GlobalStyle = createGlobalStyle`
         line-height: ${(props) => props.theme.typography.lineHeight.h2};
     }
 
-    @media(min-width: ${(props) => props.theme.breakpoints.lg}px) {
-        p {
-            font-size: ${(props) => props.theme.typography.fontSize.p.lg};
-        }
-        h2 {
-            font-size: ${(props) => props.theme.typography.fontSize.h2.lg};
-        }
-    }
-
-
     a, a:focus {
         color: ${(props) => props.theme.color.white}
     }

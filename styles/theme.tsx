@@ -19,11 +19,9 @@ export const theme = {
         fontSize: {
             p: {
                 base: "18px",
-                lg: "20px",
             },
             h2: {
                 base: "32px",
-                lg: "40px;",
             },
         },
         lineHeight: {
@@ -59,6 +57,7 @@ export const theme = {
         youtube: 1.78,
         xWide: 2.4,
         high: 0.8,
+        klangschutzBanner: 6.2,
     },
 };
 
