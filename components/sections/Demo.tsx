@@ -5,9 +5,11 @@ import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
 import { FormattedMessage } from "react-intl";
-import klangschutz from "../../images/klangschutz-banner.jpeg";
+import klangschutz from "../../images/klangschutz-banner-original.jpeg";
 import Image from "next/image";
 import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
+import raphi from "../../images/fotos-ruebezahl/ruebe-raphi.jpg";
+import GlitchyImage from "../GlitchyImage";
 
 const StyledIframeContainer = styled.div`
     display: flex;
@@ -46,13 +48,11 @@ const StyledP = styled.p`
 const StyledBanner = styled.div`
     grid-row: 2;
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
-    ${(props) => aspectRatioMixin(props.theme.ratio.klangschutzBanner)};
 
-    // margin-bottom: ${(props) => props.theme.space.sm};
-    //
-    // @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-    //     margin-bottom: ${(props) => props.theme.space.lg};
-    // }
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+        grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
+    }
+    ${(props) => aspectRatioMixin(props.theme.ratio.klangschutzBanner)};
 `;
 
 const StyledLink = styled.a`
@@ -76,9 +76,22 @@ export default function Demo() {
             <ScrollTarget id={ScrollId.ubuDemo} />
             <Grid>
                 <CompactArea>
-                    <h2>Ubu Demo</h2>
+                    <h2>Ubu Tape</h2>
                     <StyledP>
-                        <FormattedMessage id={"home.demo.text"} />
+                        <FormattedMessage
+                            id={"home.demo.text"}
+                            values={{
+                                klangschutzLink: (
+                                    <a
+                                        href={
+                                            "https://www.klangschutz.com/epages/78930758.sf/de_DE/?ObjectPath=/Shops/78930758/Products/0000022"
+                                        }
+                                    >
+                                        Klangschutz Mailorder
+                                    </a>
+                                ),
+                            }}
+                        />
                     </StyledP>
                     <StyledIframeContainer>
                         {!isFirstRender && (
@@ -92,19 +105,16 @@ export default function Demo() {
                             </StyledIframe>
                         )}
                     </StyledIframeContainer>
-                    <StyledP>
-                        <FormattedMessage
-                            id={"home.demo.text2"}
-                            values={{
-                                klangschutzLink: <a href={"https://www.klangschutz.com/"}>Klangschutz Mailorder</a>,
-                            }}
-                        />
-                    </StyledP>
+                    <p>
+                        <FormattedMessage id={"home.demo.text2"} />
+                    </p>
                 </CompactArea>
 
                 <StyledBanner>
                     <AspectRatioContent>
-                        <StyledLink href={"https://www.klangschutz.com/"}>
+                        <StyledLink
+                            href={"https://www.klangschutz.com/epages/78930758.sf/de_DE/?ObjectPath=/Shops/78930758/Products/0000022"}
+                        >
                             <Image src={klangschutz} quality={90} alt={"klangschutz"} layout="fill" objectFit={"cover"} />
                         </StyledLink>
                     </AspectRatioContent>

@@ -57,7 +57,7 @@ export const theme = {
         youtube: 1.78,
         xWide: 2.4,
         high: 0.8,
-        klangschutzBanner: 6.2,
+        klangschutzBanner: 4.55,
     },
 };
 
