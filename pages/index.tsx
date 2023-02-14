@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 import en from "../lang/en.json";
 import de from "../lang/de.json";
 import { IntlProvider } from "react-intl";
+import BandPic from "../components/BandPic";
 
 const messages: Record<string, any> = {
     de,
@@ -40,6 +41,7 @@ const Home: NextPage = () => {
                 <StyledRoot>
                     <PageMenu />
                     <Intro />
+                    <BandPic />
                     <Demo />
                     <BandText />
                     <Video />
