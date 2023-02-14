@@ -2,16 +2,28 @@ import React from "react";
 import Grid, { GridLines } from "./Grid";
 import styled, { css, keyframes } from "styled-components";
 import photo from "../images/fotos-galerie/UBUIMPERATOR_Auswahl-20.jpg";
-import frame from "../images/frame2.png";
+import frame from "../images/frame.png";
 import Image from "next/image";
 import SectionSpace from "./SectionSpace";
 
-export const photoKeyframes = keyframes`
+const photoKeyframesStrong = keyframes`
     0% {
         transform: scale(0.83) translateX(1%);
     }
     50% {
         transform: scale(0.9) translateX(1%);
+    }
+    100% {
+        transform: scale(0.83) translateX(1%);
+
+    }
+`;
+const photoKeyframesLight = keyframes`
+    0% {
+        transform: scale(0.83) translateX(1%);
+    }
+    50% {
+        transform: scale(0.87) translateX(1%);
     }
     100% {
         transform: scale(0.83) translateX(1%);
@@ -33,10 +45,14 @@ const StyledArea = styled.div`
 `;
 
 const StyledContainer = styled.div`
-    transform: scale(0.83) translateX(1%);
-    animation: ${photoKeyframes} 5s infinite;
+    animation: ${photoKeyframesStrong} 5s infinite;
     animation-timing-function: ease-in-out;
+
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+        animation: ${photoKeyframesLight} 5s infinite;
+    }
 `;
+// animation-name: ${photoKeyframesLight};
 
 export interface BandPicProps {}
 
