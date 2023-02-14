@@ -5,8 +5,6 @@ import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
 import { FormattedMessage } from "react-intl";
-import LocaleText from "../LocaleText";
-import { textContent } from "../../lang/textContent";
 
 const StyledIframeContainer = styled.div`
     display: flex;
@@ -19,6 +17,11 @@ const StyledIframe = styled.iframe`
     box-shadow: 0 0 15px 1px ${(props) => props.theme.color.secondary};
     width: 300px;
     height: 538px;
+    margin-bottom: ${(props) => props.theme.space.sm};
+
+    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+        margin-bottom: ${(props) => props.theme.space.lg};
+    }
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         box-shadow: 0 0 26px 6px ${(props) => props.theme.color.secondary};
@@ -65,6 +68,14 @@ export default function Demo() {
                             </StyledIframe>
                         )}
                     </StyledIframeContainer>
+                    <StyledP>
+                        <FormattedMessage
+                            id={"home.demo.text2"}
+                            values={{
+                                klangschutzLink: <a href={"https://www.klangschutz.com/"}>Klangschutz Mailorder</a>,
+                            }}
+                        />
+                    </StyledP>
                 </CompactArea>
             </Grid>
             <SectionSpace />

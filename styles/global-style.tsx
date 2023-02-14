@@ -21,13 +21,27 @@ export const GlobalStyle = createGlobalStyle`
 
     p {
         margin-top: 0;
-        font-size: ${(props) => props.theme.typography.fontSize.p};
+        font-size: ${(props) => props.theme.typography.fontSize.p.base};
         line-height: ${(props) => props.theme.typography.lineHeight.p};
         margin-bottom: ${(props) => props.theme.space.sm};
-
-        // :not(:last-child) {
-        // }
     }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: ${(props) => props.theme.space.sm};
+        font-size: ${(props) => props.theme.typography.fontSize.h2.base};
+        line-height: ${(props) => props.theme.typography.lineHeight.h2};
+    }
+
+    @media(min-width: ${(props) => props.theme.breakpoints.lg}px) {
+        p {
+            font-size: ${(props) => props.theme.typography.fontSize.p.lg};
+        }
+        h2 {
+            font-size: ${(props) => props.theme.typography.fontSize.h2.lg};
+        }
+    }
+
 
     a, a:focus {
         color: ${(props) => props.theme.color.white}
@@ -42,11 +56,5 @@ export const GlobalStyle = createGlobalStyle`
         height: auto;
     }
 
-    h2 {
-        margin-top: 0;
-        margin-bottom: ${(props) => props.theme.space.sm};
-        font-size: ${(props) => props.theme.typography.fontSize.h2};
-        line-height: ${(props) => props.theme.typography.lineHeight.h2};
-    }
 
 `;

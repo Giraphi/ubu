@@ -17,8 +17,14 @@ export const theme = {
     },
     typography: {
         fontSize: {
-            p: "18px",
-            h2: "32px",
+            p: {
+                base: "18px",
+                lg: "20px",
+            },
+            h2: {
+                base: "32px",
+                lg: "40px;",
+            },
         },
         lineHeight: {
             p: "130%",

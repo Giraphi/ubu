@@ -6,7 +6,7 @@ const StyledRoot = styled.div`
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
+        grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
     }
 `;
 
