@@ -6,7 +6,7 @@ import PhotosImpex from "../components/sections/PhotosImpex";
 import BandText from "../components/sections/BandText";
 import Footer from "../components/Footer";
 import PhotosRuebe from "../components/sections/PhotosRuebe";
-import Demo from "../components/sections/Demo";
+import Demo from "../components/sections/Demo/Demo";
 import PageMenu from "../components/PageMenu/PageMenu";
 import MenuContextProvider from "../context/MenuContextProvider";
 import Video from "../components/sections/Video";
