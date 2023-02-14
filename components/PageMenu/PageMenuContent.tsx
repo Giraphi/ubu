@@ -55,7 +55,7 @@ export default function PageMenuContent(props: PageMenuContentProps) {
     return (
         <StyledRoot>
             <StyledLink onClick={() => onItemClick(ScrollId.top)}>Start</StyledLink>
-            <StyledLink onClick={() => onItemClick(ScrollId.ubuDemo)}>Ubu Demo</StyledLink>
+            <StyledLink onClick={() => onItemClick(ScrollId.ubuDemo)}>Tape</StyledLink>
             <StyledLink onClick={() => onItemClick(ScrollId.ueberUns)}>Über Uns</StyledLink>
             <StyledLink onClick={() => onItemClick(ScrollId.video)}>Video</StyledLink>
             <StyledLink onClick={() => onItemClick(ScrollId.impex)}>Fotos Impex</StyledLink>

@@ -73,7 +73,20 @@ export default function Demo() {
                 </RowArea>
                 <CompactArea>
                     <p>
-                        <FormattedMessage id={"home.demo.text2"} />
+                        <FormattedMessage
+                            id={"home.demo.text2"}
+                            values={{
+                                klangschutzLink: (
+                                    <a
+                                        href={
+                                            "https://www.klangschutz.com/epages/78930758.sf/de_DE/?ObjectPath=/Shops/78930758/Products/0000022"
+                                        }
+                                    >
+                                        Klangschutz Mailorder
+                                    </a>
+                                ),
+                            }}
+                        />
                     </p>
                 </CompactArea>
 

@@ -10,9 +10,11 @@ const StyledRow = styled.div`
     align-items: center;
     flex-direction: column;
     row-gap: ${(props) => props.theme.space.sm};
+    margin-bottom: ${(props) => props.theme.space.sm};
 
     @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
         flex-direction: row;
+        margin-bottom: 0;
     }
 `;
 

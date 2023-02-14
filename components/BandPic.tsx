@@ -62,11 +62,11 @@ export default function BandPic(props: BandPicProps) {
             <Grid>
                 <StyledArea>
                     <StyledContainer>
-                        <Image src={photo} alt={"band photo"} />
+                        <Image src={photo} alt={"band photo"} quality={10} priority={true} />
                     </StyledContainer>
                 </StyledArea>
                 <StyledArea>
-                    <Image src={frame} alt={"image frame"} />
+                    <Image src={frame} alt={"image frame"} quality={50} priority={true} />
                 </StyledArea>
                 {/*<StyledOverlay />*/}
                 {/*<StyledArea>*/}
