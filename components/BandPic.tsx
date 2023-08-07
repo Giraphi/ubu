@@ -5,35 +5,36 @@ import photo from "../images/fotos-galerie/UBUIMPERATOR_Auswahl-20.jpg";
 import frame from "../images/frame.png";
 import Image from "next/image";
 import SectionSpace from "./SectionSpace";
+import { AspectRatioContent, aspectRatioMixin } from "../styles/aspect-ratio";
+import { renditions } from "../renditions";
 
 const photoKeyframesStrong = keyframes`
     0% {
-        transform: scale(0.83) translateX(1%);
+        transform: scale(0.83);
     }
     50% {
-        transform: scale(0.9) translateX(1%);
+        transform: scale(0.9);
     }
     100% {
-        transform: scale(0.83) translateX(1%);
+        transform: scale(0.83);
 
     }
 `;
 const photoKeyframesLight = keyframes`
     0% {
-        transform: scale(0.83) translateX(1%);
+        transform: scale(0.83);
     }
     50% {
-        transform: scale(0.87) translateX(1%);
+        transform: scale(0.87);
     }
     100% {
-        transform: scale(0.83) translateX(1%);
+        transform: scale(0.83);
 
     }
 `;
 
 const ImageAreaMixin = css`
     grid-row: 1;
-
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
 `;
 
@@ -42,9 +43,15 @@ const StyledArea = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    ${(props) => aspectRatioMixin(1.3)}
 `;
 
 const StyledContainer = styled.div`
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 100%;
+    height: 100%;
+    position: relative;
     animation: ${photoKeyframesStrong} 5s infinite;
     animation-timing-function: ease-in-out;
 
@@ -52,7 +59,6 @@ const StyledContainer = styled.div`
         animation: ${photoKeyframesLight} 5s infinite;
     }
 `;
-// animation-name: ${photoKeyframesLight};
 
 export interface BandPicProps {}
 
@@ -61,17 +67,33 @@ export default function BandPic(props: BandPicProps) {
         <>
             <Grid>
                 <StyledArea>
-                    <StyledContainer>
-                        <Image src={photo} alt={"band photo"} quality={10} priority={true} />
-                    </StyledContainer>
+                    <AspectRatioContent>
+                        <StyledContainer>
+                            <Image
+                                src={photo}
+                                alt={"band photo"}
+                                quality={30}
+                                loading={"eager"}
+                                layout={"fill"}
+                                objectFit={"cover"}
+                                sizes={renditions.full}
+                            />
+                        </StyledContainer>
+                    </AspectRatioContent>
                 </StyledArea>
                 <StyledArea>
-                    <Image src={frame} alt={"image frame"} quality={50} priority={true} />
+                    <AspectRatioContent>
+                        <Image
+                            loading={"eager"}
+                            src={frame}
+                            alt={"image frame"}
+                            quality={50}
+                            layout={"fill"}
+                            objectFit={"cover"}
+                            sizes={renditions.full}
+                        />
+                    </AspectRatioContent>
                 </StyledArea>
-                {/*<StyledOverlay />*/}
-                {/*<StyledArea>*/}
-                {/*    <Image src={frame} layout={"fill"} objectFit={"contain"} />*/}
-                {/*</StyledArea>*/}
             </Grid>
             <SectionSpace />
         </>

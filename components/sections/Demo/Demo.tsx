@@ -9,6 +9,7 @@ import klangschutz from "../../../images/klangschutz-banner-original.jpeg";
 import Image from "next/image";
 import { AspectRatioContent, aspectRatioMixin } from "../../../styles/aspect-ratio";
 import DemoRow from "./DemoRow";
+import { renditions } from "../../../renditions";
 
 const StyledP = styled.p`
     && {
@@ -95,7 +96,14 @@ export default function Demo() {
                         <StyledLink
                             href={"https://www.klangschutz.com/epages/78930758.sf/de_DE/?ObjectPath=/Shops/78930758/Products/0000022"}
                         >
-                            <Image src={klangschutz} quality={90} alt={"klangschutz"} layout="fill" objectFit={"cover"} />
+                            <Image
+                                src={klangschutz}
+                                quality={90}
+                                alt={"klangschutz"}
+                                layout="fill"
+                                objectFit={"cover"}
+                                sizes={renditions.full}
+                            />
                         </StyledLink>
                     </AspectRatioContent>
                 </StyledBanner>

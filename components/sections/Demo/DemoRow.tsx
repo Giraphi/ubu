@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Kas1 from "../../../images/kassette/kas_1.png";
 import Kas3 from "../../../images/kassette/kas_2.png";
 import Image from "next/image";
+import { renditions } from "../../../renditions";
 
 const StyledRow = styled.div`
     display: flex;
@@ -75,7 +76,7 @@ export default function DemoRow(props: DemoRowProps) {
         <StyledRow>
             <StyledImageContainer>
                 <StyledImageItem>
-                    <Image src={Kas1} alt={"Tape"} quality={50} />
+                    <Image src={Kas1} alt={"Tape"} quality={50} sizes={renditions.half} />
                 </StyledImageItem>
             </StyledImageContainer>
 
@@ -94,7 +95,7 @@ export default function DemoRow(props: DemoRowProps) {
 
             <StyledImageContainer>
                 <StyledImageItem>
-                    <Image src={Kas3} alt={"Tape"} quality={50} />
+                    <Image src={Kas3} alt={"Tape"} quality={50} sizes={renditions.half} />
                 </StyledImageItem>
             </StyledImageContainer>
         </StyledRow>

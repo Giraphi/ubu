@@ -13,6 +13,7 @@ import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio"
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
 import Image from "next/image";
 import { FormattedMessage } from "react-intl";
+import { renditions } from "../../renditions";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -120,25 +121,25 @@ export default function PhotosImpex(props: PhotosProps) {
             <StyledGrid>
                 <StyledAllImage>
                     <AspectRatioContent>
-                        <Image src={alle} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} />
+                        <Image src={alle} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} sizes={renditions.full} />
                     </AspectRatioContent>
                 </StyledAllImage>
 
                 <StyledRaphiImage>
                     <AspectRatioContent>
-                        <Image src={raphi} layout={"fill"} quality={90} objectFit={"cover"} alt={"raphi"} />
+                        <Image src={raphi} layout={"fill"} quality={90} objectFit={"cover"} alt={"raphi"} sizes={renditions.half} />
                     </AspectRatioContent>
                 </StyledRaphiImage>
 
                 <StyledSimonImage>
                     <AspectRatioContent>
-                        <Image src={simon} layout={"fill"} quality={90} objectFit={"cover"} alt={"simon"} />
+                        <Image src={simon} layout={"fill"} quality={90} objectFit={"cover"} alt={"simon"} sizes={renditions.half} />
                     </AspectRatioContent>
                 </StyledSimonImage>
 
                 <StyledDanielImage>
                     <AspectRatioContent>
-                        <Image src={daniel} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} />
+                        <Image src={daniel} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} sizes={renditions.full} />
                     </AspectRatioContent>
                 </StyledDanielImage>
             </StyledGrid>
