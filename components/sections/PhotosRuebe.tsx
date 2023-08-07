@@ -12,6 +12,7 @@ import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio"
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
 import NoiseTransparent from "../../images/noise-transparent.png";
 import { FormattedMessage } from "react-intl";
+import { imageRenditions } from "../../imageRenditions";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.lg};
@@ -99,21 +100,21 @@ export default function PhotosRuebe(props: PhotosRuebeProps) {
             <StyledGrid>
                 <StyledRaphiImage>
                     <AspectRatioContent>
-                        <GlitchyImage src={raphi.src} variant={1} alt={"raphi"} />
+                        <GlitchyImage src={raphi.src} variant={1} alt={"raphi"} sizes={imageRenditions.half} />
                         <StyledNoise />
                     </AspectRatioContent>
                 </StyledRaphiImage>
 
                 <StyledSimonImage>
                     <AspectRatioContent>
-                        <GlitchyImage src={simon.src} variant={2} imagePosition={"58% 14%"} alt={"simon"} />
+                        <GlitchyImage src={simon.src} variant={2} imagePosition={"58% 14%"} alt={"simon"} sizes={imageRenditions.half} />
                         <StyledNoise />
                     </AspectRatioContent>
                 </StyledSimonImage>
 
                 <StyledDanielImage>
                     <AspectRatioContent>
-                        <GlitchyImage src={daniel.src} variant={3} imagePosition={"19% 38%"} alt={"daniel"} />
+                        <GlitchyImage src={daniel.src} variant={3} imagePosition={"19% 38%"} alt={"daniel"} sizes={imageRenditions.full} />
                         <StyledNoise />
                     </AspectRatioContent>
                 </StyledDanielImage>

@@ -166,7 +166,7 @@ export default function PhotosImpex(props: PhotosProps) {
                         <Image
                             src={daniel}
                             layout={"fill"}
-                            quality={90}
+                            quality={70}
                             objectFit={"cover"}
                             alt={"alle"}
                             sizes={imageRenditions.full}

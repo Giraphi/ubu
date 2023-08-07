@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { flash, glitch1, glitch2, glitch3 } from "../styles/glitch-keyframes";
 import Image from "next/image";
 import { ImageProps } from "next/dist/client/image";
+import { imageLazyBoundary, imageRenditions } from "../imageRenditions";
 
 const StyledGlitch = styled.div`
     position: relative;
@@ -19,9 +20,6 @@ const StyledImg = styled(Image)<{ $numChild: number; variant: number }>`
     left: calc(-1 * 10px);
     width: calc(100% + 10px * 2);
     height: calc(100% + 5px * 2);
-    //background-repeat: no-repeat;
-    //background-color: transparent;
-    //background-size: cover;
 
     ${(props) =>
         props.$numChild === 2 &&
@@ -60,6 +58,7 @@ export interface GlitchyImageProps {
     variant: number;
     imagePosition?: string;
     alt: string;
+    sizes: string;
 }
 
 export default function GlitchyImage(props: GlitchyImageProps) {
@@ -69,7 +68,9 @@ export default function GlitchyImage(props: GlitchyImageProps) {
         objectFit: "cover",
         objectPosition: props.imagePosition,
         alt: props.alt,
-        quality: 80,
+        quality: 40,
+        sizes: props.sizes,
+        lazyBoundary: imageLazyBoundary,
     } as ImageProps;
 
     return (
