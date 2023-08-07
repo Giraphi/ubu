@@ -6,7 +6,7 @@ import frame from "../images/frame.png";
 import Image from "next/image";
 import SectionSpace from "./SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../styles/aspect-ratio";
-import { renditions } from "../renditions";
+import { imageRenditions } from "../imageRenditions";
 
 const photoKeyframesStrong = keyframes`
     0% {
@@ -76,7 +76,7 @@ export default function BandPic(props: BandPicProps) {
                                 loading={"eager"}
                                 layout={"fill"}
                                 objectFit={"cover"}
-                                sizes={renditions.full}
+                                sizes={imageRenditions.full}
                             />
                         </StyledContainer>
                     </AspectRatioContent>
@@ -90,7 +90,7 @@ export default function BandPic(props: BandPicProps) {
                             quality={50}
                             layout={"fill"}
                             objectFit={"cover"}
-                            sizes={renditions.full}
+                            sizes={imageRenditions.full}
                         />
                     </AspectRatioContent>
                 </StyledArea>

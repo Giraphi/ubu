@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Kas1 from "../../../images/kassette/kas_1.png";
 import Kas3 from "../../../images/kassette/kas_2.png";
 import Image from "next/image";
-import { renditions } from "../../../renditions";
+import { imageLazyBoundary, imageRenditions } from "../../../imageRenditions";
 
 const StyledRow = styled.div`
     display: flex;
@@ -76,14 +76,13 @@ export default function DemoRow(props: DemoRowProps) {
         <StyledRow>
             <StyledImageContainer>
                 <StyledImageItem>
-                    <Image src={Kas1} alt={"Tape"} quality={50} sizes={renditions.half} />
+                    <Image src={Kas1} alt={"Tape"} quality={50} sizes={imageRenditions.half} lazyBoundary={imageLazyBoundary} />
                 </StyledImageItem>
             </StyledImageContainer>
 
             <StyledIframeContainer>
                 {!isFirstRender && (
                     <StyledIframe
-                        // style="border: 0; width: 400px; height: 274px;"
                         title={"bandcamp"}
                         src="https://bandcamp.com/EmbeddedPlayer/album=3643840065/size=large/bgcol=333333/linkcol=ffffff/transparent=true/"
                         seamless
@@ -95,7 +94,7 @@ export default function DemoRow(props: DemoRowProps) {
 
             <StyledImageContainer>
                 <StyledImageItem>
-                    <Image src={Kas3} alt={"Tape"} quality={50} sizes={renditions.half} />
+                    <Image src={Kas3} alt={"Tape"} quality={50} sizes={imageRenditions.half} lazyBoundary={imageLazyBoundary} />
                 </StyledImageItem>
             </StyledImageContainer>
         </StyledRow>

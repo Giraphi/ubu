@@ -13,7 +13,7 @@ import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio"
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
 import Image from "next/image";
 import { FormattedMessage } from "react-intl";
-import { renditions } from "../../renditions";
+import { imageLazyBoundary, imageRenditions } from "../../imageRenditions";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -121,25 +121,57 @@ export default function PhotosImpex(props: PhotosProps) {
             <StyledGrid>
                 <StyledAllImage>
                     <AspectRatioContent>
-                        <Image src={alle} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} sizes={renditions.full} />
+                        <Image
+                            src={alle}
+                            layout={"fill"}
+                            quality={90}
+                            objectFit={"cover"}
+                            alt={"alle"}
+                            sizes={imageRenditions.full}
+                            lazyBoundary={imageLazyBoundary}
+                        />
                     </AspectRatioContent>
                 </StyledAllImage>
 
                 <StyledRaphiImage>
                     <AspectRatioContent>
-                        <Image src={raphi} layout={"fill"} quality={90} objectFit={"cover"} alt={"raphi"} sizes={renditions.half} />
+                        <Image
+                            src={raphi}
+                            layout={"fill"}
+                            quality={90}
+                            objectFit={"cover"}
+                            alt={"raphi"}
+                            sizes={imageRenditions.half}
+                            lazyBoundary={imageLazyBoundary}
+                        />
                     </AspectRatioContent>
                 </StyledRaphiImage>
 
                 <StyledSimonImage>
                     <AspectRatioContent>
-                        <Image src={simon} layout={"fill"} quality={90} objectFit={"cover"} alt={"simon"} sizes={renditions.half} />
+                        <Image
+                            src={simon}
+                            layout={"fill"}
+                            quality={90}
+                            objectFit={"cover"}
+                            alt={"simon"}
+                            sizes={imageRenditions.half}
+                            lazyBoundary={imageLazyBoundary}
+                        />
                     </AspectRatioContent>
                 </StyledSimonImage>
 
                 <StyledDanielImage>
                     <AspectRatioContent>
-                        <Image src={daniel} layout={"fill"} quality={90} objectFit={"cover"} alt={"alle"} sizes={renditions.full} />
+                        <Image
+                            src={daniel}
+                            layout={"fill"}
+                            quality={90}
+                            objectFit={"cover"}
+                            alt={"alle"}
+                            sizes={imageRenditions.full}
+                            lazyBoundary={imageLazyBoundary}
+                        />
                     </AspectRatioContent>
                 </StyledDanielImage>
             </StyledGrid>
