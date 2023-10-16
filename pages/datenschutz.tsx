@@ -1,3 +1,5 @@
+/* eslint-disable tailwindcss/no-custom-classname */
+
 import { NextPage } from "next";
 import styled from "styled-components";
 

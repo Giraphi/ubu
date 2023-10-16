@@ -1,3 +1,5 @@
+/* eslint-disable tailwindcss/no-custom-classname */
+
 import React from "react";
 import Instagram from "../images/social-icons/instagram.svg";
 import Facebook from "../images/social-icons/facebook.svg";

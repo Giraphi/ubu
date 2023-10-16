@@ -31,10 +31,8 @@ class MyDocument extends Document {
                 lang="en"
                 className={`${sourceCodePro.variable} ${bungee.variable}`}
             >
-                <Head>
-                    {/*<link rel="preload" href="/fonts/source-code-pro-regular.woff" as="font" type="font/woff" crossOrigin="" />*/}
-                </Head>
-                <body className={"font-mono text-lg leading-snug text-lightWhite"}>
+                <Head></Head>
+                <body className={"font-mono text-lg leading-snug text-white"}>
                     <Main />
                     <NextScript />
                 </body>

@@ -8,7 +8,12 @@ module.exports = {
             bungee: ["var(--font-bungee)"],
         },
         colors: {
-            lightWhite: "#eee",
+            primary: "#ff00ff",
+            secondary: "#00ffff",
+            tertiary: "#00ff00",
+            white: "#eee",
+            black: "#111",
+            gray: "#1f1f1f",
         },
     },
     plugins: [],
