@@ -11,7 +11,7 @@ import CompactArea from "../CompactArea";
 import SectionSpace from "../SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { FormattedMessage } from "react-intl";
 import { imageLazyBoundary, imageRenditions } from "../../imageRenditions";
 

@@ -6,7 +6,7 @@ import SectionSpace from "../../SectionSpace";
 import ScrollTarget, { ScrollId } from "../../ScrollTarget";
 import { FormattedMessage } from "react-intl";
 import klangschutz from "../../../images/klangschutz-banner-original.jpeg";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { AspectRatioContent, aspectRatioMixin } from "../../../styles/aspect-ratio";
 import DemoRow from "./DemoRow";
 import { imageRenditions } from "../../../imageRenditions";

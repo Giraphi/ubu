@@ -3,7 +3,7 @@ import Grid, { GridLines } from "./Grid";
 import styled, { css, keyframes } from "styled-components";
 import photo from "../images/fotos-galerie/UBUIMPERATOR_Auswahl-20.jpg";
 import frame from "../images/frame.png";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import SectionSpace from "./SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../styles/aspect-ratio";
 import { imageRenditions } from "../imageRenditions";

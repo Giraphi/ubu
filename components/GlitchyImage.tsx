@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { flash, glitch1, glitch2, glitch3 } from "../styles/glitch-keyframes";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { ImageProps } from "next/dist/client/image";
 import { imageLazyBoundary, imageRenditions } from "../imageRenditions";
 

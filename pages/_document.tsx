@@ -1,9 +1,7 @@
 import { ServerStyleSheet } from "styled-components";
 import { DocumentContext } from "next/dist/shared/lib/utils";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-// import { Source_Code_Pro } from "next/font/google";
-//
-// const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], variable: "--font-source-code-pro" });
+import { sourceCodePro } from "./_app";
 
 export default // @ts-ignore
 class MyDocument extends Document {
@@ -29,11 +27,11 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html lang="en">
+            <Html lang="en" className={`${sourceCodePro.variable}`}>
                 <Head>
-                    <link rel="preload" href="/fonts/source-code-pro-regular.woff" as="font" type="font/woff" crossOrigin="" />
+                    {/*<link rel="preload" href="/fonts/source-code-pro-regular.woff" as="font" type="font/woff" crossOrigin="" />*/}
                 </Head>
-                <body className={"text-lg leading-snug"}>
+                <body className={"text-lg leading-snug font-mono text-lightWhite"}>
                     <Main />
                     <NextScript />
                 </body>

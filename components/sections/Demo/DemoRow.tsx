@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Kas1 from "../../../images/kassette/kas_1.png";
 import Kas3 from "../../../images/kassette/kas_2.png";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { imageLazyBoundary, imageRenditions } from "../../../imageRenditions";
 
 const StyledRow = styled.div`
