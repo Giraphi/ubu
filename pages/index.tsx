@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import styled from "styled-components";
 
 import Intro from "../components/sections/Intro";
-import PhotosMembers from "../components/sections/PhotosMembers";
+import Photos from "../components/sections/Photos";
 import BandText from "../components/sections/BandText";
 import Footer from "../components/Footer";
 
@@ -47,8 +47,8 @@ const Home: NextPage = () => {
                     <BandPic />
                     <Demo />
                     <BandText />
+                    <Photos />
                     <Video />
-                    <PhotosMembers />
                     {/*<PhotosRuebe />*/}
                     <Footer />
                 </StyledRoot>

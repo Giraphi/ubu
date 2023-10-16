@@ -1,19 +1,11 @@
 import React, { ReactNode } from "react";
-import styled from "styled-components";
-import { GridLines } from "./Grid";
-
-const StyledRoot = styled.div`
-    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
-
-    @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
-        grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
-    }
-`;
+import { cn } from "../util/functions";
 
 export interface CompactAreaProps {
     children: ReactNode;
+    className?: string;
 }
 
 export default function CompactArea(props: CompactAreaProps) {
-    return <StyledRoot>{props.children}</StyledRoot>;
+    return <div className={cn("col-content md:col-compact", props.className)}>{props.children}</div>;
 }

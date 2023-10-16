@@ -20,7 +20,7 @@ export default function Video(props: VideoProps) {
             <ScrollTarget id={ScrollId.video} />
             <Grid>
                 <CompactArea>
-                    <SectionHeadline>Video</SectionHeadline>
+                    <SectionHeadline>Ubu Video</SectionHeadline>
                     <p className={"pb-8"}>
                         <FormattedMessage id={"home.video.text"} />
                     </p>

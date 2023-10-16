@@ -15,6 +15,7 @@ import Image from "next/legacy/image";
 import { FormattedMessage } from "react-intl";
 import { imageLazyBoundary, imageRenditions } from "../../imageRenditions";
 import SectionHeadline from "../SectionHeadline";
+import PicturePile from "../PicturePile";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -74,9 +75,9 @@ export const StyledDanielImage = styled.div`
     }
 `;
 
-export interface PhotosMembers {}
+export interface PhotosProps {}
 
-export default function PhotosMembers(props: PhotosMembers) {
+export default function Photos(props: PhotosProps) {
     return (
         <>
             <ScrollTarget id={ScrollId.impex} />
@@ -88,6 +89,21 @@ export default function PhotosMembers(props: PhotosMembers) {
                 </CompactArea>
             </Grid>
             <StyledGrid>
+                <CompactArea>
+                    <p>
+                        <FormattedMessage
+                            id={"home.impex.text"}
+                            values={{
+                                faktenLink: (
+                                    <a href={"https://alternativefakten089.de/"}>
+                                        <FormattedMessage id={"home.impex.text.faktenLink"} />
+                                    </a>
+                                ),
+                                impexLink: <a href={"https://import-export.cc/"}>Import Export</a>,
+                            }}
+                        />
+                    </p>
+                </CompactArea>
                 <StyledRaphiImage>
                     <AspectRatioContent>
                         <Image
@@ -129,6 +145,12 @@ export default function PhotosMembers(props: PhotosMembers) {
                         />
                     </AspectRatioContent>
                 </StyledDanielImage>
+                {/*<CompactArea className={"pb-8"}>*/}
+                {/*    <p>*/}
+                {/*        <FormattedMessage id={"home.photo.more"} />*/}
+                {/*    </p>*/}
+                {/*</CompactArea>*/}
+                <PicturePile />
             </StyledGrid>
             <SectionSpace />
         </>
