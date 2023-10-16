@@ -81,6 +81,7 @@ const StyledColumnImage = styled.div`
     }
 `;
 
+<<<<<<< Updated upstream
 // const StyledScrollTarget = styled.div`
 //     grid-row: 3;
 //     position: relative;
@@ -91,6 +92,8 @@ const StyledMembersParagraph = styled.p`
     margin-bottom: ${(props) => props.theme.space.gutter * 4}px;
 `;
 
+=======
+>>>>>>> Stashed changes
 const StyledScrollTarget = styled.div`
     ${scrollTargetMixin};
 `;
@@ -125,7 +128,7 @@ export default function Intro() {
                             <Shaker />
                         </StyledShaker>
                     </HideOnMobile>
-                    <p>
+                    <p className={"pb-4"}>
                         Something is rising from the depths.
                         <br />
                         King Ubu awaits you.
@@ -136,14 +139,14 @@ export default function Intro() {
                         </StyledShaker>
                     </HideOnDesktop>
 
-                    <StyledMembersParagraph>
+                    <p className={"pb-8"}>
                         Daniel Pizarro - Drums and Illustration
                         <br />
                         Simon Bartenschlager - Guitar
                         <br />
                         Raphael Höps - Synthesizer
                         <br />
-                    </StyledMembersParagraph>
+                    </p>
                     <SocialIcons />
                     <HideOnDesktop>
                         <SectionSpace />

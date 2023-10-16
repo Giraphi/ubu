@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+<<<<<<< Updated upstream
     p {
         margin-top: 0;
         font-size: ${(props) => props.theme.typography.fontSize.p};
@@ -27,6 +28,21 @@ export const GlobalStyle = createGlobalStyle`
         // :not(:last-child) {
         // }
     }
+=======
+    // p {
+    //     margin-top: 0;
+    //     font-size: ${(props) => props.theme.typography.fontSize.p.base};
+    //     line-height: ${(props) => props.theme.typography.lineHeight.p};
+    //     margin-bottom: ${(props) => props.theme.space.sm};
+    // }
+    //
+    // h2 {
+    //     margin-top: 0;
+    //     margin-bottom: ${(props) => props.theme.space.sm};
+    //     font-size: ${(props) => props.theme.typography.fontSize.h2.base};
+    //     line-height: ${(props) => props.theme.typography.lineHeight.h2};
+    // }
+>>>>>>> Stashed changes
 
     a, a:focus {
         color: ${(props) => props.theme.color.white}

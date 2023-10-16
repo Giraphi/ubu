@@ -5,8 +5,12 @@ import Intro from "../components/sections/Intro";
 import PhotosImpex from "../components/sections/PhotosImpex";
 import BandText from "../components/sections/BandText";
 import Footer from "../components/Footer";
+<<<<<<< Updated upstream
 import PhotosRuebe from "../components/sections/PhotosRuebe";
 import Demo from "../components/sections/Demo";
+=======
+import Demo from "../components/sections/Demo/Demo";
+>>>>>>> Stashed changes
 import PageMenu from "../components/PageMenu/PageMenu";
 import MenuContextProvider from "../context/MenuContextProvider";
 

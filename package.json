@@ -21,6 +21,11 @@
     "prettier": "^2.7.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+<<<<<<< Updated upstream
+=======
+    "react-intl": "^6.5.0",
+    "sass": "^1.69.3",
+>>>>>>> Stashed changes
     "sharp": "^0.31.1",
     "styled-components": "^5.3.5"
   },
