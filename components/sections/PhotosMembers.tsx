@@ -27,27 +27,6 @@ const StyledGrid = styled(Grid)`
     }
 `;
 
-export const StyledImg = styled.img`
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-`;
-
-export const StyledAllImage = styled.div`
-    grid-row: 1;
-    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
-    ${(props) => aspectRatioMixin(props.theme.ratio.square)}
-
-    animation: ${rectangleKeyframes} 9s infinite 0.7s;
-    animation-timing-function: linear;
-
-    @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-        ${(props) => aspectRatioMixin(props.theme.ratio.wide)}
-        grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
-    }
-`;
-
 export const StyledSimonImage = styled.div`
     grid-row: 2;
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
@@ -94,45 +73,20 @@ export const StyledDanielImage = styled.div`
     }
 `;
 
-export interface PhotosProps {}
+export interface PhotosMembers {}
 
-export default function PhotosImpex(props: PhotosProps) {
+export default function PhotosMembers(props: PhotosMembers) {
     return (
         <>
             <ScrollTarget id={ScrollId.impex} />
             <Grid>
                 <CompactArea>
-                    <h2>Ubu @ImportExport</h2>
-                    <p>
-                        <FormattedMessage
-                            id={"home.impex.text"}
-                            values={{
-                                faktenLink: (
-                                    <a href={"https://alternativefakten089.de/"}>
-                                        <FormattedMessage id={"home.impex.text.faktenLink"} />
-                                    </a>
-                                ),
-                                impexLink: <a href={"https://import-export.cc/"}>Import Export</a>,
-                            }}
-                        />
-                    </p>
+                    <h2>
+                        <FormattedMessage id={"home.photo.headline"} />
+                    </h2>
                 </CompactArea>
             </Grid>
             <StyledGrid>
-                <StyledAllImage>
-                    <AspectRatioContent>
-                        <Image
-                            src={alle}
-                            layout={"fill"}
-                            quality={90}
-                            objectFit={"cover"}
-                            alt={"alle"}
-                            sizes={imageRenditions.full}
-                            lazyBoundary={imageLazyBoundary}
-                        />
-                    </AspectRatioContent>
-                </StyledAllImage>
-
                 <StyledRaphiImage>
                     <AspectRatioContent>
                         <Image

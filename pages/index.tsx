@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import styled from "styled-components";
 
 import Intro from "../components/sections/Intro";
-import PhotosImpex from "../components/sections/PhotosImpex";
+import PhotosMembers from "../components/sections/PhotosMembers";
 import BandText from "../components/sections/BandText";
 import Footer from "../components/Footer";
 import PhotosRuebe from "../components/sections/PhotosRuebe";
@@ -45,8 +45,8 @@ const Home: NextPage = () => {
                     <Demo />
                     <BandText />
                     <Video />
-                    <PhotosImpex />
-                    <PhotosRuebe />
+                    <PhotosMembers />
+                    {/*<PhotosRuebe />*/}
                     <Footer />
                 </StyledRoot>
             </MenuContextProvider>

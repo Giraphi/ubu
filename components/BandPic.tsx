@@ -36,6 +36,10 @@ const photoKeyframesLight = keyframes`
 const ImageAreaMixin = css`
     grid-row: 1;
     grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
+
+    @media (min-width: ${(props) => props.theme.breakpoints.lg}px) {
+        grid-column: ${GridLines.col2Start} / ${GridLines.col11End};
+    }
 `;
 
 const StyledArea = styled.div`
