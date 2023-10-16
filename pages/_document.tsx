@@ -1,7 +1,7 @@
 import { ServerStyleSheet } from "styled-components";
 import { DocumentContext } from "next/dist/shared/lib/utils";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { sourceCodePro } from "./_app";
+import { bungee, sourceCodePro } from "./_app";
 
 export default // @ts-ignore
 class MyDocument extends Document {
@@ -27,7 +27,7 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html lang="en" className={`${sourceCodePro.variable}`}>
+            <Html lang="en" className={`${sourceCodePro.variable} ${bungee.variable}`}>
                 <Head>
                     {/*<link rel="preload" href="/fonts/source-code-pro-regular.woff" as="font" type="font/woff" crossOrigin="" />*/}
                 </Head>

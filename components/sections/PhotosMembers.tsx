@@ -14,6 +14,7 @@ import ScrollTarget, { ScrollId } from "../ScrollTarget";
 import Image from "next/legacy/image";
 import { FormattedMessage } from "react-intl";
 import { imageLazyBoundary, imageRenditions } from "../../imageRenditions";
+import SectionHeadline from "../SectionHeadline";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -81,9 +82,9 @@ export default function PhotosMembers(props: PhotosMembers) {
             <ScrollTarget id={ScrollId.impex} />
             <Grid>
                 <CompactArea>
-                    <h2>
+                    <SectionHeadline>
                         <FormattedMessage id={"home.photo.headline"} />
-                    </h2>
+                    </SectionHeadline>
                 </CompactArea>
             </Grid>
             <StyledGrid>

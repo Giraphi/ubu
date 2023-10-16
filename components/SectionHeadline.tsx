@@ -5,5 +5,5 @@ export interface SectionHeadlineProps {
 }
 
 export default function SectionHeadline(props: SectionHeadlineProps) {
-    return <h2 className={"text-5xl pb-8"}>{props.children}</h2>;
+    return <h2 className={"text-5xl pb-6 md:pb-8 font-bungee"}>{props.children}</h2>;
 }

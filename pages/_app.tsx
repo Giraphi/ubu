@@ -5,9 +5,10 @@ import { Theme, theme } from "../styles/theme";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 import "../styles/globals.scss";
-import { Source_Code_Pro } from "next/font/google";
+import { Source_Code_Pro, Bungee } from "next/font/google";
 //
 export const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], variable: "--font-source-code-pro" });
+export const bungee = Bungee({ subsets: ["latin"], weight: "400", variable: "--font-bungee" });
 
 declare module "styled-components" {
     interface DefaultTheme extends Theme {}

@@ -5,6 +5,7 @@ module.exports = {
         extend: {},
         fontFamily: {
             mono: ["var(--font-source-code-pro)"],
+            bungee: ["var(--font-bungee)"],
         },
         colors: {
             lightWhite: "#eee",

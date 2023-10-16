@@ -75,7 +75,7 @@ export default function Demo() {
                     <DemoRow />
                 </RowArea>
                 <CompactArea>
-                    <p>
+                    <p className={"pb-8"}>
                         <FormattedMessage
                             id={"home.demo.text2"}
                             values={{

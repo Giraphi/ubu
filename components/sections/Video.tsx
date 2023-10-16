@@ -6,6 +6,7 @@ import SectionSpace from "../SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
 import styled from "styled-components";
 import { FormattedMessage } from "react-intl";
+import SectionHeadline from "../SectionHeadline";
 
 const StyledVideoArea = styled.div`
     ${(props) => aspectRatioMixin(props.theme.ratio.youtube)}
@@ -19,8 +20,8 @@ export default function Video(props: VideoProps) {
             <ScrollTarget id={ScrollId.video} />
             <Grid>
                 <CompactArea>
-                    <h2>Video</h2>
-                    <p>
+                    <SectionHeadline>Video</SectionHeadline>
+                    <p className={"pb-8"}>
                         <FormattedMessage id={"home.video.text"} />
                     </p>
                     <StyledVideoArea>

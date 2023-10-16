@@ -12,6 +12,7 @@ import CompactArea from "../CompactArea";
 import { useInView } from "framer-motion";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
 import { FormattedMessage } from "react-intl";
+import SectionHeadline from "../SectionHeadline";
 
 const StyledRotateFigure = styled(Figur)`
     transform: scaleX(-1);
@@ -54,9 +55,9 @@ export default function BandText(props: TextProps) {
             <ScrollTarget id={ScrollId.ueberUns} />
             <Grid>
                 <CompactArea>
-                    <h2>
+                    <SectionHeadline>
                         <FormattedMessage id={"home.about.title"} />
-                    </h2>
+                    </SectionHeadline>
                     <p>
                         {/*UBU IMPERATOR ist ein 2022 gegründetes Krautrocktrio aus München mit Genreeinflüssen aus Noise, Experimental und*/}
                         {/*Progressive.*/}
@@ -87,7 +88,7 @@ export default function BandText(props: TextProps) {
                             <Shaker />
                         </Figur>
                     </Row>
-                    <p>
+                    <p className={"pb-8"}>
                         <FormattedMessage id={"home.about.text3"} />
                     </p>
                     <StyledVideo ref={videoRef} muted={true} loop={true} playsInline={true}>
