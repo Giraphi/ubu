@@ -22,7 +22,7 @@ export default function PileImage(props: PileImageProps) {
 
     const isWide = props.src.width / props.src.height > 1;
     const heightScreenPercentage = isWide ? 0.6 : 0.7;
-    const widthScreenPercentage = isWide ? 0.8 : 0.6;
+    const widthScreenPercentage = isWide ? 0.82 : 0.6;
 
     const screenHeight = typeof window === "undefined" ? 1000 : window.innerHeight;
     const screenWidth = typeof window === "undefined" ? 1000 : window.innerWidth;
