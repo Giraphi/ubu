@@ -146,7 +146,7 @@ export default function Photos(props: PhotosProps) {
                     </AspectRatioContent>
                 </StyledDanielImage>
 
-                <CompactArea className={"pt-8"}>
+                <CompactArea className={"pb-4 pt-8"}>
                     <p>
                         <FormattedMessage id={"home.photo.more"} />
                     </p>

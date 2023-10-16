@@ -1,2 +1,4 @@
-- theme als const und nicht als sc theme?
-- hexe fliegt rein
+- tap indicator: color animation
+- examine phone screenshot error
+- fix menu
+- Gigs section
