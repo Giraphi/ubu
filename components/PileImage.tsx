@@ -44,7 +44,10 @@ export default function PileImage(props: PileImageProps) {
 
     return (
         <div
-            className={cn("absolute", { hidden: props.index + 1 > props.showImages, "blur-sm": props.index + 1 !== props.showImages })}
+            className={cn("absolute select-none", {
+                hidden: props.index + 1 > props.showImages,
+                "blur-[2px] md:blur-sm": props.index + 1 !== props.showImages,
+            })}
             style={
                 isFirstRender
                     ? {}
@@ -61,10 +64,10 @@ export default function PileImage(props: PileImageProps) {
                 fill={true}
                 src={props.src}
                 sizes={imageRenditions.full}
-                className={cn("object-contain transition-all")}
+                className={cn("select-none object-contain transition-all")}
             />
             <div
-                className={`absolute bottom-0 px-1 py-0.5 text-xs md:px-2 md:py-1 md:text-sm ${
+                className={`absolute bottom-0 px-1 py-0.5 text-xs md:px-2 md:py-1 md:text-base ${
                     props.textRight ? "right-0" : "left-0"
                 } bg-blackTransparent`}
             >

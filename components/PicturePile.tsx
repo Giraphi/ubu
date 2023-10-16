@@ -41,12 +41,12 @@ export default function PicturePile(props: PicturePileProps) {
     }
 
     return (
-        <div className={" col-content pt-4 md:pt-8"}>
+        <div className={" col-content select-none pt-4 md:pt-8"}>
             <div
                 className={"relative h-[60lvh] w-full cursor-clickText bg-darkGray md:h-[80lvh]"}
                 onClick={handleClick}
             >
-                <div className={"relative h-full w-full "}>
+                <div className={"relative h-full w-full select-none"}>
                     {pileImageProps.map((props, index) => (
                         <PileImage
                             key={index}
