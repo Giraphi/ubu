@@ -30,7 +30,7 @@ export default function PicturePile(props: PicturePileProps) {
 
     return (
         <div
-            className={"col-content pt-4"}
+            className={"col-content pt-4 md:pt-8"}
             onClick={handleClick}
         >
             <div className={"h-[60lvh] w-full bg-darkGray md:h-[80lvh]"}>

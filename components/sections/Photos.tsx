@@ -39,7 +39,7 @@ export const StyledSimonImage = styled.div`
 
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         ${(props) => aspectRatioMixin(props.theme.ratio.high)}
-        grid-column: ${GridLines.contentLeft} / ${GridLines.col6End};
+        grid-column: ${GridLines.col3Start} / ${GridLines.col6End};
     }
 `;
 
@@ -54,7 +54,7 @@ export const StyledRaphiImage = styled.div`
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         ${(props) => aspectRatioMixin(props.theme.ratio.high)}
         grid-row: 2;
-        grid-column: ${GridLines.col7Start} / ${GridLines.contentRight};
+        grid-column: ${GridLines.col7Start} / ${GridLines.col10End};
     }
 `;
 
@@ -71,7 +71,7 @@ export const StyledDanielImage = styled.div`
         ${(props) => aspectRatioMixin(props.theme.ratio.xWide)}
 
         grid-row: 3;
-        grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
+        grid-column: ${GridLines.col3Start} / ${GridLines.col10End};
     }
 `;
 

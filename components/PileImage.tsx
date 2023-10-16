@@ -59,7 +59,7 @@ export default function PileImage(props: PileImageProps) {
                 fill={true}
                 src={props.src}
                 sizes={imageRenditions.full}
-                className={"object-contain"}
+                className={cn("object-contain transition-all", { "blur-sm": props.index + 1 !== props.showImages })}
             />
         </div>
     );
