@@ -23,6 +23,7 @@ export enum ScrollId {
     ueberUns = "ueber-uns",
     impex = "impex",
     ruebe = "ruebe",
+    video = "video",
 }
 
 // const ScrollIdArray = Object.values(ScrollId);

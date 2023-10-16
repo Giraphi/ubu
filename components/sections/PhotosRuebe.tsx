@@ -10,6 +10,9 @@ import GlitchyImage from "../GlitchyImage";
 import SectionSpace from "../SectionSpace";
 import { AspectRatioContent, aspectRatioMixin } from "../../styles/aspect-ratio";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
+import NoiseTransparent from "../../images/noise-transparent.png";
+import { FormattedMessage } from "react-intl";
+import { imageRenditions } from "../../imageRenditions";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.lg};
@@ -69,7 +72,7 @@ const StyledNoise = styled.div`
     bottom: -50%;
     width: 200%;
     height: 200%;
-    background: url("http://assets.iceable.com/img/noise-transparent.png");
+    background: url(${NoiseTransparent.src});
     animation: ${noiseKeyframes} 0.2s infinite;
     visibility: visible;
     filter: contrast(2) brightness(2);
@@ -85,29 +88,33 @@ export default function PhotosRuebe(props: PhotosRuebeProps) {
                 <CompactArea>
                     <h2>Ubu @Rübezahl</h2>
                     <p>
-                        Ubu auf dem sehr besonderen und nachhaltigen{" "}
-                        <a href={"https://www.youtube.com/watch?v=ylfAdSLbCS0"}>Rübezahl Festival</a> im August 2022.
+                        <FormattedMessage
+                            id={"home.ruebe.text"}
+                            values={{ link: <a href={"https://www.youtube.com/watch?v=ylfAdSLbCS0"}>Rübezahl Festival</a> }}
+                        />
+                        {/*Ubu auf dem sehr besonderen und nachhaltigen{" "}*/}
+                        {/*<a href={"https://www.youtube.com/watch?v=ylfAdSLbCS0"}>Rübezahl Festival</a> im August 2022.*/}
                     </p>
                 </CompactArea>
             </Grid>
             <StyledGrid>
                 <StyledRaphiImage>
                     <AspectRatioContent>
-                        <GlitchyImage src={raphi.src} variant={1} />
+                        <GlitchyImage src={raphi.src} variant={1} alt={"raphi"} sizes={imageRenditions.half} />
                         <StyledNoise />
                     </AspectRatioContent>
                 </StyledRaphiImage>
 
                 <StyledSimonImage>
                     <AspectRatioContent>
-                        <GlitchyImage src={simon.src} variant={2} imagePosition={"58% 14%"} />
+                        <GlitchyImage src={simon.src} variant={2} imagePosition={"58% 14%"} alt={"simon"} sizes={imageRenditions.half} />
                         <StyledNoise />
                     </AspectRatioContent>
                 </StyledSimonImage>
 
                 <StyledDanielImage>
                     <AspectRatioContent>
-                        <GlitchyImage src={daniel.src} variant={3} imagePosition={"19% 38%"} />
+                        <GlitchyImage src={daniel.src} variant={3} imagePosition={"19% 38%"} alt={"daniel"} sizes={imageRenditions.full} />
                         <StyledNoise />
                     </AspectRatioContent>
                 </StyledDanielImage>

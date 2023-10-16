@@ -5,6 +5,7 @@ import PageMenuContent from "./PageMenuContent";
 import { styleConstants } from "../../styles/style-constants";
 import Logo from "../../images/logo.svg";
 import { colorAnimationSlow } from "../../styles/color-animation";
+import { ScrollId } from "../ScrollTarget";
 
 export const TopBarSizePx = 54;
 const BarHeightPx = 0.08 * TopBarSizePx;
@@ -27,8 +28,10 @@ const StyledTopBar = styled.div<{
     background-color: ${(props) => props.theme.color.black};
     display: flex;
     justify-content: space-between;
-
     height: ${TopBarSizeSmPx}px;
+    // Fixes a glitch on iOS Safari where a thin transparent area between iOS top bar and browser content was rendered.
+    transform: translateY(-1px);
+
     @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
         height: ${TopBarSizePx}px;
     }
@@ -112,20 +115,21 @@ const StyledPageMenuContentWrapper = styled(motion.div)`
 
 const menuVariants = {
     visible: {
-        clipPath: "ellipse(70vw 144vh at 0% 0%)",
+        clipPath: "ellipse(80vw 200vh at 0% 0%)",
         transition: {
-            duration: 0.3,
+            duration: 0.5,
         },
     },
     hidden: {
         clipPath: "ellipse(0vw 0vh at 0% 0%)",
         transition: {
-            duration: 0.3,
+            duration: 0.5,
         },
     },
 };
 
 const StyledLogo = styled.div`
+    cursor: pointer;
     display: flex;
     align-items: center;
     margin-right: ${(props) => props.theme.grid.spaceHorizontal.base};
@@ -149,7 +153,7 @@ export default function PageMenu() {
     const ref = useRef<HTMLDivElement>(null);
 
     scrollY.onChange((value) => {
-        const isScrolled = value > 100;
+        const isScrolled = value > 30;
         setIsMenuVisible(isScrolled);
 
         if (!isScrolled) {
@@ -181,14 +185,22 @@ export default function PageMenu() {
         };
     }, []);
 
+    function onLogoClick() {
+        const element: HTMLDivElement | null = document.querySelector(`#${ScrollId.top}`);
+        if (!element) {
+            return;
+        }
+        element.scrollIntoView({ behavior: "smooth" });
+    }
+
     return (
-        <div ref={ref}>
+        <>
             <StyledTopBar isMenuOpen={isMenuOpen} isMenuVisible={isMenuVisible}>
                 <StyledButton isMenuOpen={isMenuOpen} onClick={handleClick}>
                     <StyledBar />
                     <StyledBar />
                 </StyledButton>
-                <StyledLogo>
+                <StyledLogo onClick={onLogoClick}>
                     <Logo />
                 </StyledLogo>
             </StyledTopBar>
@@ -200,6 +212,6 @@ export default function PageMenu() {
                     </StyledPageMenuContentWrapper>
                 )}
             </AnimatePresence>
-        </div>
+        </>
     );
 }

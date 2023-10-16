@@ -17,8 +17,12 @@ export const theme = {
     },
     typography: {
         fontSize: {
-            p: "18px",
-            h2: "32px",
+            p: {
+                base: "18px",
+            },
+            h2: {
+                base: "32px",
+            },
         },
         lineHeight: {
             p: "130%",
@@ -49,9 +53,11 @@ export const theme = {
     },
     ratio: {
         square: 1,
-        wide: 1.62,
+        wide: 1.78,
+        youtube: 1.78,
         xWide: 2.4,
         high: 0.8,
+        klangschutzBanner: 4.55,
     },
 };
 

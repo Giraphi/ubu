@@ -11,6 +11,7 @@ import Figur from "../Figur";
 import CompactArea from "../CompactArea";
 import { useInView } from "framer-motion";
 import ScrollTarget, { ScrollId } from "../ScrollTarget";
+import { FormattedMessage } from "react-intl";
 
 const StyledRotateFigure = styled(Figur)`
     transform: scaleX(-1);
@@ -53,10 +54,13 @@ export default function BandText(props: TextProps) {
             <ScrollTarget id={ScrollId.ueberUns} />
             <Grid>
                 <CompactArea>
-                    <h2>Über uns</h2>
+                    <h2>
+                        <FormattedMessage id={"home.about.title"} />
+                    </h2>
                     <p>
-                        UBU IMPERATOR ist ein 2022 gegründetes Krautrocktrio aus München mit Genreeinflüssen aus Noise, Experimental und
-                        Progressive.
+                        {/*UBU IMPERATOR ist ein 2022 gegründetes Krautrocktrio aus München mit Genreeinflüssen aus Noise, Experimental und*/}
+                        {/*Progressive.*/}
+                        <FormattedMessage id={"home.about.text1"} />
                     </p>
                     <Row>
                         <Figur>
@@ -70,8 +74,7 @@ export default function BandText(props: TextProps) {
                         </StyledRotateFigure>
                     </Row>
                     <p>
-                        Die Musik von UBU IMPERATOR ist meist instrumental und geprägt von stimmungsvoll-krautigen Flächen, immersiven
-                        Sequenzen und Arpeggios, sowie teils dystopischem Noise, der von harmonischen Synthesizer Akkorden abgelöst wird.
+                        <FormattedMessage id={"home.about.text2"} />
                     </p>
                     <Row>
                         <Figur delay={3}>
@@ -85,10 +88,7 @@ export default function BandText(props: TextProps) {
                         </Figur>
                     </Row>
                     <p>
-                        Der Name der Band bezieht sich auf das Theaterstück &bdquo;König Ubu&rdquo; (1896) des französischen Schriftstellers
-                        Alfred Jarry. Ein Stück, das wegen seines grotesken, karnevalesken und absurden Charakters viele surrealistische und
-                        dadaistische Künstler der damaligen Zeit in Erstaunen versetzte. Ubu Imperator ist auch der Titel eines der
-                        bekanntesten Werke von Max Ernst.
+                        <FormattedMessage id={"home.about.text3"} />
                     </p>
                     <StyledVideo ref={videoRef} muted={true} loop={true} playsInline={true}>
                         <source src={"./video/eule.webm"} type={"video/webm"} />

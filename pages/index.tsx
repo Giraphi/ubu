@@ -2,21 +2,28 @@ import type { NextPage } from "next";
 import styled from "styled-components";
 
 import Intro from "../components/sections/Intro";
-import PhotosImpex from "../components/sections/PhotosImpex";
+import PhotosMembers from "../components/sections/PhotosMembers";
 import BandText from "../components/sections/BandText";
 import Footer from "../components/Footer";
-<<<<<<< Updated upstream
-import PhotosRuebe from "../components/sections/PhotosRuebe";
-import Demo from "../components/sections/Demo";
-=======
-import Demo from "../components/sections/Demo/Demo";
->>>>>>> Stashed changes
+
 import PageMenu from "../components/PageMenu/PageMenu";
 import MenuContextProvider from "../context/MenuContextProvider";
+import Video from "../components/sections/Video";
+import { useRouter } from "next/router";
+import en from "../lang/en.json";
+import de from "../lang/de.json";
+import { IntlProvider } from "react-intl";
+import BandPic from "../components/BandPic";
+import Demo from "../components/sections/Demo/Demo";
+
+const messages: Record<string, any> = {
+    de,
+    en,
+};
 
 const StyledRoot = styled.div`
     background: ${(props) => props.theme.color.black};
-    padding-bottom: ${(props) => props.theme.space.lg};
+    padding-bottom: ${(props) => props.theme.space.gutter * 2}px;
     padding-top: ${(props) => props.theme.space.md};
     overflow-x: hidden;
 
@@ -26,18 +33,24 @@ const StyledRoot = styled.div`
 `;
 
 const Home: NextPage = () => {
+    const locale = useRouter().locale as "de" | "en"; // because of next.config.js this can only be "de" or "en"
+
     return (
-        <MenuContextProvider>
-            <StyledRoot>
-                <PageMenu />
-                <Intro />
-                <Demo />
-                <BandText />
-                <PhotosImpex />
-                <PhotosRuebe />
-                <Footer />
-            </StyledRoot>
-        </MenuContextProvider>
+        <IntlProvider locale={locale} messages={messages[locale]}>
+            <MenuContextProvider>
+                <StyledRoot>
+                    <PageMenu />
+                    <Intro />
+                    <BandPic />
+                    <Demo />
+                    <BandText />
+                    <Video />
+                    <PhotosMembers />
+                    {/*<PhotosRuebe />*/}
+                    <Footer />
+                </StyledRoot>
+            </MenuContextProvider>
+        </IntlProvider>
     );
 };
 

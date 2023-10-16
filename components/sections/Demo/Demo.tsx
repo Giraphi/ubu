@@ -52,6 +52,7 @@ export default function Demo() {
             <Grid>
                 <CompactArea>
                     <SectionHeadline>Ubu Tape</SectionHeadline>
+
                     <StyledP>
                         <FormattedMessage
                             id={"home.demo.text"}
