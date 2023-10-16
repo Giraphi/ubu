@@ -1,4 +1,3 @@
-import Image from "next/image";
 import balveDaniel from "../images/pile/balve-danie.jpeg";
 import balveDrums from "../images/pile/balve-drums.jpg";
 import kaufbeurenBand from "../images/pile/kaufbeuren-band.jpeg";
@@ -16,13 +15,25 @@ import RotateButton from "./RotateButton";
 
 export interface PicturePileProps {}
 
-const numImages = 10;
 export default function PicturePile(props: PicturePileProps) {
-    const [showImages, setShowImages] = useState(numImages);
+    const [pileImageProps] = useState([
+        { src: kaufbeurenLogo, text: "11.03.22 Roundhouse, Kaufbeuren" },
+        { src: balveDaniel, text: "27.05.2023 Kunstblock Balve, München" },
+        { src: balveDrums, text: "27.05.2023 Kunstblock Balve, München" },
+        { src: UBU3, text: "Bandportrait by Vanessa Mönius" },
+        { src: ruebeSimon, text: "2022 Ruebezahl Festival" },
+        { src: murf1, text: "01.10.23 Murf/Murw Festival, Tilburg NL" },
+        { src: murf2, text: "30.09.23 Murf/Murw Festival, Tilburg NL" },
+        { src: murf3, text: "30.09.23 Little Devil, Tilburg NL" },
+        { src: UBU2, text: "Bandportrait by Vanessa Mönius" },
+        { src: kaufbeurenBand, text: "11.03.22 Roundhouse, Kaufbeuren" },
+    ]);
+
+    const [showImages, setShowImages] = useState(pileImageProps.length);
 
     function handleClick() {
         if (showImages === 0) {
-            setShowImages(numImages);
+            setShowImages(pileImageProps.length);
             return;
         }
 
@@ -30,62 +41,20 @@ export default function PicturePile(props: PicturePileProps) {
     }
 
     return (
-        <div
-            className={"cursor-clickText col-content pt-4 md:pt-8"}
-            onClick={handleClick}
-        >
-            <div className={"relative h-[60lvh] w-full bg-darkGray md:h-[80lvh]"}>
+        <div className={" col-content pt-4 md:pt-8"}>
+            <div
+                className={"relative h-[60lvh] w-full cursor-clickText bg-darkGray md:h-[80lvh]"}
+                onClick={handleClick}
+            >
                 <div className={"relative h-full w-full "}>
-                    <PileImage
-                        src={kaufbeurenLogo}
-                        index={0}
-                        showImages={showImages}
-                    />
-                    <PileImage
-                        src={balveDaniel}
-                        index={1}
-                        showImages={showImages}
-                    />
-                    <PileImage
-                        src={balveDrums}
-                        index={2}
-                        showImages={showImages}
-                    />
-                    <PileImage
-                        src={UBU3}
-                        index={3}
-                        showImages={showImages}
-                    />
-                    <PileImage
-                        src={ruebeSimon}
-                        index={4}
-                        showImages={showImages}
-                    />
-                    <PileImage
-                        src={murf1}
-                        index={5}
-                        showImages={showImages}
-                    />
-                    <PileImage
-                        src={murf2}
-                        index={6}
-                        showImages={showImages}
-                    />
-                    <PileImage
-                        src={murf3}
-                        index={7}
-                        showImages={showImages}
-                    />
-                    <PileImage
-                        src={UBU2}
-                        index={8}
-                        showImages={showImages}
-                    />
-                    <PileImage
-                        src={kaufbeurenBand}
-                        index={9}
-                        showImages={showImages}
-                    />
+                    {pileImageProps.map((props, index) => (
+                        <PileImage
+                            key={index}
+                            index={index}
+                            showImages={showImages}
+                            {...props}
+                        />
+                    ))}
                 </div>
                 <RotateButton className={"absolute bottom-2 right-2 md:hidden"} />
             </div>

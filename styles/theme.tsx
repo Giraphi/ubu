@@ -6,6 +6,7 @@ export const theme = {
         white: "#eee",
         black: "#111",
         gray: "#1f1f1f",
+        blackTransparent: "rgba(17,17,17,50)",
     },
     space: {
         gutter: 8,

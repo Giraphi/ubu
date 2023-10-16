@@ -7,6 +7,8 @@ export interface PileImageProps {
     src: StaticImageData;
     showImages: number;
     index: number;
+    text?: string;
+    textRight?: boolean;
 }
 
 export default function PileImage(props: PileImageProps) {
@@ -42,7 +44,7 @@ export default function PileImage(props: PileImageProps) {
 
     return (
         <div
-            className={cn("absolute", { hidden: props.index + 1 > props.showImages })}
+            className={cn("absolute", { hidden: props.index + 1 > props.showImages, "blur-sm": props.index + 1 !== props.showImages })}
             style={
                 isFirstRender
                     ? {}
@@ -59,8 +61,15 @@ export default function PileImage(props: PileImageProps) {
                 fill={true}
                 src={props.src}
                 sizes={imageRenditions.full}
-                className={cn("object-contain transition-all", { "blur-sm": props.index + 1 !== props.showImages })}
+                className={cn("object-contain transition-all")}
             />
+            <div
+                className={`absolute bottom-0 px-1 py-0.5 text-xs md:px-2 md:py-1 md:text-sm ${
+                    props.textRight ? "right-0" : "left-0"
+                } bg-blackTransparent`}
+            >
+                <p>{props.text}</p>
+            </div>
         </div>
     );
 }

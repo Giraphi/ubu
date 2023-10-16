@@ -15,13 +15,13 @@ export default function RotateButton(props: RotateButtonProps) {
     return (
         <div
             className={cn(
-                "animate-rotate flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-primary bg-black font-bold text-primary duration-300",
+                "flex h-10 w-10 animate-rotate cursor-pointer items-center justify-center rounded-full border border-primary bg-black font-bold text-primary duration-300",
                 props.className,
             )}
         >
             {letters.map((letter, index) => (
                 <div
-                    className={"absolute inset-x-auto flex h-full w-2 justify-center  text-[0.9rem] "}
+                    className={"absolute inset-x-auto flex h-full w-2 justify-center  text-[0.7rem] "}
                     style={{ transform: `rotate(${index * 45}deg)` }}
                     key={index}
                 >

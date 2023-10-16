@@ -14,6 +14,7 @@ module.exports = {
                 white: "#eee",
                 black: "#111",
                 darkGray: "#1f1f1f",
+                blackTransparent: "rgba(17,17,17,0.6)",
             },
             gridColumn: {
                 // "start-content-left": "start-content-left",
