@@ -76,7 +76,13 @@ export default function DemoRow(props: DemoRowProps) {
         <StyledRow>
             <StyledImageContainer>
                 <StyledImageItem>
-                    <Image src={Kas1} alt={"Tape"} quality={50} sizes={imageRenditions.half} lazyBoundary={imageLazyBoundary} />
+                    <Image
+                        src={Kas1}
+                        alt={"Tape"}
+                        quality={50}
+                        sizes={imageRenditions.half}
+                        lazyBoundary={imageLazyBoundary}
+                    />
                 </StyledImageItem>
             </StyledImageContainer>
 
@@ -94,7 +100,13 @@ export default function DemoRow(props: DemoRowProps) {
 
             <StyledImageContainer>
                 <StyledImageItem>
-                    <Image src={Kas3} alt={"Tape"} quality={50} sizes={imageRenditions.half} lazyBoundary={imageLazyBoundary} />
+                    <Image
+                        src={Kas3}
+                        alt={"Tape"}
+                        quality={50}
+                        sizes={imageRenditions.half}
+                        lazyBoundary={imageLazyBoundary}
+                    />
                 </StyledImageItem>
             </StyledImageContainer>
         </StyledRow>

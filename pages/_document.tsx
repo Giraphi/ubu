@@ -27,11 +27,14 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html lang="en" className={`${sourceCodePro.variable} ${bungee.variable}`}>
+            <Html
+                lang="en"
+                className={`${sourceCodePro.variable} ${bungee.variable}`}
+            >
                 <Head>
                     {/*<link rel="preload" href="/fonts/source-code-pro-regular.woff" as="font" type="font/woff" crossOrigin="" />*/}
                 </Head>
-                <body className={"text-lg leading-snug font-mono text-lightWhite"}>
+                <body className={"font-mono text-lg leading-snug text-lightWhite"}>
                     <Main />
                     <NextScript />
                 </body>

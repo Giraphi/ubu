@@ -84,16 +84,30 @@ export default function BandText(props: TextProps) {
                         <Figur delay={1.5}>
                             <Kerze />
                         </Figur>
-                        <Figur scale={2} delay={4}>
+                        <Figur
+                            scale={2}
+                            delay={4}
+                        >
                             <Shaker />
                         </Figur>
                     </Row>
                     <p className={"pb-8"}>
                         <FormattedMessage id={"home.about.text3"} />
                     </p>
-                    <StyledVideo ref={videoRef} muted={true} loop={true} playsInline={true}>
-                        <source src={"./video/eule.webm"} type={"video/webm"} />
-                        <source src={"./video/eule.mp4"} type={"video/mp4"} />
+                    <StyledVideo
+                        ref={videoRef}
+                        muted={true}
+                        loop={true}
+                        playsInline={true}
+                    >
+                        <source
+                            src={"./video/eule.webm"}
+                            type={"video/webm"}
+                        />
+                        <source
+                            src={"./video/eule.mp4"}
+                            type={"video/mp4"}
+                        />
                     </StyledVideo>
                     <SectionSpace />
                 </CompactArea>

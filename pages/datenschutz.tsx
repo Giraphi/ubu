@@ -269,7 +269,11 @@ const Datenschutz: NextPage = () => {
                     Bereitstellung, Analyse sowie Optimierung unseres Audioangebotes gem. Art. 6 Abs. 1 lit. f. DSGVO. <br />
                     <br />
                     Weitere Informationen und Widerspruchsmöglichkeiten finden sich in der Datenschutzerklärung von Bandcamp:{" "}
-                    <a target="_blank" href="https://bandcamp.com/privacy" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://bandcamp.com/privacy"
+                        rel="noreferrer"
+                    >
                         https://bandcamp.com/privacy
                     </a>
                     .
@@ -316,23 +320,43 @@ const Datenschutz: NextPage = () => {
                     <br />
                     <br />- Facebook, -Seiten, -Gruppen, (Facebook Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2,
                     Irland) auf Grundlage einer{" "}
-                    <a target="_blank" href="https://www.facebook.com/legal/terms/page_controller_addendum" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://www.facebook.com/legal/terms/page_controller_addendum"
+                        rel="noreferrer"
+                    >
                         Vereinbarung über gemeinsame Verarbeitung personenbezogener Daten
                     </a>{" "}
                     - Datenschutzerklärung:{" "}
-                    <a target="_blank" href="https://www.facebook.com/about/privacy/" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://www.facebook.com/about/privacy/"
+                        rel="noreferrer"
+                    >
                         https://www.facebook.com/about/privacy/
                     </a>
                     , speziell für Seiten:{" "}
-                    <a target="_blank" href="https://www.facebook.com/legal/terms/information_about_page_insights_data" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://www.facebook.com/legal/terms/information_about_page_insights_data"
+                        rel="noreferrer"
+                    >
                         https://www.facebook.com/legal/terms/information_about_page_insights_data
                     </a>{" "}
                     , Opt-Out:{" "}
-                    <a target="_blank" href="https://www.facebook.com/settings?tab=ads" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://www.facebook.com/settings?tab=ads"
+                        rel="noreferrer"
+                    >
                         https://www.facebook.com/settings?tab=ads
                     </a>{" "}
                     und{" "}
-                    <a target="_blank" href="http://www.youronlinechoices.com" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="http://www.youronlinechoices.com"
+                        rel="noreferrer"
+                    >
                         http://www.youronlinechoices.com
                     </a>
                     , Privacy Shield:{" "}
@@ -346,11 +370,19 @@ const Datenschutz: NextPage = () => {
                     .<br />
                     <br />- Google/ YouTube (Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA) – Datenschutzerklärung:
                     &nbsp;
-                    <a target="_blank" href="https://policies.google.com/privacy" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://policies.google.com/privacy"
+                        rel="noreferrer"
+                    >
                         https://policies.google.com/privacy
                     </a>
                     , Opt-Out:{" "}
-                    <a target="_blank" href="https://adssettings.google.com/authenticated" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://adssettings.google.com/authenticated"
+                        rel="noreferrer"
+                    >
                         https://adssettings.google.com/authenticated
                     </a>
                     , Privacy Shield:{" "}
@@ -363,16 +395,28 @@ const Datenschutz: NextPage = () => {
                     </a>
                     .<br />
                     <br />- Instagram (Instagram Inc., 1601 Willow Road, Menlo Park, CA, 94025, USA) – Datenschutzerklärung/ Opt-Out:{" "}
-                    <a target="_blank" href="http://instagram.com/about/legal/privacy/" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="http://instagram.com/about/legal/privacy/"
+                        rel="noreferrer"
+                    >
                         http://instagram.com/about/legal/privacy/
                     </a>
                     .<br />
                     <br />- Twitter (Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA) - Datenschutzerklärung:{" "}
-                    <a target="_blank" href="https://twitter.com/de/privacy" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://twitter.com/de/privacy"
+                        rel="noreferrer"
+                    >
                         https://twitter.com/de/privacy
                     </a>
                     , Opt-Out:{" "}
-                    <a target="_blank" href="https://twitter.com/personalization" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://twitter.com/personalization"
+                        rel="noreferrer"
+                    >
                         https://twitter.com/personalization
                     </a>
                     , Privacy Shield:{" "}
@@ -385,16 +429,28 @@ const Datenschutz: NextPage = () => {
                     </a>
                     .<br />
                     <br />- Pinterest (Pinterest Inc., 635 High Street, Palo Alto, CA, 94301, USA) – Datenschutzerklärung/ Opt-Out:{" "}
-                    <a target="_blank" href="https://about.pinterest.com/de/privacy-policy" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://about.pinterest.com/de/privacy-policy"
+                        rel="noreferrer"
+                    >
                         https://about.pinterest.com/de/privacy-policy
                     </a>
                     .<br />
                     <br />- LinkedIn (LinkedIn Ireland Unlimited Company Wilton Place, Dublin 2, Irland) - Datenschutzerklärung{" "}
-                    <a target="_blank" href="https://www.linkedin.com/legal/privacy-policy" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://www.linkedin.com/legal/privacy-policy"
+                        rel="noreferrer"
+                    >
                         https://www.linkedin.com/legal/privacy-policy
                     </a>{" "}
                     , Opt-Out:{" "}
-                    <a target="_blank" href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out"
+                        rel="noreferrer"
+                    >
                         https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out
                     </a>
                     , Privacy Shield:&nbsp;
@@ -407,17 +463,29 @@ const Datenschutz: NextPage = () => {
                     </a>
                     .<br />
                     <br />- Xing (XING AG, Dammtorstraße 29-32, 20354 Hamburg, Deutschland) - Datenschutzerklärung/ Opt-Out:{" "}
-                    <a target="_blank" href="https://privacy.xing.com/de/datenschutzerklaerung" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://privacy.xing.com/de/datenschutzerklaerung"
+                        rel="noreferrer"
+                    >
                         https://privacy.xing.com/de/datenschutzerklaerung
                     </a>
                     .<br />
                     <br />- Wakalet (Wakelet Limited, 76 Quay Street, Manchester, M3 4PR, United Kingdom) - Datenschutzerklärung/ Opt-Out:{" "}
-                    <a target="_blank" href="https://wakelet.com/privacy.html" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://wakelet.com/privacy.html"
+                        rel="noreferrer"
+                    >
                         https://wakelet.com/privacy.html
                     </a>
                     .<br />
                     <br />- Bandcamp - Datenschutzerklärung/ Opt-Out:{" "}
-                    <a target="_blank" href="https://bandcamp.com/privacy" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://bandcamp.com/privacy"
+                        rel="noreferrer"
+                    >
                         https://bandcamp.com/privacy
                     </a>
                     .
@@ -452,11 +520,19 @@ const Datenschutz: NextPage = () => {
                 <span className="ts-muster-content">
                     Wir binden die Videos der Plattform &rdquo;YouTube” des Anbieters Google LLC, 1600 Amphitheatre Parkway, Mountain View,
                     CA 94043, USA, ein. Datenschutzerklärung:{" "}
-                    <a target="_blank" href="https://www.google.com/policies/privacy/" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://www.google.com/policies/privacy/"
+                        rel="noreferrer"
+                    >
                         https://www.google.com/policies/privacy/
                     </a>
                     , Opt-Out:{" "}
-                    <a target="_blank" href="https://adssettings.google.com/authenticated" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://adssettings.google.com/authenticated"
+                        rel="noreferrer"
+                    >
                         https://adssettings.google.com/authenticated
                     </a>
                     .
@@ -470,17 +546,30 @@ const Datenschutz: NextPage = () => {
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     Wir binden die Schriftarten ('Google Fonts') des Anbieters Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA
                     94043, USA, ein. Datenschutzerklärung:{" "}
-                    <a target="_blank" href="https://www.google.com/policies/privacy/" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://www.google.com/policies/privacy/"
+                        rel="noreferrer"
+                    >
                         https://www.google.com/policies/privacy/
                     </a>
                     , Opt-Out:{" "}
-                    <a target="_blank" href="https://adssettings.google.com/authenticated" rel="noreferrer">
+                    <a
+                        target="_blank"
+                        href="https://adssettings.google.com/authenticated"
+                        rel="noreferrer"
+                    >
                         https://adssettings.google.com/authenticated
                     </a>
                     .
                 </span>
             </p>
-            <a href="https://datenschutz-generator.de" className="dsg1-6" rel="nofollow noreferrer" target="_blank">
+            <a
+                href="https://datenschutz-generator.de"
+                className="dsg1-6"
+                rel="nofollow noreferrer"
+                target="_blank"
+            >
                 Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke
             </a>
         </StyledRoot>

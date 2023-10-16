@@ -75,11 +75,37 @@ export default function GlitchyImage(props: GlitchyImageProps) {
 
     return (
         <StyledGlitch>
-            <StyledImg {...imageProps} $numChild={1} variant={props.variant} />
-            {props.variant === 1 && <StyledImg {...imageProps} $numChild={2} variant={props.variant} />}
-            {props.variant === 2 && <StyledImg {...imageProps} $numChild={3} variant={props.variant} />}
-            {props.variant === 3 && <StyledImg {...imageProps} $numChild={4} variant={props.variant} />}
-            <StyledImg {...imageProps} $numChild={5} variant={props.variant} />
+            <StyledImg
+                {...imageProps}
+                $numChild={1}
+                variant={props.variant}
+            />
+            {props.variant === 1 && (
+                <StyledImg
+                    {...imageProps}
+                    $numChild={2}
+                    variant={props.variant}
+                />
+            )}
+            {props.variant === 2 && (
+                <StyledImg
+                    {...imageProps}
+                    $numChild={3}
+                    variant={props.variant}
+                />
+            )}
+            {props.variant === 3 && (
+                <StyledImg
+                    {...imageProps}
+                    $numChild={4}
+                    variant={props.variant}
+                />
+            )}
+            <StyledImg
+                {...imageProps}
+                $numChild={5}
+                variant={props.variant}
+            />
         </StyledGlitch>
     );
 }

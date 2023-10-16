@@ -3,7 +3,7 @@ import Grid, { GridLines } from "./Grid";
 import styled from "styled-components";
 
 const StyledArea = styled.div`
-    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight}; ;
+    grid-column: ${GridLines.contentLeft} / ${GridLines.contentRight};
 `;
 
 const StyledRow = styled.div`
@@ -19,10 +19,18 @@ export default function Footer() {
             <StyledArea>
                 <StyledRow>
                     <span>
-                        <a href={"/impressum"} target={"_blank"} rel="noreferrer">
+                        <a
+                            href={"/impressum"}
+                            target={"_blank"}
+                            rel="noreferrer"
+                        >
                             Impressum
                         </a>{" "}
-                        <a href={"/datenschutz"} target={"_blank"} rel="noreferrer">
+                        <a
+                            href={"/datenschutz"}
+                            target={"_blank"}
+                            rel="noreferrer"
+                        >
                             Datenschutz
                         </a>
                     </span>

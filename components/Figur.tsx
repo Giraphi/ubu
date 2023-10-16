@@ -39,7 +39,13 @@ export default function Figur(props: FigurProps) {
     const size = props.size || theme.space.figure;
 
     return (
-        <StyledRoot scale={scale} className={props.className} disableSpace={props.disableSpace} delay={props.delay || 0} size={size}>
+        <StyledRoot
+            scale={scale}
+            className={props.className}
+            disableSpace={props.disableSpace}
+            delay={props.delay || 0}
+            size={size}
+        >
             {props.children}
         </StyledRoot>
     );

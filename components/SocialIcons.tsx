@@ -74,19 +74,35 @@ export interface SocialIconsProps {}
 export default function SocialIcons(props: SocialIconsProps) {
     return (
         <StyledRoot>
-            <StyledItem href={"https://www.instagram.com/ubu.imperator"} target={"_blank"} className={"instagram"}>
+            <StyledItem
+                href={"https://www.instagram.com/ubu.imperator"}
+                target={"_blank"}
+                className={"instagram"}
+            >
                 <Instagram />
             </StyledItem>
 
-            <StyledItem href={"https://ubuimperator.bandcamp.com/album/ubudemo"} target={"_blank"} className={"bandcamp"}>
+            <StyledItem
+                href={"https://ubuimperator.bandcamp.com/album/ubudemo"}
+                target={"_blank"}
+                className={"bandcamp"}
+            >
                 <Bandcamp />
             </StyledItem>
 
-            <StyledItem href={"https://www.youtube.com/@ubuimperator4321"} target={"_blank"} className={"youtube"}>
+            <StyledItem
+                href={"https://www.youtube.com/@ubuimperator4321"}
+                target={"_blank"}
+                className={"youtube"}
+            >
                 <Youtube />
             </StyledItem>
 
-            <StyledItem href={"mailto:ubuimperator.band@gmail.com"} target={"_blank"} className={"mail"}>
+            <StyledItem
+                href={"mailto:ubuimperator.band@gmail.com"}
+                target={"_blank"}
+                className={"mail"}
+            >
                 <Mail />
             </StyledItem>
         </StyledRoot>

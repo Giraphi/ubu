@@ -195,8 +195,14 @@ export default function PageMenu() {
 
     return (
         <>
-            <StyledTopBar isMenuOpen={isMenuOpen} isMenuVisible={isMenuVisible}>
-                <StyledButton isMenuOpen={isMenuOpen} onClick={handleClick}>
+            <StyledTopBar
+                isMenuOpen={isMenuOpen}
+                isMenuVisible={isMenuVisible}
+            >
+                <StyledButton
+                    isMenuOpen={isMenuOpen}
+                    onClick={handleClick}
+                >
                     <StyledBar />
                     <StyledBar />
                 </StyledButton>
@@ -207,7 +213,12 @@ export default function PageMenu() {
 
             <AnimatePresence>
                 {isMenuOpen && (
-                    <StyledPageMenuContentWrapper variants={menuVariants} initial={"hidden"} animate={"visible"} exit={"hidden"}>
+                    <StyledPageMenuContentWrapper
+                        variants={menuVariants}
+                        initial={"hidden"}
+                        animate={"visible"}
+                        exit={"hidden"}
+                    >
                         <PageMenuContent handleItemClick={() => setIsMenuOpen(false)} />
                     </StyledPageMenuContentWrapper>
                 )}

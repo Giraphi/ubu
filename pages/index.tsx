@@ -36,7 +36,10 @@ const Home: NextPage = () => {
     const locale = useRouter().locale as "de" | "en"; // because of next.config.js this can only be "de" or "en"
 
     return (
-        <IntlProvider locale={locale} messages={messages[locale]}>
+        <IntlProvider
+            locale={locale}
+            messages={messages[locale]}
+        >
             <MenuContextProvider>
                 <StyledRoot>
                     <PageMenu />

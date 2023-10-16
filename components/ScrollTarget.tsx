@@ -45,5 +45,10 @@ export default function ScrollTarget(props: ScrollTargetProps) {
     //     setActiveItem(props.id);
     // }, [isInView, props.id, setActiveItem]);
 
-    return <StyledDiv id={props.id} ref={ref} />;
+    return (
+        <StyledDiv
+            id={props.id}
+            ref={ref}
+        />
+    );
 }
