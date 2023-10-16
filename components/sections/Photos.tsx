@@ -146,11 +146,11 @@ export default function Photos(props: PhotosProps) {
                     </AspectRatioContent>
                 </StyledDanielImage>
 
-                {/*<CompactArea className={"pb-8"}>*/}
-                {/*    <p>*/}
-                {/*        <FormattedMessage id={"home.photo.more"} />*/}
-                {/*    </p>*/}
-                {/*</CompactArea>*/}
+                <CompactArea className={"pt-8"}>
+                    <p>
+                        <FormattedMessage id={"home.photo.more"} />
+                    </p>
+                </CompactArea>
                 <PicturePile />
             </StyledGrid>
             <SectionSpace />

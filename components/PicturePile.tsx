@@ -18,15 +18,15 @@ export interface PicturePileProps {}
 export default function PicturePile(props: PicturePileProps) {
     const [pileImageProps] = useState([
         { src: kaufbeurenLogo, text: "11.03.22 Roundhouse, Kaufbeuren", textRight: true },
-        { src: balveDaniel, text: "27.05.2023 Kunstblock Balve, München" },
         { src: UBU3, text: "Bandportrait by Vanessa Mönius" },
         { src: ruebeSimon, text: "2022 Ruebezahl Festival" },
+        { src: balveDaniel, text: "27.05.2023 Kunstblock Balve, München" },
         { src: balveDrums, text: "27.05.2023 Kunstblock Balve, München" },
-        { src: murf1, text: "01.10.23 Murf/Murw Festival, Tilburg NL" },
-        { src: murf2, text: "30.09.23 Murf/Murw Festival, Tilburg NL" },
-        { src: murf3, text: "30.09.23 Little Devil, Tilburg NL" },
         { src: UBU2, text: "Bandportrait by Vanessa Mönius" },
         { src: kaufbeurenBand, text: "11.03.22 Roundhouse, Kaufbeuren" },
+        { src: murf1, text: "01.10.23 Murf/Murw Festival, Tilburg NL" },
+        { src: murf3, text: "30.09.23 Murf/Murw Festival, Tilburg NL" },
+        { src: murf2, text: "30.09.23 Murf/Murw Festival, Tilburg NL" },
     ]);
 
     const [showImages, setShowImages] = useState(pileImageProps.length);
