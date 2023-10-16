@@ -31,7 +31,7 @@ export default function PicturePile(props: PicturePileProps) {
 
     return (
         <div
-            className={"col-content pt-4 md:pt-8"}
+            className={"cursor-clickText col-content pt-4 md:pt-8"}
             onClick={handleClick}
         >
             <div className={"relative h-[60lvh] w-full bg-darkGray md:h-[80lvh]"}>
@@ -87,7 +87,7 @@ export default function PicturePile(props: PicturePileProps) {
                         showImages={showImages}
                     />
                 </div>
-                <RotateButton className={"absolute bottom-2 right-2"} />
+                <RotateButton className={"absolute bottom-2 right-2 md:hidden"} />
             </div>
         </div>
     );

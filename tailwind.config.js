@@ -25,6 +25,9 @@ module.exports = {
             animation: {
                 rotate: "spin 3s linear infinite",
             },
+            cursor: {
+                clickText: "url('/cursor.svg') 48 16, pointer",
+            },
         },
     },
     plugins: [],
