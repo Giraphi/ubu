@@ -22,6 +22,9 @@ module.exports = {
                 screen: "screen-left / screen-right",
                 compact: "col-3-start / col-10-end",
             },
+            animation: {
+                rotate: "spin 3s linear infinite",
+            },
         },
     },
     plugins: [],

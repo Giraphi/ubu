@@ -12,6 +12,7 @@ import UBU3 from "../images/pile/UBUIMPERATOR-3.jpg";
 
 import PileImage from "./PileImage";
 import { useState } from "react";
+import RotateButton from "./RotateButton";
 
 export interface PicturePileProps {}
 
@@ -33,50 +34,50 @@ export default function PicturePile(props: PicturePileProps) {
             className={"col-content pt-4 md:pt-8"}
             onClick={handleClick}
         >
-            <div className={"h-[60lvh] w-full bg-darkGray md:h-[80lvh]"}>
+            <div className={"relative h-[60lvh] w-full bg-darkGray md:h-[80lvh]"}>
                 <div className={"relative h-full w-full "}>
                     <PileImage
-                        src={balveDaniel}
+                        src={kaufbeurenLogo}
                         index={0}
                         showImages={showImages}
                     />
                     <PileImage
-                        src={balveDrums}
+                        src={balveDaniel}
                         index={1}
                         showImages={showImages}
                     />
                     <PileImage
-                        src={UBU3}
+                        src={balveDrums}
                         index={2}
                         showImages={showImages}
                     />
                     <PileImage
-                        src={murf1}
+                        src={UBU3}
                         index={3}
                         showImages={showImages}
                     />
                     <PileImage
-                        src={murf2}
+                        src={ruebeSimon}
                         index={4}
                         showImages={showImages}
                     />
                     <PileImage
-                        src={murf3}
+                        src={murf1}
                         index={5}
                         showImages={showImages}
                     />
                     <PileImage
-                        src={ruebeSimon}
+                        src={murf2}
                         index={6}
                         showImages={showImages}
                     />
                     <PileImage
-                        src={UBU2}
+                        src={murf3}
                         index={7}
                         showImages={showImages}
                     />
                     <PileImage
-                        src={kaufbeurenLogo}
+                        src={UBU2}
                         index={8}
                         showImages={showImages}
                     />
@@ -86,6 +87,7 @@ export default function PicturePile(props: PicturePileProps) {
                         showImages={showImages}
                     />
                 </div>
+                <RotateButton className={"absolute bottom-2 right-2"} />
             </div>
         </div>
     );
