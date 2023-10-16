@@ -10,8 +10,8 @@ export interface PileImageProps {
 }
 
 export default function PileImage(props: PileImageProps) {
-    const topXFactor = useState(random(0, 1))[0];
-    const y = useState(random(0, 100))[0];
+    const top = useState(random(0, 1))[0];
+    const left = useState(random(0, 1))[0];
     const [isFirstRender, setIsFirstRender] = useState(true);
 
     function random(min: number, max: number) {
@@ -19,7 +19,19 @@ export default function PileImage(props: PileImageProps) {
     }
 
     const isWide = props.src.width / props.src.height > 1;
-    const height = isWide ? "80%" : "90%";
+    const heightScreenPercentage = isWide ? 0.6 : 0.7;
+    const widthScreenPercentage = isWide ? 0.8 : 0.6;
+
+    const screenHeight = typeof window === "undefined" ? 1000 : window.innerHeight;
+    const screenWidth = typeof window === "undefined" ? 1000 : window.innerWidth;
+
+    const scaleFactor =
+        screenWidth > screenHeight
+            ? (screenHeight * heightScreenPercentage) / props.src.height
+            : (screenWidth * widthScreenPercentage) / props.src.width;
+
+    const height = Math.floor(props.src.height * scaleFactor);
+    const width = Math.floor(props.src.width * scaleFactor);
 
     useEffect(() => {
         if (!isFirstRender) {
@@ -30,16 +42,24 @@ export default function PileImage(props: PileImageProps) {
 
     return (
         <div
-            className={cn(`absolute  w-full`, { hidden: props.showImages < props.index + 1 })}
-            style={isFirstRender ? {} : { top: `calc(${topXFactor} * (75vh - ${height}))`, height: height }}
+            className={cn("absolute", { hidden: props.index + 1 > props.showImages })}
+            style={
+                isFirstRender
+                    ? {}
+                    : {
+                          width: `${width}px`,
+                          height: `${height}px`,
+                          left: `calc(${left} * (100% - ${width}px))`,
+                          top: `calc(${top} * (100% - ${height}px))`,
+                      }
+            }
         >
             <Image
                 alt={"pile image"}
                 fill={true}
                 src={props.src}
                 sizes={imageRenditions.full}
-                className={"border-white object-contain"}
-                style={isFirstRender ? {} : { objectPosition: `${y}%` }}
+                className={"object-contain"}
             />
         </div>
     );
