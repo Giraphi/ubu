@@ -6,32 +6,29 @@ export interface PileImageProps {
     src: StaticImageData;
 }
 
-const widthPercentage = 30;
-
 export default function PileImage(props: PileImageProps) {
-    const x = useState(random())[0];
-    const y = useState(random())[0];
+    const topXFactor = useState(random(0, 1))[0];
+    const y = useState(random(0, 100))[0];
 
-    const objectX = useState(random())[0];
-    const objectY = useState(random())[0];
-
-    function random() {
-        const min = 0;
-        const max = 30;
+    function random(min: number, max: number) {
         return Math.random() * (max - min) + min;
     }
 
+    const isWide = props.src.width / props.src.height > 1;
+    const height = isWide ? "65%" : "80%";
+
     return (
         <div
-            className={`absolute h-[70%] w-[70%]`}
-            style={{ left: `${x}%`, top: `${y}%` }}
+            className={`absolute  w-full`}
+            style={{ top: `calc(${topXFactor} * (75vh - 80%))`, height: height }}
         >
             <Image
                 alt={"pile image"}
                 fill={true}
                 src={props.src}
-                className={"object-contain"}
                 sizes={imageRenditions.full}
+                className={"object-contain"}
+                style={{ objectPosition: `${y}%` }}
             />
         </div>
     );

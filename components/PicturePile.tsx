@@ -15,8 +15,10 @@ import PileImage from "./PileImage";
 export interface PicturePileProps {}
 
 export default function PicturePile(props: PicturePileProps) {
+    // const numClicks
+
     return (
-        <div className={"col-content  h-[75vh] px-5 "}>
+        <div className={"col-content  h-[80vh] px-5 "}>
             <div className={"h-full w-full bg-darkGray"}>
                 <div className={"relative h-full w-full "}>
                     <PileImage src={balveDaniel} />
