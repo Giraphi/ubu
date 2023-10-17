@@ -99,6 +99,7 @@ export default function BandText(props: TextProps) {
                         muted={true}
                         loop={true}
                         playsInline={true}
+                        autoPlay={true}
                     >
                         <source
                             src={"./video/eule.webm"}
