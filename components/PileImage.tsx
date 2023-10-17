@@ -44,7 +44,7 @@ export default function PileImage(props: PileImageProps) {
 
     return (
         <div
-            className={cn("absolute select-none", {
+            className={cn("absolute select-none shadow-2xl", {
                 hidden: props.index + 1 > props.showImages,
                 "blur-[2px] md:blur-sm": props.index + 1 !== props.showImages,
             })}

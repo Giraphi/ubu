@@ -41,9 +41,9 @@ export default function PicturePile(props: PicturePileProps) {
     }
 
     return (
-        <div className={" col-content select-none "}>
+        <div className={"col-content select-none"}>
             <div
-                className={"relative h-[60lvh] w-full cursor-clickText bg-darkGray md:h-[80lvh]"}
+                className={"relative h-[60lvh] w-full cursor-clickText bg-darkGray px-2 py-4 md:h-[80lvh] md:px-4 md:py-8"}
                 onClick={handleClick}
             >
                 <div className={"relative h-full w-full select-none"}>

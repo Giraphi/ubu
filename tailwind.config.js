@@ -23,8 +23,44 @@ module.exports = {
                 screen: "screen-left / screen-right",
                 compact: "col-3-start / col-10-end",
             },
+            keyframes: {
+                color: {
+                    "0%": {
+                        color: "#ff00ff",
+                    },
+
+                    "33%": {
+                        color: "#00ffff",
+                    },
+
+                    "66%": {
+                        color: "#00ff00",
+                    },
+
+                    "100%": {
+                        color: "#ff00ff",
+                    },
+                },
+                borderColor: {
+                    "0%": {
+                        borderColor: "#ff00ff",
+                    },
+
+                    "33%": {
+                        borderColor: "#00ffff",
+                    },
+
+                    "66%": {
+                        borderColor: "#00ff00",
+                    },
+
+                    "100%": {
+                        borderColor: "#ff00ff",
+                    },
+                },
+            },
             animation: {
-                rotate: "spin 3s linear infinite",
+                color: "color 4s linear infinite",
             },
             cursor: {
                 clickText: "url('/cursor.svg') 48 16, pointer",
