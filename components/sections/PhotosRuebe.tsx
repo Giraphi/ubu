@@ -83,7 +83,7 @@ export interface PhotosRuebeProps {}
 export default function PhotosRuebe(props: PhotosRuebeProps) {
     return (
         <>
-            <ScrollTarget id={ScrollId.ruebe} />
+            {/*<ScrollTarget id={ScrollId.ruebe} />*/}
             <Grid>
                 <CompactArea>
                     <h2>Ubu @Rübezahl</h2>

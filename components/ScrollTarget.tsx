@@ -21,8 +21,7 @@ export enum ScrollId {
     top = "top",
     ubuDemo = "ubu-demo",
     ueberUns = "ueber-uns",
-    impex = "impex",
-    ruebe = "ruebe",
+    photos = "photos",
     video = "video",
 }
 

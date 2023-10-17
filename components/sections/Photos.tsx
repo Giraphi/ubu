@@ -80,7 +80,7 @@ export interface PhotosProps {}
 export default function Photos(props: PhotosProps) {
     return (
         <>
-            <ScrollTarget id={ScrollId.impex} />
+            <ScrollTarget id={ScrollId.photos} />
             <Grid>
                 <CompactArea>
                     <SectionHeadline>
