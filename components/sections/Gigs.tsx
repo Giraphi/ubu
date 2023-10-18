@@ -65,7 +65,7 @@ export default function Gigs(props: GigsProps) {
                     </details>
 
                     <div className={"hidden flex-col md:flex"}>
-                        <p className={"inline cursor-pointer pb-2 font-bold"}>PAST</p>
+                        <p className={"inline pb-2 font-bold"}>PAST</p>
                         {pastGigs}
                     </div>
                 </CompactArea>
