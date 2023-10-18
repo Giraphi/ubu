@@ -15,7 +15,7 @@ import Image from "next/legacy/image";
 import { FormattedMessage } from "react-intl";
 import { imageLazyBoundary, imageRenditions } from "../../imageRenditions";
 import SectionHeadline from "../SectionHeadline";
-import PicturePile from "../PicturePile";
+import StackedPhotos from "../StackedPhotos/StackedPhotos";
 
 const StyledGrid = styled(Grid)`
     row-gap: ${(props) => props.theme.grid.gap.base};
@@ -151,7 +151,7 @@ export default function Photos(props: PhotosProps) {
                         <FormattedMessage id={"home.photo.more"} />
                     </p>
                 </CompactArea>
-                <PicturePile />
+                <StackedPhotos />
             </StyledGrid>
             <SectionSpace />
         </>

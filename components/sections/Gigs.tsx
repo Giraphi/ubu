@@ -11,12 +11,13 @@ export interface GigsProps {}
 export default function Gigs(props: GigsProps) {
     const pastGigs = (
         <ul className={"flex flex-col gap-2 md:gap-1"}>
-            <li>01.10.23 Murf/Murw Festival, Hallo of Fame, Tilburg NL</li>
-            <li>30.09.23 Murf/Murw Festival, Little Devil, Tilburg NL</li>
+            <li>01.10.23 Hallo of Fame, Murf/Murw Festival, Tilburg NL</li>
+            <li>30.09.23 Little Devil, Murf/Murw Festival, Tilburg NL</li>
             <li>27.05.23 Kunstblock Balve, München</li>
             <li>29.09.23 Mufi Kino, Fulda</li>
             <li>09.09.23 Klangfest, München</li>
             <li>22.07.23 Kulturspektakel Gauting</li>
+            <li>24.04.23 Walter Storms Galerie, München</li>
             <li>11.03.23 Roundhouse, Kaufbeuren</li>
 
             <li>26.10.22 Sunny Red, München</li>
@@ -58,9 +59,9 @@ export default function Gigs(props: GigsProps) {
                     </ul>
                     <details className={"md:hidden"}>
                         <summary>
-                            <p className={"inline cursor-pointer pb-2 font-bold"}>PAST</p>
+                            <p className={"inline cursor-pointer font-bold"}>PAST</p>
                         </summary>
-                        {pastGigs}
+                        <div className={"pt-2"}>{pastGigs}</div>
                     </details>
 
                     <div className={"hidden flex-col md:flex"}>

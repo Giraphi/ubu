@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
-import { imageRenditions } from "../imageRenditions";
+import { imageRenditions } from "../../imageRenditions";
 import { useEffect, useState } from "react";
-import { cn } from "../util/functions";
+import { cn } from "../../util/functions";
 
 export interface PileImageProps {
     src: StaticImageData;
@@ -11,7 +11,7 @@ export interface PileImageProps {
     textRight?: boolean;
 }
 
-export default function PileImage(props: PileImageProps) {
+export default function StackedPhoto(props: PileImageProps) {
     const top = useState(random(0, 1))[0];
     const left = useState(random(0, 1))[0];
     const [isFirstRender, setIsFirstRender] = useState(true);

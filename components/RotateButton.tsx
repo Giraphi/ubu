@@ -15,7 +15,7 @@ export default function RotateButton(props: RotateButtonProps) {
     return (
         <div
             className={cn(
-                "flex h-10 w-10 animate-[color_4s_linear_infinite,spin_3s_linear_infinite,borderColor_4s_linear_infinite] cursor-pointer items-center justify-center rounded-full border border-primary bg-black font-bold duration-300",
+                "flex h-10 w-10 animate-[color_4s_linear_infinite,spin_12s_linear_infinite,borderColor_4s_linear_infinite] cursor-pointer items-center justify-center rounded-full border border-primary bg-black font-bold duration-300",
                 props.className,
             )}
         >
