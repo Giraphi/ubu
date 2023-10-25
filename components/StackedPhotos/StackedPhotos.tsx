@@ -12,9 +12,8 @@ import rebl from "../../images/pile/rebl.jpg";
 import gallery from "../../images/pile/gallery.jpg";
 
 import StackedPhoto from "./StackedPhoto";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import RotateButton from "../RotateButton";
-import { shuffleArray } from "../../util/functions";
 
 export interface PicturePileProps {}
 
