@@ -45,6 +45,14 @@ export default function Gigs(props: GigsProps) {
                                 16.12.23 Mood Club, Memmingen
                             </a>
                         </li>
+                        <li>
+                            <a
+                                target={"_blank"}
+                                href={"https://www.instagram.com/p/CzttGAfCXgs/?img_index=1"}
+                            >
+                                07.12.23 Walter Storms Galerie, München
+                            </a>
+                        </li>
 
                         <li>
                             <a
