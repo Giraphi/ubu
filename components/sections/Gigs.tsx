@@ -35,7 +35,12 @@ export default function Gigs(props: GigsProps) {
                     <p className={"animate-color pb-2 font-bold"}>UPCOMING</p>
                     <ul className={"flex flex-col gap-2 pb-8 md:gap-1"}>
                         <li>
-                            <a>28.09.24 Z-Bau, Nürnberg</a>
+                            <a
+                                target={"_blank"}
+                                href={"https://www.facebook.com/events/1015451419730315"}
+                            >
+                                28.09.24 Z-Bau, Nürnberg
+                            </a>
                         </li>
                         <li>
                             <a
