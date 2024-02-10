@@ -11,6 +11,31 @@ export interface GigsProps {}
 export default function Gigs(props: GigsProps) {
     const pastGigs = (
         <ul className={"flex flex-col gap-2 md:gap-1"}>
+            <li>
+                <a
+                    target={"_blank"}
+                    href={"https://moodclub.org/programm/"}
+                >
+                    16.12.23 Mood Club, Memmingen
+                </a>
+            </li>
+            <li>
+                <a
+                    target={"_blank"}
+                    href={"https://www.instagram.com/p/CzttGAfCXgs/?img_index=1"}
+                >
+                    07.12.23 Walter Storms Galerie, München
+                </a>
+            </li>
+
+            <li>
+                <a
+                    target={"_blank"}
+                    href={"https://eventfrog.de/de/p/konzert/hard-rock-heavy-metal/exxasens-ubu-imperator-7091301423107756810.html"}
+                >
+                    09.11.23 Glockenbach Werkstatt, München
+                </a>
+            </li>
             <li>01.10.23 Hallo of Fame, Murf/Murw Festival, Tilburg NL</li>
             <li>30.09.23 Little Devil, Murf/Murw Festival, Tilburg NL</li>
             <li>27.05.23 Kunstblock Balve, München</li>
@@ -45,28 +70,9 @@ export default function Gigs(props: GigsProps) {
                         <li>
                             <a
                                 target={"_blank"}
-                                href={"https://moodclub.org/programm/"}
+                                href={"https://www.instagram.com/treibhaus_acts/"}
                             >
-                                16.12.23 Mood Club, Memmingen
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                target={"_blank"}
-                                href={"https://www.instagram.com/p/CzttGAfCXgs/?img_index=1"}
-                            >
-                                07.12.23 Walter Storms Galerie, München
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                target={"_blank"}
-                                href={
-                                    "https://eventfrog.de/de/p/konzert/hard-rock-heavy-metal/exxasens-ubu-imperator-7091301423107756810.html"
-                                }
-                            >
-                                09.11.23 Glockenbach Werkstatt, München
+                                23.02.24 Treibhaus, München
                             </a>
                         </li>
                     </ul>
