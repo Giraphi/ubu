@@ -4,7 +4,7 @@ import Grid from "../../Grid";
 import ScrollTarget, { ScrollId } from "../../ScrollTarget";
 import SectionHeadline from "../../SectionHeadline";
 import { useEffect, useRef, useState } from "react";
-import { motion, useMotionTemplate, useMotionValue, useScroll, useTime, useTransform } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue, useScroll, useSpring, useTime, useTransform } from "framer-motion";
 import { fullGradient, zeroGradient } from "./util";
 
 export interface FruhtrunkProps {}
@@ -25,13 +25,18 @@ export default function Fruhtrunk(props: FruhtrunkProps) {
         target: ref,
         offset: ["start end", "end start"],
     });
+    const spring = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001,
+    });
 
-    const stroke = useTransform(scrollYProgress, [0, 0.5, 1], [10, MAX_STROKE - 30, 10]);
-    const rotate = useTransform(scrollYProgress, [0, 1], [-180, 180]);
+    const stroke = useTransform(spring, [0, 0.5, 1], [0, MAX_STROKE - 20, 0]);
+    const rotate = useTransform(spring, [0, 1], [-180, 180]);
     const first = useTransform(() => (MAX_STROKE - stroke.get()) / 2);
-    const second = useTransform(() => (MAX_STROKE - stroke.get()) / 2 + stroke.get());
+    const second = useTransform(() => first.get() + stroke.get());
 
-    const backgroundImage = useMotionTemplate`repeating-linear-gradient(${scrollYProgress}turn, rgba(0,0,0,0) 0px, rgba(0,0,0,0) ${first}px, rgba(255,255,255,1) ${first}px, rgba(255,255,255,1) ${second}px, rgba(0,0,0,0) ${second}px, rgba(0,0,0,0) ${MAX_STROKE}px)`;
+    const backgroundImage = useMotionTemplate`repeating-linear-gradient(${rotate}deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) ${first}px, rgba(255,255,255,1) ${first}px, rgba(255,255,255,1) ${second}px, rgba(0,0,0,0) ${second}px, rgba(0,0,0,0) ${MAX_STROKE}px)`;
 
     useEffect(() => {
         setIsFirstRender(false);
