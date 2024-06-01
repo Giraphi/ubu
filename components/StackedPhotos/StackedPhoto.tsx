@@ -64,6 +64,8 @@ export default function StackedPhoto(props: PileImageProps) {
                 fill={true}
                 src={props.src}
                 sizes={imageRenditions.full}
+                quality={30}
+                loading={"eager"}
                 className={cn("select-none object-contain transition-all")}
             />
             <div

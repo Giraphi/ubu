@@ -51,7 +51,7 @@ export default function Demo() {
             <ScrollTarget id={ScrollId.ubuDemo} />
             <Grid>
                 <CompactArea>
-                    <SectionHeadline>Ubu Tape</SectionHeadline>
+                    <SectionHeadline>Release - Ubu Tape</SectionHeadline>
 
                     <StyledP>
                         <FormattedMessage

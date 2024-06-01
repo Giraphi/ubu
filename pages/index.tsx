@@ -16,6 +16,7 @@ import { IntlProvider } from "react-intl";
 import BandPic from "../components/BandPic";
 import Demo from "../components/sections/Demo/Demo";
 import Gigs from "../components/sections/Gigs";
+import Fruhtrunk from "../components/sections/Fruhtrunk/Fruhtrunk";
 
 const messages: Record<string, any> = {
     de,
@@ -47,6 +48,7 @@ const Home: NextPage = () => {
                     <Intro />
                     <BandPic />
                     <Gigs />
+                    <Fruhtrunk />
                     <Demo />
                     <BandText />
                     <Photos />

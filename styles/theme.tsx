@@ -12,7 +12,7 @@ export const theme = {
         gutter: 8,
         sm: "24px",
         md: "32px",
-        lg: "54px",
+        lg: "56px",
         xlg: "108px",
         figure: "80px",
     },

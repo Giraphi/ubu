@@ -16,8 +16,8 @@ const BarHeightSmPx = 0.08 * TopBarSizeSmPx;
 const BarSpaceSmPx = 0.07 * TopBarSizeSmPx;
 
 const StyledTopBar = styled.div<{
-    isMenuOpen: boolean;
-    isMenuVisible: boolean;
+    $isMenuOpen: boolean;
+    $isMenuVisible: boolean;
 }>`
     position: fixed;
     top: 0;
@@ -39,7 +39,7 @@ const StyledTopBar = styled.div<{
     transition: top 0.2s ease-out;
 
     ${(props) =>
-        !props.isMenuVisible &&
+        !props.$isMenuVisible &&
         css`
             top: -${TopBarSizePx}px;
         `}
@@ -58,7 +58,7 @@ const StyledBar = styled.div`
     }
 `;
 
-const StyledButton = styled.div<{ isMenuOpen: boolean }>`
+const StyledButton = styled.div<{ $isMenuOpen: boolean }>`
     width: ${TopBarSizeSmPx}px;
     cursor: pointer;
 
@@ -80,7 +80,7 @@ const StyledButton = styled.div<{ isMenuOpen: boolean }>`
     }
 
     ${(props) =>
-        props.isMenuOpen &&
+        props.$isMenuOpen &&
         css`
             ${StyledBar}:first-child {
                 transform: translateY(calc((${BarHeightSmPx}px + ${BarSpaceSmPx}px) / 2)) rotate(315deg);
@@ -196,11 +196,11 @@ export default function PageMenu() {
     return (
         <>
             <StyledTopBar
-                isMenuOpen={isMenuOpen}
-                isMenuVisible={isMenuVisible}
+                $isMenuOpen={isMenuOpen}
+                $isMenuVisible={isMenuVisible}
             >
                 <StyledButton
-                    isMenuOpen={isMenuOpen}
+                    $isMenuOpen={isMenuOpen}
                     onClick={handleClick}
                 >
                     <StyledBar />

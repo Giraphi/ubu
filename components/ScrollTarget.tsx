@@ -24,6 +24,7 @@ export enum ScrollId {
     photos = "photos",
     video = "video",
     gigs = "gigs",
+    fruhtrunk = "fruhtrunk",
 }
 
 // const ScrollIdArray = Object.values(ScrollId);
