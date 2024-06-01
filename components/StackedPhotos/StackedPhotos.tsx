@@ -50,7 +50,7 @@ export default function StackedPhotos(props: PicturePileProps) {
                 className={"relative h-[60lvh] w-full cursor-clickText bg-darkGray px-2 py-4 md:h-[80lvh] md:px-4 md:py-8"}
                 onClick={handleClick}
             >
-                <div className={"relative h-full w-full select-none"}>
+                <div className={"relative size-full select-none"}>
                     {pileImageProps.map((props, index) => (
                         <StackedPhoto
                             key={props.id}
