@@ -14,6 +14,14 @@ export default function Gigs(props: GigsProps) {
             <li>
                 <a
                     target={"_blank"}
+                    href={"https://www.instagram.com/treibhaus_acts/"}
+                >
+                    23.02.24 Treibhaus, München
+                </a>
+            </li>
+            <li>
+                <a
+                    target={"_blank"}
                     href={"https://moodclub.org/programm/"}
                 >
                     16.12.23 Mood Club, Memmingen
@@ -47,7 +55,6 @@ export default function Gigs(props: GigsProps) {
 
             <li>26.10.22 Sunny Red, München</li>
             <li>24.09.22 Import/Export, München</li>
-            <li>09.22 Ruebezahl Festival</li>
         </ul>
     );
 
@@ -69,24 +76,82 @@ export default function Gigs(props: GigsProps) {
                         </li>
                         <li>
                             <a
-                                target={"_blank"}
-                                href={"https://www.instagram.com/treibhaus_acts/"}
+                                href="https://www.nochbesserleben.com/"
+                                target="_blank"
                             >
-                                23.02.24 Treibhaus, München
+                                09.09.24 Nochbesserleben, Leipzig
+                            </a>
+                        </li>
+                        <li>
+                            <span>17.08.24 Secret Location at Nürnberg &#128561; Contact us for info</span>
+                        </li>
+                        <li>
+                            <a
+                                target={"_blank"}
+                                href={"https://waldschaenke-dornheim.de/"}
+                            >
+                                27.07.24 Dornheim, Würzburg
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                target={"_blank"}
+                                href={"https://www.schokoladen-mitte.de/"}
+                            >
+                                26.07.24 Schokoladen, Berlin
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                target={"_blank"}
+                                href={"http://www.c-keller.de/"}
+                            >
+                                24.07.24 C.Keller, Weimar
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                target={"_blank"}
+                                href={"https://www.horstklub.ch/"}
+                            >
+                                20.07.24 Horst Club, Kreuzlingen CH
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                target={"_blank"}
+                                href={"https://www.glockenbachwerkstatt.de/"}
+                            >
+                                18.07.24 Glockbachwerkstatt, München
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                target={"_blank"}
+                                href={"https://www.lenbachhaus.de/"}
+                            >
+                                15.07.24 Lenbachhaus / Fashion Performance, München
                             </a>
                         </li>
                     </ul>
-                    <details className={"md:hidden"}>
+                    {/* <details className={"md:hidden"}>
                         <summary>
                             <p className={"inline cursor-pointer font-bold"}>PAST</p>
                         </summary>
                         <div className={"pt-2"}>{pastGigs}</div>
-                    </details>
+                    </details> */}
 
+                    <details>
+                        <summary className="cursor-pointer">
+                            <p className={"ml-2 inline cursor-pointer font-bold"}>PAST</p>
+                        </summary>
+                        <div className={"pt-2"}>{pastGigs}</div>
+                    </details>
+                    {/* 
                     <div className={"hidden flex-col md:flex"}>
                         <p className={"inline pb-2 font-bold"}>PAST</p>
                         {pastGigs}
-                    </div>
+                    </div> */}
                 </CompactArea>
             </Grid>
             <SectionSpace />
