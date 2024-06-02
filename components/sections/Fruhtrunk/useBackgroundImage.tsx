@@ -4,8 +4,6 @@ import { useMotionTemplate, useScroll, useSpring, useTransform } from "framer-mo
 import { MutableRefObject, RefObject } from "react";
 
 export default function useBackgroundImage(ref: RefObject<HTMLDivElement>) {
-    // const ref = useRef<HTMLDivElement>(null);
-
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start end", "end start"],
