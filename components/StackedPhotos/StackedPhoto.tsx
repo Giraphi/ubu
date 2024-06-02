@@ -46,7 +46,7 @@ export default function StackedPhoto(props: PileImageProps) {
         <div
             className={cn("absolute select-none shadow-2xl", {
                 hidden: props.index + 1 > props.showImages,
-                "blur-[2px] md:blur-sm": props.index + 1 !== props.showImages,
+                "md:blur-sm": props.index + 1 !== props.showImages,
             })}
             style={
                 isFirstRender
@@ -69,9 +69,11 @@ export default function StackedPhoto(props: PileImageProps) {
                 className={cn("select-none object-contain transition-all")}
             />
             <div
-                className={`absolute bottom-0 px-1 py-0.5 text-xs md:px-2 md:py-1 md:text-base ${
-                    props.textRight ? "right-0" : "left-0"
-                } bg-blackTransparent`}
+                className={cn(
+                    `absolute bottom-0 px-1 py-0.5 text-xs md:px-2 md:py-1 md:text-base ${
+                        props.textRight ? "right-0" : "left-0"
+                    } bg-blackTransparent`,
+                )}
             >
                 <p>{props.text}</p>
             </div>
