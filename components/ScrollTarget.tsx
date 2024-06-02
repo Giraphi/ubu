@@ -19,12 +19,11 @@ const StyledDiv = styled.div`
 
 export enum ScrollId {
     top = "top",
-    ubuDemo = "ubu-demo",
     ueberUns = "ueber-uns",
     photos = "photos",
     video = "video",
     gigs = "gigs",
-    fruhtrunk = "fruhtrunk",
+    releases = "releases",
 }
 
 // const ScrollIdArray = Object.values(ScrollId);

@@ -152,7 +152,7 @@ export default function PageMenu() {
     const { scrollY } = useScroll();
     const ref = useRef<HTMLDivElement>(null);
 
-    scrollY.onChange((value) => {
+    scrollY.onChange((value: number) => {
         const isScrolled = value > 30;
         setIsMenuVisible(isScrolled);
 

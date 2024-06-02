@@ -48,7 +48,6 @@ const RowArea = styled.div`
 export default function Demo() {
     return (
         <>
-            <ScrollTarget id={ScrollId.ubuDemo} />
             <Grid>
                 <CompactArea>
                     <SectionHeadline>Release - Ubu Tape</SectionHeadline>

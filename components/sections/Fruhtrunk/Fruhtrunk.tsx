@@ -27,7 +27,7 @@ export default function Fruhtrunk(props: FruhtrunkProps) {
 
     return (
         <div ref={ref}>
-            <ScrollTarget id={ScrollId.fruhtrunk} />
+            <ScrollTarget id={ScrollId.releases} />
             <Grid>
                 <CompactArea>
                     <SectionHeadline>Release - Fruhtrunk</SectionHeadline>
