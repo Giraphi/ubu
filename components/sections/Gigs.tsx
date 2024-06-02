@@ -68,18 +68,18 @@ export default function Gigs(props: GigsProps) {
                     <ul className={"flex flex-col gap-2 pb-8 md:gap-1"}>
                         <li>
                             <a
-                                target={"_blank"}
-                                href={"https://www.facebook.com/events/1015451419730315"}
+                                href="https://www.nochbesserleben.com/"
+                                target="_blank"
                             >
-                                28.09.24 Z-Bau, Nürnberg
+                                09.11.24 Nochbesserleben, Leipzig
                             </a>
                         </li>
                         <li>
                             <a
-                                href="https://www.nochbesserleben.com/"
-                                target="_blank"
+                                target={"_blank"}
+                                href={"https://www.facebook.com/events/1015451419730315"}
                             >
-                                09.09.24 Nochbesserleben, Leipzig
+                                28.09.24 Z-Bau, Nürnberg
                             </a>
                         </li>
                         <li>
