@@ -5,7 +5,7 @@
 <rect width="28" height="900" transform="translate(305)" fill="white"/>
 <rect width="28" height="900" transform="translate(242)" fill="white"/>
 <rect width="28" height="900" transform="translate(179)" fill="white"/>
-<rect width="28" height="900" transform="translate(450)" fill="white"/>
+<rect width="28" height="900" transform="translate(462)" fill="white"/>
 <rect width="28" height="900" transform="translate(375)" fill="white"/>
 <rect width="28" height="900" transform="translate(507)" fill="white"/>
 <rect width="28" height="900" transform="translate(570)" fill="white"/>
@@ -15,5 +15,7 @@
 <rect width="28" height="900" transform="translate(860 -11)" fill="white"/>
 <rect width="28" height="900" transform="translate(747)" fill="white"/>
 <rect width="28" height="900" transform="translate(810)" fill="white"/>
+<rect width="8" height="900" transform="translate(444)" fill="#FF0000"/>
+<rect width="804" height="10" transform="translate(39 450)" fill="#FF0000"/>
 
 </svg>
