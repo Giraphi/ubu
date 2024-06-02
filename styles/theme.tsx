@@ -13,7 +13,7 @@ export const theme = {
         sm: "24px",
         md: "32px",
         lg: "56px",
-        xlg: "108px",
+        xl: "108px",
         figure: "80px",
     },
     typography: {
@@ -37,20 +37,20 @@ export const theme = {
             lg: "20px",
         },
         contentMaxWidth: {
-            xlg: "1120px",
+            xl: "1120px",
         },
         spaceHorizontal: {
             base: "20px",
             md: "32px",
             lg: "48px",
-            xlg: "48px",
+            xl: "48px",
         },
     },
     breakpoints: {
         sm: 568,
         md: 768,
         lg: 1024,
-        xlg: 1440,
+        xl: 1440,
     },
     ratio: {
         square: 1,

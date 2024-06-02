@@ -17,6 +17,7 @@ import BandPic from "../components/BandPic";
 import Demo from "../components/sections/Demo/Demo";
 import Gigs from "../components/sections/Gigs";
 import Fruhtrunk from "../components/sections/Fruhtrunk/Fruhtrunk";
+import DeviceStoreHandler from "../context/DeviceStoreHandler";
 
 const messages: Record<string, any> = {
     de,
@@ -42,6 +43,7 @@ const Home: NextPage = () => {
             locale={locale}
             messages={messages[locale]}
         >
+            <DeviceStoreHandler />
             <MenuContextProvider>
                 <StyledRoot>
                     <PageMenu />

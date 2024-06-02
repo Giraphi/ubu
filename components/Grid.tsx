@@ -96,15 +96,15 @@ const StyledRoot = styled.div`
             [ ${GridLines.screenRight} ${GridLines.bleedRight}];
     }
 
-    @media (min-width: ${(props) => props.theme.breakpoints.xlg}px) {
+    @media (min-width: ${(props) => props.theme.breakpoints.xl}px) {
         grid-template-columns:
             [ ${GridLines.screenLeft}]
             ${(props) => `
-                calc(50% - ${props.theme.grid.contentMaxWidth.xlg} / 2 - ${props.theme.grid.spaceHorizontal.xlg}) [${GridLines.bleedLeft}]
-                ${props.theme.grid.spaceHorizontal.xlg}
+                calc(50% - ${props.theme.grid.contentMaxWidth.xl} / 2 - ${props.theme.grid.spaceHorizontal.xl}) [${GridLines.bleedLeft}]
+                ${props.theme.grid.spaceHorizontal.xl}
                 ${gridContentCols(props.theme.grid.gap.lg)}
-                ${props.theme.grid.spaceHorizontal.xlg} [${GridLines.bleedRight}]
-                calc(50% - ${props.theme.grid.contentMaxWidth.xlg} / 2 - ${props.theme.grid.spaceHorizontal.xlg})
+                ${props.theme.grid.spaceHorizontal.xl} [${GridLines.bleedRight}]
+                calc(50% - ${props.theme.grid.contentMaxWidth.xl} / 2 - ${props.theme.grid.spaceHorizontal.xl})
             `}
             [ ${GridLines.screenRight}];
     }

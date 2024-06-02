@@ -6,6 +6,12 @@ module.exports = {
             mono: ["var(--font-source-code-pro)"],
             bungee: ["var(--font-bungee)"],
         },
+        screens: {
+            sm: "568px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1440px",
+        },
         extend: {
             colors: {
                 primary: "#ff00ff",

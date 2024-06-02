@@ -6,6 +6,8 @@ import SectionHeadline from "../../SectionHeadline";
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionTemplate, useMotionValue, useScroll, useSpring, useTime, useTransform } from "framer-motion";
 import { fullGradient, zeroGradient } from "./util";
+import useBackgroundImage from "./useBackgroundImage";
+import { useDeviceStore } from "../../../context/useDeviceStore";
 
 export interface FruhtrunkProps {}
 
@@ -21,22 +23,11 @@ export default function Fruhtrunk(props: FruhtrunkProps) {
     const [isFirstRender, setIsFirstRender] = useState(true);
     const ref = useRef<HTMLDivElement>(null);
 
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"],
-    });
-    const spring = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001,
-    });
+    const backgroundImage = useBackgroundImage(ref);
 
-    const stroke = useTransform(spring, [0, 0.5, 1], [0, MAX_STROKE - 20, 0]);
-    const rotate = useTransform(spring, [0, 1], [-180, 180]);
-    const first = useTransform(() => (MAX_STROKE - stroke.get()) / 2);
-    const second = useTransform(() => first.get() + stroke.get());
+    const device = useDeviceStore();
 
-    const backgroundImage = useMotionTemplate`repeating-linear-gradient(${rotate}deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) ${first}px, rgba(255,255,255,1) ${first}px, rgba(255,255,255,1) ${second}px, rgba(0,0,0,0) ${second}px, rgba(0,0,0,0) ${MAX_STROKE}px)`;
+    console.log(device);
 
     useEffect(() => {
         setIsFirstRender(false);
