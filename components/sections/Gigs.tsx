@@ -14,6 +14,14 @@ export default function Gigs(props: GigsProps) {
             <li>
                 <a
                     target={"_blank"}
+                    href={"https://www.lenbachhaus.de/"}
+                >
+                    15.07.24 Lenbachhaus / Fashion Performance, München
+                </a>
+            </li>
+            <li>
+                <a
+                    target={"_blank"}
                     href={"https://www.instagram.com/treibhaus_acts/"}
                 >
                     23.02.24 Treibhaus, München
@@ -83,15 +91,35 @@ export default function Gigs(props: GigsProps) {
                             </a>
                         </li>
                         <li>
-                            <span>17.08.24 Secret Location at Nürnberg &#128561; Contact us for info</span>
+                            <span>21.09.24 Wasserburg with Unbelievable Lake</span>
                         </li>
                         <li>
                             <a
                                 target={"_blank"}
-                                href={"https://waldschaenke-dornheim.de/"}
+                                href={"https://aera.at/"}
                             >
-                                27.07.24 Dornheim, Würzburg
+                                20.09.24 Cafe Aera, Vienna with Unbelievable Lake
                             </a>
+                        </li>
+                        <li>
+                            <span>19.09.24 Import Export with Karaba and Unbelievable Lake</span>
+                        </li>
+
+                        <li>
+                            <span>
+                                <a
+                                    target={"_blank"}
+                                    href={
+                                        "https://rausgegangen.de/events/green-sugar-festival-acid-tongue-les-imprimes-and-more-0/#:~:text=%E2%98%BC%20GREEN%20SUGAR%20FESTIVAL%20%E2%98%BC&text=This%20is%20not%20your%20usual,the%20promise%20of%20endless%20possibilities."
+                                    }
+                                >
+                                    14.09.24 Import Export, Munich at Green Sugar Festival
+                                </a>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>17.08.24 Secret Location at Nürnberg &#128561; Contact us for info</span>
                         </li>
                         <li>
                             <a
@@ -123,14 +151,6 @@ export default function Gigs(props: GigsProps) {
                                 href={"https://www.glockenbachwerkstatt.de/"}
                             >
                                 18.07.24 Glockbachwerkstatt, München
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                target={"_blank"}
-                                href={"https://www.lenbachhaus.de/"}
-                            >
-                                15.07.24 Lenbachhaus / Fashion Performance, München
                             </a>
                         </li>
                     </ul>

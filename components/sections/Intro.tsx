@@ -127,14 +127,14 @@ export default function Intro() {
                         </StyledShaker>
                     </HideOnDesktop>
 
-                    <p className={"pb-8"}>
+                    {/* <p className={"pb-8"}>
                         Daniel Pizarro - Drums and Illustration
                         <br />
                         Simon Bartenschlager - Guitar
                         <br />
                         Raphael Höps - Synthesizer
                         <br />
-                    </p>
+                    </p> */}
                     <SocialIcons />
                     <HideOnDesktop>
                         <SectionSpace />
