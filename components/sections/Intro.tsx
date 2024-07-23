@@ -139,12 +139,12 @@ export default function Intro() {
 
                     <SocialIcons />
 
-                    <div className="mt-3 flex h-10 justify-start">
+                    <div className="mt-3 flex justify-start">
                         <a
                             href="https://open.spotify.com/artist/5s5eLEhylyrYKqaW2dyiZ7?si=Ay4J6F6nT4yXNjsdOpqZSA"
                             className="inline-flex hover:animate-color"
                         >
-                            <Spotify className="h-full" />
+                            <Spotify className="h-10 w-auto" />
                         </a>
                     </div>
                     <HideOnDesktop>
