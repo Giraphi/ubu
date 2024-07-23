@@ -14,6 +14,32 @@ export default function Gigs(props: GigsProps) {
             <li>
                 <a
                     target={"_blank"}
+                    href={"https://www.horstklub.ch/"}
+                >
+                    20.07.24 Horst Club, Kreuzlingen CH
+                </a>
+            </li>
+
+            <li>
+                <a
+                    target={"_blank"}
+                    href={" https://shedhalle.de/de/events/konzert-hut-ubu-imperator"}
+                >
+                    19.07.24 Shedhalle, Tübingen
+                </a>
+            </li>
+
+            <li>
+                <a
+                    target={"_blank"}
+                    href={"https://www.glockenbachwerkstatt.de/"}
+                >
+                    18.07.24 Glockbachwerkstatt, München
+                </a>
+            </li>
+            <li>
+                <a
+                    target={"_blank"}
                     href={"https://www.lenbachhaus.de/"}
                 >
                     15.07.24 Lenbachhaus / Fashion Performance, München
@@ -91,7 +117,7 @@ export default function Gigs(props: GigsProps) {
                             </a>
                         </li>
                         <li>
-                            <span>21.09.24 Wasserburg with Unbelievable Lake</span>
+                            <span>21.09.24 Der Berg ruft, Wasserburg, with Unbelievable Lake</span>
                         </li>
                         <li>
                             <a
@@ -102,7 +128,7 @@ export default function Gigs(props: GigsProps) {
                             </a>
                         </li>
                         <li>
-                            <span>19.09.24 Import Export with Karaba and Unbelievable Lake</span>
+                            <span>19.09.24 Import Export, Munich, with Karaba and Unbelievable Lake</span>
                         </li>
 
                         <li>
@@ -137,29 +163,7 @@ export default function Gigs(props: GigsProps) {
                                 24.07.24 C.Keller, Weimar
                             </a>
                         </li>
-                        <li>
-                            <a
-                                target={"_blank"}
-                                href={"https://www.horstklub.ch/"}
-                            >
-                                20.07.24 Horst Club, Kreuzlingen CH
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                target={"_blank"}
-                                href={"https://www.glockenbachwerkstatt.de/"}
-                            >
-                                18.07.24 Glockbachwerkstatt, München
-                            </a>
-                        </li>
                     </ul>
-                    {/* <details className={"md:hidden"}>
-                        <summary>
-                            <p className={"inline cursor-pointer font-bold"}>PAST</p>
-                        </summary>
-                        <div className={"pt-2"}>{pastGigs}</div>
-                    </details> */}
 
                     <details>
                         <summary className="cursor-pointer">

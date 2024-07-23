@@ -6,6 +6,7 @@ import SocialIcons from "../SocialIcons";
 import styled from "styled-components";
 import { colorAnimation } from "../../styles/color-animation";
 import Shaker from "../../images/figuren/shaker.svg";
+import Spotify from "../../images/spotify_w_text.svg";
 import HideOnMobile from "../HideOnMobile";
 import HideOnDesktop from "../HideOnDesktop";
 import SectionSpace from "../SectionSpace";
@@ -135,7 +136,17 @@ export default function Intro() {
                         Raphael Höps - Synthesizer
                         <br />
                     </p> */}
+
                     <SocialIcons />
+
+                    <div className="mt-3 flex h-10 justify-start">
+                        <a
+                            href="https://open.spotify.com/artist/5s5eLEhylyrYKqaW2dyiZ7?si=Ay4J6F6nT4yXNjsdOpqZSA"
+                            className="inline-flex hover:animate-color"
+                        >
+                            <Spotify className="h-full" />
+                        </a>
+                    </div>
                     <HideOnDesktop>
                         <SectionSpace />
                     </HideOnDesktop>
