@@ -117,18 +117,18 @@ export default function Gigs(props: GigsProps) {
                             </a>
                         </li>
                         <li>
-                            <span>21.09.24 Der Berg ruft, Wasserburg, with Unbelievable Lake</span>
+                            <span>21.09.24 Der Berg ruft, Wasserburg. With Unbelievable Lake</span>
                         </li>
                         <li>
                             <a
                                 target={"_blank"}
                                 href={"https://aera.at/"}
                             >
-                                20.09.24 Cafe Aera, Vienna with Unbelievable Lake
+                                20.09.24 Cafe Aera, Vienna. With Unbelievable Lake
                             </a>
                         </li>
                         <li>
-                            <span>19.09.24 Import Export, Munich, with Karaba and Unbelievable Lake</span>
+                            <span>19.09.24 Import Export, Munich. With Karaba and Unbelievable Lake</span>
                         </li>
 
                         <li>
