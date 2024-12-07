@@ -76,7 +76,7 @@ export default function Gigs(props: GigsProps) {
       <Grid>
         <CompactArea>
           <SectionHeadline>Gigs </SectionHeadline>
-          <p className={"animate-color pb-2 font-bold"}>UPCOMING</p>
+          {/* <p className={"animate-color pb-2 font-bold"}>UPCOMING</p> */}
           <ul className={"flex flex-col gap-2 pb-8 md:gap-1"}>
             <li>
               <a href="https://www.nochbesserleben.com/" target="_blank">

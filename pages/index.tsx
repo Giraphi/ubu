@@ -18,6 +18,7 @@ import Demo from "../components/sections/Demo/Demo"
 import Gigs from "../components/sections/Gigs"
 import Fruhtrunk from "../components/sections/Fruhtrunk/Fruhtrunk"
 import DeviceStoreHandler from "../context/DeviceStoreHandler"
+import AveUbu from "../components/sections/AveUbu/AveUbu"
 
 const messages: Record<string, any> = {
   de,
@@ -47,6 +48,7 @@ const Home: NextPage = () => {
           <Intro />
           <BandPic />
           <Gigs />
+          <AveUbu />
           <Fruhtrunk />
           <Demo />
           <BandText />
