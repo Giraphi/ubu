@@ -11,6 +11,13 @@ import UBU3 from "../../images/pile/UBUIMPERATOR-3.jpg"
 import rebl from "../../images/pile/rebl.jpg"
 import gallery from "../../images/pile/gallery.jpg"
 
+import leipzig from "../../images/pile/leipzig.jpg"
+// import tuebingen from "../../images/pile/tuebingen.jpg"
+import zBau from "../../images/pile/z-bau.jpg"
+import greenSugar from "../../images/pile/green-sugar.webp"
+import ruebe1 from "../../images/pile/ruebe-buehne.jpg"
+import ruebe2 from "../../images/pile/ruebe-buehne-2.jpg"
+
 import StackedPhoto from "./StackedPhoto"
 import { useState } from "react"
 import RotateButton from "../RotateButton"
@@ -21,7 +28,7 @@ export default function StackedPhotos(props: PicturePileProps) {
   const [pileImageProps, setPileImageProps] = useState([
     { src: kaufbeurenLogo, text: "11.03.22 Roundhouse, Kaufbeuren", textRight: true, id: "1" },
     { src: UBU3, text: "Bandportrait by Vanessa Mönius", id: "2" },
-    { src: ruebeSimon, text: "2022 Ruebezahl Festival", id: "3" },
+    // { src: ruebeSimon, text: "2022 Ruebezahl Festival", id: "3" },
     { src: rebl, text: "24.04.23 Walter Storms Galerie, München", id: "4" },
     { src: gallery, text: "24.04.23 Walter Storms Galerie, München", id: "5" },
     { src: balveDaniel, text: "27.05.2023 Kunstblock Balve, München", id: "6" },
@@ -31,6 +38,13 @@ export default function StackedPhotos(props: PicturePileProps) {
     { src: murf1, text: "01.10.23 Murf/Murw Festival, Tilburg NL", id: "10" },
     { src: murf3, text: "30.09.23 Murf/Murw Festival, Tilburg NL", id: "11" },
     { src: murf2, text: "30.09.23 Murf/Murw Festival, Tilburg NL", id: "12" },
+
+    // { src: tuebingen, text: "19.07.24 Shedhalle, Tübingen", id: "13" },
+    { src: zBau, text: "28.09.24 Z-Bau, Nürnberg", id: "14" },
+    { src: greenSugar, text: "14.09.24 Import Export at Green Sugar Festival, Munich", id: "15" },
+    { src: leipzig, text: "09.11.24 Nochbesserleben, Leipzig", id: "13" },
+    { src: ruebe2, text: "17.08.24 Wald, Nürnberg", id: "17", textTop: true, textRight: true },
+    { src: ruebe1, text: "17.08.24 Wald, Nürnberg", id: "16" },
   ])
 
   const [counter, setCounter] = useState(pileImageProps.length)

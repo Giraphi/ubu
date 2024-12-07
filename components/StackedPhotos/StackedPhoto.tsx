@@ -9,6 +9,7 @@ export interface PileImageProps {
   index: number
   text?: string
   textRight?: boolean
+  textTop?: boolean
 }
 
 export default function StackedPhoto(props: PileImageProps) {
@@ -64,16 +65,14 @@ export default function StackedPhoto(props: PileImageProps) {
         fill={true}
         src={props.src}
         sizes={imageRenditions.full}
-        quality={30}
         loading={"eager"}
         className={cn("select-none object-contain transition-all")}
       />
       <div
-        className={cn(
-          `absolute bottom-0 px-1 py-0.5 text-xs md:px-2 md:py-1 md:text-base ${
-            props.textRight ? "right-0" : "left-0"
-          } bg-blackTransparent`,
-        )}
+        className={cn(`absolute bottom-0 left-0 bg-blackTransparent px-1 py-0.5 text-xs md:px-2 md:py-1  md:text-base`, {
+          "left-auto right-0": props.textRight,
+          "bottom bottom-auto top-0": props.textTop,
+        })}
       >
         <p>{props.text}</p>
       </div>
