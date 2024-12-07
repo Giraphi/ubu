@@ -1,4 +1,4 @@
-import { css, keyframes } from "styled-components";
+import { css, keyframes } from "styled-components"
 
 export const glitch1 = keyframes`
 0% {
@@ -40,7 +40,7 @@ export const glitch1 = keyframes`
 100% {
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
 }
-`;
+`
 
 export const glitch2 = keyframes`
     0% {
@@ -82,7 +82,7 @@ export const glitch2 = keyframes`
     100% {
         clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     }
-`;
+`
 
 export const glitch3 = keyframes`
     0% {
@@ -148,7 +148,7 @@ export const glitch3 = keyframes`
     100% {
         clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     }
-`;
+`
 
 export const flash = keyframes`
     0% {
@@ -159,4 +159,4 @@ export const flash = keyframes`
         opacity: 0;
         transform: translate3d(0,0,0);
     }
-`;
+`

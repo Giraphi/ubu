@@ -1,6 +1,6 @@
 <h1>Links</h1>
 
--   <a href="https://nextjs.org/learn/basics/deploying-nextjs-app/setup">next.js deployment and vercel setup</a>
+- <a href="https://nextjs.org/learn/basics/deploying-nextjs-app/setup">next.js deployment and vercel setup</a>
 
 <h1>Next.js</h1>
 
@@ -26,8 +26,8 @@ yarn add @types/styled-component
 
 Now copy from the <a href="https://github.com/vercel/next.js/tree/canary/examples/with-styled-components">template</a>
 
--   `next.config.js`
--   `_document.tsx`
+- `next.config.js`
+- `_document.tsx`
 
 Note: When using `yarn run dev`, when inspecting the received document there's a `display: none;` on the `<div id=__next>` and/or `<body>`. The seems to be set by next.js in development mode to prevent flicker of unstyled content (FOUC): See <a href="https://github.com/vercel/next.js/discussions/16104">here</a>
 
@@ -65,9 +65,9 @@ Links:
 https://nextjs.org/docs/basic-features/font-optimization
 https://dev.to/dharmi/adding-fonts-in-nextjs-local-fonts-along-with-styled-components-2cdd
 
--   Place font-files into `public/fonts`
--   Reference them by path with a `@font-face` in styled-component's global style
--   Make next.js preload them by placing a `<link  rel="preload"` into the document's head. (See `_document.tsx`)
+- Place font-files into `public/fonts`
+- Reference them by path with a `@font-face` in styled-component's global style
+- Make next.js preload them by placing a `<link  rel="preload"` into the document's head. (See `_document.tsx`)
 
 <h1>Svg</h1>
 With SVGR. `yarn add @svgr/webpack` and adjust `next.config.js`

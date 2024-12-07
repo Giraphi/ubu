@@ -1,4 +1,4 @@
-import { keyframes } from "styled-components";
+import { keyframes } from "styled-components"
 
 export const noiseKeyframes = keyframes`
     0% { transform: translate(0,0) }
@@ -13,4 +13,4 @@ export const noiseKeyframes = keyframes`
     90% { transform: translate(10%,5%) }
     100% { transform: translate(5%,0) }
 
-`;
+`

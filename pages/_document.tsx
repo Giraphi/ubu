@@ -1,42 +1,39 @@
-import { ServerStyleSheet } from "styled-components";
-import { DocumentContext } from "next/dist/shared/lib/utils";
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { bungee, sourceCodePro } from "./_app";
+import { ServerStyleSheet } from "styled-components"
+import { DocumentContext } from "next/dist/shared/lib/utils"
+import Document, { Html, Head, Main, NextScript } from "next/document"
+import { bungee, sourceCodePro } from "./_app"
 
 export default // @ts-ignore
 class MyDocument extends Document {
-    static async getInitialProps(ctx: DocumentContext) {
-        const sheet = new ServerStyleSheet();
-        const originalRenderPage = ctx.renderPage;
+  static async getInitialProps(ctx: DocumentContext) {
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
-        try {
-            ctx.renderPage = () =>
-                originalRenderPage({
-                    enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
-                });
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+        })
 
-            const initialProps = await Document.getInitialProps(ctx);
-            return {
-                ...initialProps,
-                styles: [initialProps.styles, sheet.getStyleElement()],
-            };
-        } finally {
-            sheet.seal();
-        }
+      const initialProps = await Document.getInitialProps(ctx)
+      return {
+        ...initialProps,
+        styles: [initialProps.styles, sheet.getStyleElement()],
+      }
+    } finally {
+      sheet.seal()
     }
+  }
 
-    render() {
-        return (
-            <Html
-                lang="en"
-                className={`${sourceCodePro.variable} ${bungee.variable}`}
-            >
-                <Head></Head>
-                <body className={"font-mono text-lg leading-snug text-white"}>
-                    <Main />
-                    <NextScript />
-                </body>
-            </Html>
-        );
-    }
+  render() {
+    return (
+      <Html lang="en" className={`${sourceCodePro.variable} ${bungee.variable}`}>
+        <Head></Head>
+        <body className={"font-mono text-lg leading-snug text-white"}>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
 }

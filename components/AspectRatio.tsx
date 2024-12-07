@@ -1,18 +1,18 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
-const StyledRoot = styled.div``;
+const StyledRoot = styled.div``
 
-const StyledPadding = styled.div``;
+const StyledPadding = styled.div``
 
 export interface AspectRatioProps {
-    aspectRatio: number;
+  aspectRatio: number
 }
 
 export default function AspectRatio(props: AspectRatioProps) {
-    return (
-        <StyledRoot>
-            <StyledPadding></StyledPadding>
-        </StyledRoot>
-    );
+  return (
+    <StyledRoot>
+      <StyledPadding></StyledPadding>
+    </StyledRoot>
+  )
 }

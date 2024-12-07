@@ -1,4 +1,4 @@
-import { keyframes } from "styled-components";
+import { keyframes } from "styled-components"
 
 export const flickerKeyframes = keyframes`
     0% {
@@ -64,4 +64,4 @@ export const flickerKeyframes = keyframes`
     100% {
         opacity: 0.24387;
     }
-`;
+`

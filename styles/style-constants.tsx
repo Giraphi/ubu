@@ -1,6 +1,6 @@
 export const styleConstants = {
-    zIndex: {
-        menuButton: 20,
-        menuContent: 15,
-    },
-};
+  zIndex: {
+    menuButton: 20,
+    menuContent: 15,
+  },
+}

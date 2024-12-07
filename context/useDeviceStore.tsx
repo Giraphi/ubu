@@ -1,27 +1,27 @@
-import { create } from "zustand";
-import { immer } from "zustand/middleware/immer";
+import { create } from "zustand"
+import { immer } from "zustand/middleware/immer"
 
 export enum Device {
-    sm,
-    md,
-    lg,
-    xl,
+  sm,
+  md,
+  lg,
+  xl,
 }
 
 type State = {
-    device: Device;
-};
+  device: Device
+}
 
 type Actions = {
-    setDevice: (device: Device) => void;
-};
+  setDevice: (device: Device) => void
+}
 
 export const useDeviceStore = create(
-    immer<State & Actions>((set) => ({
-        device: Device.lg,
-        setDevice: (device: Device) =>
-            set((state) => {
-                state.device = device;
-            }),
-    })),
-);
+  immer<State & Actions>((set) => ({
+    device: Device.lg,
+    setDevice: (device: Device) =>
+      set((state) => {
+        state.device = device
+      }),
+  })),
+)
