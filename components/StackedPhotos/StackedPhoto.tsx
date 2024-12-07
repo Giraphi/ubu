@@ -47,7 +47,7 @@ export default function StackedPhoto(props: PileImageProps) {
     <div
       className={cn("absolute select-none shadow-2xl", {
         hidden: props.index + 1 > props.showImages,
-        "md:blur-sm": props.index + 1 !== props.showImages,
+        "max-md:brightness-50 md:blur-sm": props.index + 1 !== props.showImages,
       })}
       style={
         isFirstRender
@@ -72,6 +72,7 @@ export default function StackedPhoto(props: PileImageProps) {
         className={cn(`absolute bottom-0 left-0 bg-blackTransparent px-1 py-0.5 text-xs md:px-2 md:py-1  md:text-base`, {
           "left-auto right-0": props.textRight,
           "bottom bottom-auto top-0": props.textTop,
+          "max-md:hidden": props.index + 1 !== props.showImages,
         })}
       >
         <p>{props.text}</p>
