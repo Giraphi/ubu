@@ -27,7 +27,7 @@ export default function AveUbu({}: Props) {
                   href={"https://www.klangschutz.com/epages/78930758.sf/de_DE/?ObjectPath=/Shops/78930758/Products/0000022"}
                   className="underline underline-offset-2"
                 >
-                  Klangschutz Mailorder
+                  Klangschutz Schallplatten
                 </a>
               ),
             }}
